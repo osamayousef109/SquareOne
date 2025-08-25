@@ -13,6 +13,7 @@ constexpr uint8_t FLAG_CASTLE    = 1 << 2;
 constexpr uint8_t FLAG_PROMOTION = 1 << 3;
 enum Piece {PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING,EMPTY};
 enum Color {WHITE,BLACK,NO_COLOR};
+inline uint16_t generation=0;
 struct History {
     Move move;
     int captured;

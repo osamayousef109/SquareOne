@@ -3,7 +3,17 @@
 #define MOVE_H
 #include "types.h"
 #include "bitboards.h"
-inline void makeMove(Board& board,Move move) {
+inline int moveScores[MAX_PLY][MAX_MOVES];
+inline int MVV_LVA[6][6] = {
+    // Attacker:   P     N     B     R     Q     K
+    /* Victim P */ {105, 104, 103, 102, 101, 100},
+    /* Victim N */ {205, 204, 203, 202, 201, 200},
+    /* Victim B */ {305, 304, 303, 302, 301, 300},
+    /* Victim R */ {405, 404, 403, 402, 401, 400},
+    /* Victim Q */ {505, 504, 503, 502, 501, 500},
+    /* Victim K */ {605, 604, 603, 602, 601, 600}
+};
+inline void makeMove(Board& board,Move move,int ply) {
     History h{};
     int from=fromSquare(move);
     int to=toSquare(move);
@@ -120,13 +130,13 @@ inline void makeMove(Board& board,Move move) {
         board.enpassant=-1;
     if (board.ep_is_capturable(board.enpassant,enemy))
         board.zobristKey^=board.enpassantFile[board.enpassant&7];
-    history[historyIdx++]=h;
+    history[ply][historyCount[ply]++]=h;
     board.empty = ~board.allOccupied;
     board.zobristKey^=board.colorKey;
     board.currentColor=(Color)(1-board.currentColor);
 }
-inline void unmakeMove(Board& board) {
-    History h=history[--historyIdx];
+inline void unmakeMove(Board& board,int ply) {
+    History h=history[ply][--historyCount[ply]];
     Move move=h.move;
     int from=fromSquare(move);
     int to=toSquare(move);
@@ -195,7 +205,7 @@ inline void unmakeMove(Board& board) {
     board.zobristKey=h.zobristKey;
     board.currentColor=(Color)(1-board.currentColor);
 }
-inline void addMove(Board& board,int from,int to,int promo,bool castle,bool enpassant) {
+inline void addMove(Board& board,int from,int to,int promo,bool castle,bool enpassant,int ply) {
     int flag=0;
     if (castle)
         flag|=FLAG_CASTLE;
@@ -212,11 +222,15 @@ inline void addMove(Board& board,int from,int to,int promo,bool castle,bool enpa
         flag|=FLAG_CAPTURE;
     }
     Move move=make_move(from,to,promo,flag);
-    makeMove(board,move);
+    makeMove(board,move,ply);
 
     if (!isAttacked(board,color,board.kingPos[color])) {
-        moves[moveIdx++]=move;
+        moveScores[ply][moveCount[ply]]=0;
+        if (flag&FLAG_CAPTURE) {
+            moveScores[ply][moveCount[ply]]=MVV_LVA[pieceTaken][pieceMoved]+10000;
+        }
+        moves[ply][moveCount[ply]++]=move;
     }
-    unmakeMove(board);
+    unmakeMove(board,ply);
 }
 #endif //MOVE_H

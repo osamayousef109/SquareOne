@@ -1,3 +1,0 @@
-C:/Users/MSi/CLionProjects/Chussy/cmake-build-release-mingw-1/CMakeFiles/ChessEngine.dir
-C:/Users/MSi/CLionProjects/Chussy/cmake-build-release-mingw-1/CMakeFiles/edit_cache.dir
-C:/Users/MSi/CLionProjects/Chussy/cmake-build-release-mingw-1/CMakeFiles/rebuild_cache.dir

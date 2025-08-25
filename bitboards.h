@@ -76,12 +76,12 @@ constexpr U64 rookAttackRay(int sq, U64 occ) {
     return out;
 }
 void initMagic();
-
-inline Move moves[512];
-inline History history[512];
-inline int moveIdx=0;
-inline int historyIdx=0;
-
+constexpr int MAX_MOVES=256;
+constexpr int MAX_PLY=32;
+inline Move moves[MAX_PLY][MAX_MOVES];
+inline History history[MAX_PLY][MAX_MOVES];
+inline int moveCount[MAX_PLY];
+inline int historyCount[MAX_PLY];
 
 struct Board {
     U64 piece[2][6];

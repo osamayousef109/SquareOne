@@ -20,3 +20,6 @@ add_executable(ChessEngine main.cpp
         evaluation.h
         play.h
 )
+
+target_compile_options(ChessEngine PRIVATE -O3 -march=native -flto -fno-exceptions -ffast-math)
+target_link_options(ChessEngine PRIVATE -O3 -march=native -flto)

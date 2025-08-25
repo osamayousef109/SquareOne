@@ -9,7 +9,8 @@ constexpr U64 WLC = (1ULL<<1)+(1ULL<<2)+(1ULL<<3);
 constexpr U64 BSC = (1ULL<<61)+(1ULL<<62);
 constexpr U64 BLC = (1ULL<<57)+(1ULL<<58)+(1ULL<<59);
 
-inline void generateMoves(Board& board) {
+inline void generateMoves(Board& board,int ply) {
+    moveCount[ply]=0;
     int color=board.currentColor;
     U64 notOwn=~board.occupied[color];
 
@@ -24,10 +25,10 @@ inline void generateMoves(Board& board) {
         singlePushPawns&=singlePushPawns-1;
         if (to/8==promoRank) {
             for (int i=1;i<=4;i++) {
-                addMove(board,from,to,i,false,false);
+                addMove(board,from,to,i,false,false,ply);
             }
         }else {
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
     }
     while (doublePushPawns) {
@@ -35,7 +36,7 @@ inline void generateMoves(Board& board) {
         int forward=(color==WHITE? 16:-16);
         int to=from+forward;
         doublePushPawns&=doublePushPawns-1;
-        addMove(board,from,to,0,false,false);
+        addMove(board,from,to,0,false,false,ply);
     }
     while (pawns) {
         int promoRank=(color==WHITE? 7:0);
@@ -47,17 +48,17 @@ inline void generateMoves(Board& board) {
             moves&=moves-1;
             if (to/8==promoRank) {
                 for (int i=1;i<=4;i++) {
-                    addMove(board,from,to,i,false,false);
+                    addMove(board,from,to,i,false,false,ply);
                 }
             }else {
-                addMove(board,from,to,0,false,false);
+                addMove(board,from,to,0,false,false,ply);
             }
         }
         if (board.enpassant!=-1) {
             U64 enpassant= pawnAttacks[color][from] & (1ULL<<board.enpassant);
             if (enpassant) {
                 int to=__builtin_ctzll(enpassant);
-                addMove(board,from,to,0,false,true);
+                addMove(board,from,to,0,false,true,ply);
             }
         }
     }
@@ -70,7 +71,7 @@ inline void generateMoves(Board& board) {
         while (moves) {
             int to=__builtin_ctzll(moves);
             moves&=moves-1;
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
     }
 
@@ -82,7 +83,7 @@ inline void generateMoves(Board& board) {
         while (moves) {
             int to=__builtin_ctzll(moves);
             moves&=moves-1;
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
     }
 
@@ -94,7 +95,7 @@ inline void generateMoves(Board& board) {
         while (moves) {
             int to=__builtin_ctzll(moves);
             moves&=moves-1;
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
     }
 
@@ -106,7 +107,7 @@ inline void generateMoves(Board& board) {
         while (moves) {
             int to=__builtin_ctzll(moves);
             moves&=moves-1;
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
     }
 
@@ -117,26 +118,26 @@ inline void generateMoves(Board& board) {
         while (moves) {
             int to=__builtin_ctzll(moves);
             moves&=moves-1;
-            addMove(board,from,to,0,false,false);
+            addMove(board,from,to,0,false,false,ply);
         }
         if (!isAttacked(board,color,from)) {
             if (color==WHITE) {
                 if (board.castlingRights&(1<<0)) {
                     if (!(board.allOccupied&WSC)&&!isAttacked(board,WHITE,6)&&!isAttacked(board,WHITE,5))
-                        addMove(board,4,6,0,true,false);
+                        addMove(board,4,6,0,true,false,ply);
                 }
                 if (board.castlingRights&(1<<1)) {
                     if (!(board.allOccupied&WLC)&&!isAttacked(board,WHITE,3)&&!isAttacked(board,WHITE,2))
-                        addMove(board,4,2,0,true,false);
+                        addMove(board,4,2,0,true,false,ply);
                 }
             }else {
                 if (board.castlingRights&(1<<2)) {
                     if (!(board.allOccupied&BSC)&&!isAttacked(board,BLACK,61)&&!isAttacked(board,BLACK,62))
-                        addMove(board,60,62,0,true,false);
+                        addMove(board,60,62,0,true,false,ply);
                 }
                 if (board.castlingRights&(1<<3)) {
                     if (!(board.allOccupied&BLC)&&!isAttacked(board,BLACK,58)&&!isAttacked(board,BLACK,59))
-                        addMove(board,60,58,0,true,false);
+                        addMove(board,60,58,0,true,false,ply);
                 }
             }
         }
