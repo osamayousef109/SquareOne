@@ -56,7 +56,7 @@ void printBitboard(U64 bb) {
             int sq=rank*8+file; //
             std::cout << ((bb>>sq)&1ULL? "1 " : ". ");
         }
-        std::cout << "\n";
+        std::cout << std::endl;
     }
-    std::cout << "\n   a b c d e f g h\n\n";
+    std::cout << std::endl << "  a b c d e f g h" << std::endl << std::endl;
 }

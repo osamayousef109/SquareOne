@@ -251,4 +251,5 @@ inline bool isAttacked(Board& board,int color,int sq) {
     if (moves&(board.piece[enemy][ROOK]|board.piece[enemy][QUEEN])) return true;
     return false;
 }
+void printBitboard(U64 bb);
 #endif //BITBOARDS_H

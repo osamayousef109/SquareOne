@@ -8,7 +8,7 @@
 
 constexpr int INF=1e7;
 constexpr int MATE=32000;
-constexpr int pieceValue[5]={100,320,330,500,900};
+constexpr int pieceValue[6]={100,320,330,500,900,32000};
 inline int eval(Board& board,int ply) {
     int wq=__builtin_popcountll(board.piece[WHITE][QUEEN]);
     int wr=__builtin_popcountll(board.piece[WHITE][ROOK]);
@@ -28,11 +28,13 @@ inline int eval(Board& board,int ply) {
             return -INF+ply;
         return 0;
     }
-    moveCount[ply]=0;
+    int temp=board.enpassant;
+    board.enpassant=-1;
     board.currentColor=(Color)(1-board.currentColor);
     generateMoves(board,ply);
     int bm=moveCount[ply];
     board.currentColor=(Color)(1-board.currentColor);
+    board.enpassant=temp;
     int mobility=50*(wm-bm);
     int perspective = (board.currentColor == WHITE) ? 1 : -1;
     return (material+mobility)*perspective;

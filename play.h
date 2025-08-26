@@ -21,7 +21,8 @@ inline void play(Board& board) {
     generation++;
     int prevScore=eval(board,0);
     int score=-1;
-    for (int depth=1;depth<=5;depth++) {
+    bestMove=-1;
+    for (int depth=1;depth<=7;depth++) {
         int delta=50;
         int alpha=prevScore-delta;
         int beta=prevScore+delta;

@@ -29,7 +29,7 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
         Move move=moves[ply][i];
         int flag=moveFlags(move);
         if (flag&(FLAG_CAPTURE)) {
-            int gain=pieceValue[board.mailbox[fromSquare(move)]];
+            int gain=pieceValue[board.mailbox[toSquare(move)]];
             if (standPat+gain+100<=alpha) {
                 continue;
             }
@@ -46,9 +46,9 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
 }
 inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
     int ttscore=-1;
-    Move ttmove=-1;
+    Move ttmove=0;
     int ogAlpha=alpha;
-    if (probeTT(board.zobristKey,depth,alpha,beta,ttscore,ttmove)) {
+    if (probeTT(board.zobristKey,depth,alpha,beta,ttscore,ttmove)&&ply) {
         if (ttscore > MATE - 1000) ttscore -= ply;
         if (ttscore < -MATE + 1000) ttscore += ply;
         return ttscore;
@@ -56,9 +56,14 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
     if (depth==0)
         return quiesce(board,alpha,beta,ply);
     generateMoves(board,ply);
+    if (moveCount[ply]==0) {
+        if (isAttacked(board,board.currentColor,board.kingPos[board.currentColor]))
+            return -MATE+ply;
+        return 0;
+    }
     int bestValue=-INF;
     Move best=moves[ply][0];
-    if (ttmove!=-1) {
+    if (ttmove!=0) {
         for (int i=0;i<moveCount[ply];i++) {
             if (ttmove==moves[ply][i]) {
                 moveScores[ply][i]=TT_SCORE;
@@ -89,23 +94,16 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
     }
     if (ply==0)
         bestMove=best;
-    if (moveCount[ply]==0) {
-        if (isAttacked(board,board.currentColor,board.kingPos[board.currentColor]))
-            return -MATE+ply;
-        return 0;
-    }
-    uint8_t type;
+    uint8_t type=EXACT;
     if (bestValue<=ogAlpha) {
         type=UPPER_BOUND;
     } else if (bestValue>=beta) {
         type=LOWER_BOUND;
-    } else {
-        type=EXACT;
     }
     int storeScore = bestValue;
-    if (bestValue > MATE - 1000) storeScore += ply;
-    if (bestValue < -MATE + 1000) storeScore -= ply;
-    storeTT(board.zobristKey, best, depth, storeScore, type);
+    if (bestValue>MATE-1000) storeScore += ply;
+    if (bestValue<-MATE+1000) storeScore -= ply;
+    storeTT(board.zobristKey,best,depth,storeScore,type);
 
     return bestValue;
 }
