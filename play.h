@@ -22,7 +22,7 @@ inline void play(Board& board) {
     int prevScore=0;
     int score=-1;
     bestMove=-1;
-    for (int depth=1;depth<=8;depth++) {
+    for (int depth=1;depth<=10;depth++) {
         int delta=50;
         int alpha=prevScore-delta;
         int beta=prevScore+delta;

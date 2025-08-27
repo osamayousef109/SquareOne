@@ -21,23 +21,8 @@ inline int eval(Board& board,int ply) {
     int bn=__builtin_popcountll(board.piece[BLACK][KNIGHT]);
     int bp=__builtin_popcountll(board.piece[BLACK][PAWN]);
     int material=900*(wq-bq)+500*(wr-br)+300*(wn+wb-bn-bb)+100*(wp-bp);
-    generateMoves(board,ply);
-    int wm=moveCount[ply];
-    if (wm==0) {
-        if (isAttacked(board,board.currentColor,board.kingPos[board.currentColor]))
-            return -INF+ply;
-        return 0;
-    }
-    int temp=board.enpassant;
-    board.enpassant=-1;
-    board.currentColor=(Color)(1-board.currentColor);
-    generateMoves(board,ply);
-    int bm=moveCount[ply];
-    board.currentColor=(Color)(1-board.currentColor);
-    board.enpassant=temp;
-    int mobility=50*(wm-bm);
     int perspective = (board.currentColor == WHITE) ? 1 : -1;
-    return (material+mobility)*perspective;
+    return material*perspective;
 }
 
 #endif //EVALUATION_H

@@ -43,6 +43,16 @@ inline void clear_killers() {
         for (unsigned int & k : i)
             k = 0;
 }
+inline bool isPinned(const Board &board, int side, int fromSq, U64 occ) {
+    int kingSq=board.kingPos[side];
+    U64 from_bb=1ULL<<fromSq;
+    U64 occ2=occ&~from_bb;
+    U64 enemyRooksQueens   = board.piece[side^1][ROOK]  | board.piece[side^1][QUEEN];
+    U64 enemyBishopsQueens = board.piece[side^1][BISHOP] | board.piece[side^1][QUEEN];
+    if (rookAttacks(kingSq, occ2) & enemyRooksQueens) return true;
+    if (bishopAttacks(kingSq, occ2) & enemyBishopsQueens) return true;
+    return false;
+}
 inline int getLeastValuableAttacker(U64 attackers, int side, U64 temp_piece[2][6], int &outPieceType) {
     for (int p = PAWN; p <= KING; ++p) {
         U64 piece_attackers = attackers & temp_piece[side][p];
@@ -119,6 +129,7 @@ inline void order_moves(Board& board,int ply) {
                 moveScores[ply][i]=2000000+MVV_LVA[fromPiece][toPiece];
             else
                 moveScores[ply][i]=-1000000+MVV_LVA[fromPiece][toPiece];
+            continue;
         } else if ((m==killer[ply][0])) {
             moveScores[ply][i] = KILLER1_SCORE;
             continue;
@@ -163,8 +174,6 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
                 return score;
             if (score>alpha)
                 alpha=score;
-        }else {
-            break;
         }
     }
     return alpha;
