@@ -22,7 +22,7 @@ inline void play(Board& board) {
     int prevScore=0;
     int score=-1;
     bestMove=-1;
-    for (int depth=1;depth<=10;depth++) {
+    for (int depth=1;depth<=12;depth++) {
         int delta=50;
         int alpha=prevScore-delta;
         int beta=prevScore+delta;
@@ -50,7 +50,7 @@ inline void play(Board& board) {
             break;
         }
     }
-    std::cout << score << std::endl;
+    std::cout << -score << std::endl;
     std::cout << fromSquare(bestMove) << " " << toSquare(bestMove) << std::endl;
     makeMove(board,bestMove,0);
 }

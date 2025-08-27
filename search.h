@@ -9,6 +9,9 @@
 #include "TT.h"
 inline Move bestMove=-1;
 constexpr int TT_SCORE=1e8;
+constexpr int NULL_R = 2;
+constexpr int LMR_MIN_DEPTH = 3;
+constexpr int LMR_LATE_MOVES = 4;
 inline int moveScores[MAX_PLY][MAX_MOVES];
 inline int MVV_LVA[6][6] = {
     // Attacker:   P     N     B     R     Q     K
@@ -43,6 +46,22 @@ inline void clear_killers() {
         for (unsigned int & k : i)
             k = 0;
 }
+inline void makeNullMove(Board &board) {
+    board.zobristKey^=board.colorKey;
+    if (board.ep_is_capturable(board.enpassant,board.currentColor))
+        board.zobristKey^=board.enpassantFile[board.enpassant&7];
+    board.currentColor=(Color)(1-board.currentColor);
+    board.enpassant=-1;
+}
+
+inline void undoNullMove(Board &board,int enpassant) {
+    board.currentColor=(Color)(1-board.currentColor);
+    board.zobristKey^=board.colorKey;
+    board.enpassant=enpassant;
+    if (board.ep_is_capturable(enpassant,board.currentColor))
+        board.zobristKey^=board.enpassantFile[enpassant&7];
+
+}
 inline bool isPinned(const Board &board, int side, int fromSq, U64 occ) {
     int kingSq=board.kingPos[side];
     U64 from_bb=1ULL<<fromSq;
@@ -66,7 +85,7 @@ inline int getLeastValuableAttacker(U64 attackers, int side, U64 temp_piece[2][6
 }
 
 inline int see(Board &board, int toSq, int targetType, int fromSq, int attackerType, int side) {
-    const int MAX_DEPTH = 32;
+    const int MAX_DEPTH =64;
     int gain[MAX_DEPTH];
     int d = 0;
     U64 from_bb = 1ULL << fromSq;
@@ -144,6 +163,7 @@ inline void order_moves(Board& board,int ply) {
 }
 inline int quiesce(Board& board,int alpha,int beta,int ply) {
     int standPat=eval(board,ply);
+    if (ply>=63) return standPat;
     if (standPat>=beta)
         return standPat;
     if (standPat>alpha)
@@ -207,6 +227,27 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
             }
         }
     }
+    bool inCheck=isAttacked(board, board.currentColor, board.kingPos[board.currentColor]);
+    int count = 0;
+    count += ((board.piece[WHITE][PAWN]|board.piece[BLACK][PAWN])!=0ULL);
+    count += ((board.piece[WHITE][KNIGHT]|board.piece[BLACK][KNIGHT])!=0ULL);
+    count += ((board.piece[WHITE][BISHOP]|board.piece[BLACK][BISHOP])!=0ULL);
+    count += ((board.piece[WHITE][ROOK]|board.piece[BLACK][ROOK])!=0ULL);
+    bool queen=((board.piece[WHITE][QUEEN]|board.piece[BLACK][QUEEN])!=0ULL);
+    if (!inCheck&&depth>=(NULL_R+1)&&count<=2&&!queen&&moveCount[ply]>=3) {
+        int oldEP=board.enpassant;
+        makeNullMove(board);
+        int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
+        undoNullMove(board,oldEP);
+        if (score>=beta) {
+            if (depth-1>2) {
+                int verify=alphaBeta(board,alpha,beta,depth-1,ply+1);
+                if (verify>=beta) return verify;
+            } else {
+                return score;
+            }
+        }
+    }
     for (int i=0;i<moveCount[ply];i++) {
         int mx=i;
         for (int j=i+1;j<moveCount[ply];j++) {
@@ -217,7 +258,21 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
         std::swap(moveScores[ply][i],moveScores[ply][mx]);
         std::swap(moves[ply][i],moves[ply][mx]);
         makeMove(board,moves[ply][i],ply);
-        int score=-alphaBeta(board,-beta,-alpha,depth-1,ply+1);
+        int score;
+        int flag=moveFlags(moves[ply][i]);
+        if (depth >= 5 && i >= 4 && !(flag&FLAG_CAPTURE) && !(flag&FLAG_PROMOTION)) {
+            int r = 1;
+            if (depth>=6) r=2;
+            if (depth>=10) r=3;
+            int reducedDepth = depth - 1 - r;
+            if (reducedDepth < 0) reducedDepth = 0;
+            score = -alphaBeta(board, -alpha-1, -alpha, reducedDepth, ply+1);
+            if (score > alpha) {
+                score = -alphaBeta(board, -beta, -alpha, depth-1, ply+1);
+            }
+        } else {
+            score = -alphaBeta(board, -beta, -alpha, depth-1, ply+1);
+        }
         unmakeMove(board,ply);
         if (score>bestValue) {
             bestValue=score;

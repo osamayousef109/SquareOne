@@ -77,7 +77,7 @@ constexpr U64 rookAttackRay(int sq, U64 occ) {
 }
 void initMagic();
 constexpr int MAX_MOVES=256;
-constexpr int MAX_PLY=32;
+constexpr int MAX_PLY=64;
 inline Move moves[MAX_PLY][MAX_MOVES];
 inline History history[MAX_PLY][MAX_MOVES];
 inline int moveCount[MAX_PLY];
