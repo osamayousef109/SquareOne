@@ -84154,15 +84154,9 @@ namespace __detail
 
 
 # 1 "C:/Users/MSi/CLionProjects/Chussy/types.h" 1
+# 9 "C:/Users/MSi/CLionProjects/Chussy/types.h"
 
-
-
-
-
-
-
-
-# 8 "C:/Users/MSi/CLionProjects/Chussy/types.h"
+# 9 "C:/Users/MSi/CLionProjects/Chussy/types.h"
 using U64 = uint64_t;
 using Move = uint32_t;
 constexpr uint8_t FLAG_CAPTURE = 1 << 0;
@@ -84172,6 +84166,10 @@ constexpr uint8_t FLAG_PROMOTION = 1 << 3;
 enum Piece {PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING,EMPTY};
 enum Color {WHITE,BLACK,NO_COLOR};
 inline uint16_t generation=0;
+inline auto start=std::chrono::high_resolution_clock::now();
+constexpr int TIME_LIMIT=5000;
+inline Move prevBestMove=-1;
+
 struct History {
     Move move;
     int captured;
@@ -84188,6 +84186,11 @@ inline int fromSquare(Move m) { return (int)m & 0x3F; }
 inline int toSquare(Move m) { return (int)(m >> 6) & 0x3F; }
 inline int promotionPiece(Move m) { return (int)(m >> 12) & 0xF; }
 inline int moveFlags(Move m) { return (int)(m >> 16) & 0x3F; }
+inline bool outOfTime() {
+    auto now=std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double,std::milli> elapsed=now-start;
+    return elapsed.count()>=TIME_LIMIT;
+}
 # 5 "C:/Users/MSi/CLionProjects/Chussy/attacks.h" 2
 constexpr U64 rankMask(int r) {
  return 0xFFULL << (8*r);
@@ -104180,6 +104183,10 @@ inline void order_moves(Board& board,int ply) {
     }
 }
 inline int quiesce(Board& board,int alpha,int beta,int ply) {
+    if (outOfTime()) {
+        bestMove=prevBestMove;
+        return -INF;
+    }
     int standPat=eval(board,ply);
     if (ply>=63) return standPat;
     if (standPat>=beta)
@@ -104208,6 +104215,10 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
             makeMove(board,move,ply);
             int score=-quiesce(board,-beta,-alpha,ply+1);
             unmakeMove(board,ply);
+            if (outOfTime()) {
+                bestMove=prevBestMove;
+                return -INF;
+            }
             if (score>=beta)
                 return score;
             if (score>alpha)
@@ -104217,6 +104228,10 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
     return alpha;
 }
 inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
+    if (outOfTime()) {
+        bestMove=prevBestMove;
+        return -INF;
+    }
     if (ply==0) {
         clear_history();
         clear_killers();
@@ -104257,9 +104272,17 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
         makeNullMove(board);
         int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
         undoNullMove(board,oldEP);
+        if (outOfTime()) {
+            bestMove=prevBestMove;
+            return -INF;
+        }
         if (score>=beta) {
             if (depth-1>2) {
                 int verify=alphaBeta(board,alpha,beta,depth-1,ply+1);
+                if (outOfTime()) {
+                    bestMove=prevBestMove;
+                    return -INF;
+                }
                 if (verify>=beta) return verify;
             } else {
                 return score;
@@ -104292,6 +104315,10 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
             score = -alphaBeta(board, -beta, -alpha, depth-1, ply+1);
         }
         unmakeMove(board,ply);
+        if (outOfTime()) {
+            bestMove=prevBestMove;
+            return -INF;
+        }
         if (score>bestValue) {
             bestValue=score;
             best=moves[ply][i];
@@ -104339,16 +104366,27 @@ inline void play(Board& board) {
     int prevScore=0;
     int score=-1;
     bestMove=-1;
-    for (int depth=1;depth<=12;depth++) {
+    start=std::chrono::high_resolution_clock::now();
+    for (int depth=1;depth<=50;depth++) {
         int delta=50;
         int alpha=prevScore-delta;
         int beta=prevScore+delta;
         while (true) {
             score=alphaBeta(board,alpha,beta,depth,0);
+            if (outOfTime()) {
+                bestMove=prevBestMove;
+                score=prevScore;
+                break;
+            }
             if (score<=alpha) {
                 delta*=2;
                 if (delta>MATE) {
                     score=alphaBeta(board, -INF, INF, depth, 0);
+                    if (outOfTime()) {
+                        bestMove=prevBestMove;
+                        score=prevScore;
+                        break;
+                    }
                     break;
                 }
                 alpha=prevScore-delta;
@@ -104358,6 +104396,11 @@ inline void play(Board& board) {
                 delta*=2;
                 if (delta>MATE) {
                     score=alphaBeta(board,-INF,INF,depth,0);
+                    if (outOfTime()) {
+                        bestMove=prevBestMove;
+                        score=prevScore;
+                        break;
+                    }
                     break;
                 }
                 beta=prevScore+delta;
@@ -104366,6 +104409,7 @@ inline void play(Board& board) {
             prevScore=score;
             break;
         }
+        prevBestMove=bestMove;
     }
     std::cout << -score << std::endl;
     std::cout << fromSquare(bestMove) << " " << toSquare(bestMove) << std::endl;

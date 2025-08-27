@@ -162,6 +162,10 @@ inline void order_moves(Board& board,int ply) {
     }
 }
 inline int quiesce(Board& board,int alpha,int beta,int ply) {
+    if (outOfTime()) {
+        bestMove=prevBestMove;
+        return -INF;
+    }
     int standPat=eval(board,ply);
     if (ply>=63) return standPat;
     if (standPat>=beta)
@@ -190,6 +194,10 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
             makeMove(board,move,ply);
             int score=-quiesce(board,-beta,-alpha,ply+1);
             unmakeMove(board,ply);
+            if (outOfTime()) {
+                bestMove=prevBestMove;
+                return -INF;
+            }
             if (score>=beta)
                 return score;
             if (score>alpha)
@@ -199,6 +207,10 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
     return alpha;
 }
 inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
+    if (outOfTime()) {
+        bestMove=prevBestMove;
+        return -INF;
+    }
     if (ply==0) {
         clear_history();
         clear_killers();
@@ -239,9 +251,17 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
         makeNullMove(board);
         int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
         undoNullMove(board,oldEP);
+        if (outOfTime()) {
+            bestMove=prevBestMove;
+            return -INF;
+        }
         if (score>=beta) {
             if (depth-1>2) {
                 int verify=alphaBeta(board,alpha,beta,depth-1,ply+1);
+                if (outOfTime()) {
+                    bestMove=prevBestMove;
+                    return -INF;
+                }
                 if (verify>=beta) return verify;
             } else {
                 return score;
@@ -274,6 +294,10 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
             score = -alphaBeta(board, -beta, -alpha, depth-1, ply+1);
         }
         unmakeMove(board,ply);
+        if (outOfTime()) {
+            bestMove=prevBestMove;
+            return -INF;
+        }
         if (score>bestValue) {
             bestValue=score;
             best=moves[ply][i];

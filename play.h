@@ -22,16 +22,27 @@ inline void play(Board& board) {
     int prevScore=0;
     int score=-1;
     bestMove=-1;
-    for (int depth=1;depth<=12;depth++) {
+    start=std::chrono::high_resolution_clock::now();
+    for (int depth=1;depth<=50;depth++) {
         int delta=50;
         int alpha=prevScore-delta;
         int beta=prevScore+delta;
         while (true) {
             score=alphaBeta(board,alpha,beta,depth,0);
+            if (outOfTime()) {
+                bestMove=prevBestMove;
+                score=prevScore;
+                break;
+            }
             if (score<=alpha) {
                 delta*=2;
                 if (delta>MATE) {
                     score=alphaBeta(board, -INF, INF, depth, 0);
+                    if (outOfTime()) {
+                        bestMove=prevBestMove;
+                        score=prevScore;
+                        break;
+                    }
                     break;
                 }
                 alpha=prevScore-delta;
@@ -41,6 +52,11 @@ inline void play(Board& board) {
                 delta*=2;
                 if (delta>MATE) {
                     score=alphaBeta(board,-INF,INF,depth,0);
+                    if (outOfTime()) {
+                        bestMove=prevBestMove;
+                        score=prevScore;
+                        break;
+                    }
                     break;
                 }
                 beta=prevScore+delta;
@@ -49,6 +65,7 @@ inline void play(Board& board) {
             prevScore=score;
             break;
         }
+        prevBestMove=bestMove;
     }
     std::cout << -score << std::endl;
     std::cout << fromSquare(bestMove) << " " << toSquare(bestMove) << std::endl;
