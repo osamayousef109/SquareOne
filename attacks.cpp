@@ -2,6 +2,7 @@
 #include "attacks.h"
 #include "types.h"
 void initAttacks() {
+    precomputeLineBB();
     for (int sq=0;sq<64;sq++) {
         U64 nBB=0ULL;
         U64 wpBB=0ULL;

@@ -85,7 +85,7 @@ inline int getLeastValuableAttacker(U64 attackers, int side, U64 temp_piece[2][6
 }
 
 inline int see(Board &board, int toSq, int targetType, int fromSq, int attackerType, int side) {
-    const int MAX_DEPTH =64;
+    const int MAX_DEPTH = 32;
     int gain[MAX_DEPTH];
     int d = 0;
     U64 from_bb = 1ULL << fromSq;
@@ -114,6 +114,29 @@ inline int see(Board &board, int toSq, int targetType, int fromSq, int attackerT
         attackers |= bishopAttacks(toSq, occ) & (temp_piece[side][BISHOP] | temp_piece[side][QUEEN]);
         attackers |= rookAttacks(toSq, occ) & (temp_piece[side][ROOK]     | temp_piece[side][QUEEN]);
         attackers |= kingAttacks[toSq] & temp_piece[side][KING];
+
+        int kingSq = board.kingPos[side];
+        U64 attackers_copy = attackers;
+
+        while (attackers_copy) {
+            int fromSq = __builtin_ctzll(attackers_copy);
+            U64 from_bb = 1ULL << fromSq;
+
+            U64 occ_without_attacker = occ & ~from_bb;
+            U64 enemyRooksQueens   = temp_piece[side^1][ROOK]  | temp_piece[side^1][QUEEN];
+            U64 enemyBishopsQueens = temp_piece[side^1][BISHOP] | temp_piece[side^1][QUEEN];
+
+            if ((rookAttacks(kingSq, occ_without_attacker) & enemyRooksQueens) ||
+                (bishopAttacks(kingSq, occ_without_attacker) & enemyBishopsQueens))
+            {
+                if ((LineBB[kingSq][toSq] & from_bb) == 0) {
+                    attackers &= ~from_bb;
+                }
+            }
+            attackers_copy &= attackers_copy - 1;
+        }
+
+
         int nextAttackerSq = -1;
         int nextAttackerType = -1;
         nextAttackerSq = getLeastValuableAttacker(attackers, side, temp_piece, nextAttackerType);
@@ -145,9 +168,9 @@ inline void order_moves(Board& board,int ply) {
             int toPiece=board.mailbox[t];
             int score=see(board,t,toPiece,f,fromPiece,board.currentColor);
             if (score>=0)
-                moveScores[ply][i]=2000000+MVV_LVA[fromPiece][toPiece];
+                moveScores[ply][i]=2000000+MVV_LVA[toPiece][fromPiece];
             else
-                moveScores[ply][i]=-1000000+MVV_LVA[fromPiece][toPiece];
+                moveScores[ply][i]=-1000000+MVV_LVA[toPiece][fromPiece];
             continue;
         } else if ((m==killer[ply][0])) {
             moveScores[ply][i] = KILLER1_SCORE;
@@ -240,31 +263,33 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
         }
     }
     bool inCheck=isAttacked(board, board.currentColor, board.kingPos[board.currentColor]);
-    int count = 0;
-    count += ((board.piece[WHITE][PAWN]|board.piece[BLACK][PAWN])!=0ULL);
-    count += ((board.piece[WHITE][KNIGHT]|board.piece[BLACK][KNIGHT])!=0ULL);
-    count += ((board.piece[WHITE][BISHOP]|board.piece[BLACK][BISHOP])!=0ULL);
-    count += ((board.piece[WHITE][ROOK]|board.piece[BLACK][ROOK])!=0ULL);
-    bool queen=((board.piece[WHITE][QUEEN]|board.piece[BLACK][QUEEN])!=0ULL);
-    if (!inCheck&&depth>=(NULL_R+1)&&count<=2&&!queen&&moveCount[ply]>=3) {
-        int oldEP=board.enpassant;
-        makeNullMove(board);
-        int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
-        undoNullMove(board,oldEP);
-        if (outOfTime()) {
-            bestMove=prevBestMove;
-            return -INF;
-        }
-        if (score>=beta) {
-            if (depth-1>2) {
-                int verify=alphaBeta(board,alpha,beta,depth-1,ply+1);
-                if (outOfTime()) {
-                    bestMove=prevBestMove;
-                    return -INF;
+    if (!inCheck&&depth>=(NULL_R+1)) {
+        int count = 0;
+        count += ((board.piece[WHITE][PAWN]|board.piece[BLACK][PAWN])!=0ULL);
+        count += ((board.piece[WHITE][KNIGHT]|board.piece[BLACK][KNIGHT])!=0ULL);
+        count += ((board.piece[WHITE][BISHOP]|board.piece[BLACK][BISHOP])!=0ULL);
+        count += ((board.piece[WHITE][ROOK]|board.piece[BLACK][ROOK])!=0ULL);
+        bool queen=((board.piece[WHITE][QUEEN]|board.piece[BLACK][QUEEN])!=0ULL);
+        if (!(count<=2&&!queen)){
+            int oldEP=board.enpassant;
+            makeNullMove(board);
+            int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
+            undoNullMove(board,oldEP);
+            if (outOfTime()) {
+                bestMove=prevBestMove;
+                return -INF;
+            }
+            if (score>=beta) {
+                if (depth-2>2) {
+                    int verify=alphaBeta(board,alpha,beta,depth-2,ply+1);
+                    if (outOfTime()) {
+                        bestMove=prevBestMove;
+                        return -INF;
+                    }
+                    if (verify>=beta) return verify;
+                } else {
+                    return beta;
                 }
-                if (verify>=beta) return verify;
-            } else {
-                return score;
             }
         }
     }
