@@ -76,7 +76,7 @@ inline void play(Board& board) {
         finalDepth=depth;
     }
     std::cout << finalDepth << std::endl;
-    std::cout << -score << std::endl;
+    std::cout << score << std::endl;
     std::cout << fromSquare(bestMove) << " " << toSquare(bestMove) << std::endl;
     makeMove(board,bestMove,0);
 }

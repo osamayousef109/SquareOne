@@ -11,6 +11,7 @@ int main() {
     initMagic();
     Board board;
     board.initZobrist();
+    init_eval(board);
     while(true) {
         play(board);
     }

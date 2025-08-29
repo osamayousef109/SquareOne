@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Release",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "C:/Users/MSi/CLionProjects/Chussy/cmake-build-release",
+	"dir-cur-src" : "C:/Users/MSi/CLionProjects/Chussy",
+	"dir-top-bld" : "C:/Users/MSi/CLionProjects/Chussy/cmake-build-release",
+	"dir-top-src" : "C:/Users/MSi/CLionProjects/Chussy",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/MSi/CLionProjects/Chussy/cmake-build-release/CMakeFiles/ChessEngine.dir"
+}

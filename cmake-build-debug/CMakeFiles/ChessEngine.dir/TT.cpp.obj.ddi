@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\ChessEngine.dir\\TT.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

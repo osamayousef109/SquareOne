@@ -3,8 +3,10 @@
 #define MOVE_H
 #include "types.h"
 #include "bitboards.h"
+#include "evaluation.h"
 inline void makeMove(Board& board,Move move,int ply) {
     History h{};
+    EvalDelta d{0,0,0};
     int from=fromSquare(move);
     int to=toSquare(move);
     int promo=promotionPiece(move);
@@ -16,6 +18,10 @@ inline void makeMove(Board& board,Move move,int ply) {
     h.prevEnpassant=board.enpassant;
     h.captureSquare=to;
     h.zobristKey=board.zobristKey;
+    d.mg   -= mg_table[color][piece][from];
+    d.eg   -= eg_table[color][piece][from];
+    d.mg   += mg_table[color][piece][to];
+    d.eg   += eg_table[color][piece][to];
     if (board.ep_is_capturable(board.enpassant, color)) {
         board.zobristKey ^= board.enpassantFile[board.enpassant & 7];
     }
@@ -29,6 +35,9 @@ inline void makeMove(Board& board,Move move,int ply) {
         board.piece[enemy][h.captured]&=~(toBB);
         board.occupied[enemy]&=~(toBB);
         board.zobristKey^=board.pieceKey[enemy][h.captured][to];
+        d.mg   -= mg_table[enemy][h.captured][to];
+        d.eg   -= eg_table[enemy][h.captured][to];
+        d.phase -= gamephaseInc[h.captured];
     }
     board.mailbox[to]=piece;
     board.mailbox[from]=EMPTY;
@@ -51,6 +60,9 @@ inline void makeMove(Board& board,Move move,int ply) {
         board.piece[enemy][PAWN]&=~backBB;
         board.occupied[enemy]&=~backBB;
         board.zobristKey^=board.pieceKey[enemy][PAWN][back];
+        d.mg   -= mg_table[enemy][PAWN][back];
+        d.eg   -= eg_table[enemy][PAWN][back];
+        d.phase -= gamephaseInc[PAWN];
     }
     if (flag&(FLAG_CASTLE)) {
         if (to>from) {
@@ -68,6 +80,10 @@ inline void makeMove(Board& board,Move move,int ply) {
             board.occupied[color]|=finBB;
             board.zobristKey^=board.pieceKey[color][ROOK][end];
             board.zobristKey^=board.pieceKey[color][ROOK][end-2];
+            d.mg   -= mg_table[color][ROOK][end];
+            d.eg   -= eg_table[color][ROOK][end];
+            d.mg   += mg_table[color][ROOK][end-2];
+            d.eg   += eg_table[color][ROOK][end-2];
         }else {
             int end=0;
             if (color) end=56;
@@ -83,6 +99,10 @@ inline void makeMove(Board& board,Move move,int ply) {
             board.occupied[color]|=finBB;
             board.zobristKey^=board.pieceKey[color][ROOK][end];
             board.zobristKey^=board.pieceKey[color][ROOK][end+3];
+            d.mg   -= mg_table[color][ROOK][end];
+            d.eg   -= eg_table[color][ROOK][end];
+            d.mg   += mg_table[color][ROOK][end+3];
+            d.eg   += eg_table[color][ROOK][end+3];
         }
     }
     if (promo) {
@@ -91,6 +111,12 @@ inline void makeMove(Board& board,Move move,int ply) {
         board.piece[color][promo]|=toBB;
         board.zobristKey^=board.pieceKey[color][piece][to];
         board.zobristKey^=board.pieceKey[color][promo][to];
+        d.mg   -= mg_table[color][PAWN][to];
+        d.eg   -= eg_table[color][PAWN][to];
+        d.phase -= gamephaseInc[PAWN];
+
+        d.mg   += mg_table[color][promo][to];
+        d.eg   += eg_table[color][promo][to];
     }
     if (piece!=PAWN&&!(flag&(FLAG_CAPTURE)))
         board.halfMoveClock++;
@@ -120,6 +146,10 @@ inline void makeMove(Board& board,Move move,int ply) {
         board.enpassant=-1;
     if (board.ep_is_capturable(board.enpassant,enemy))
         board.zobristKey^=board.enpassantFile[board.enpassant&7];
+    h.d=d;
+    mg_score += d.mg;
+    eg_score += d.eg;
+    phase   += d.phase;
     history[ply][historyCount[ply]++]=h;
     board.empty = ~board.allOccupied;
     board.zobristKey^=board.colorKey;
@@ -194,6 +224,9 @@ inline void unmakeMove(Board& board,int ply) {
     board.empty=~board.allOccupied;
     board.zobristKey=h.zobristKey;
     board.currentColor=(Color)(1-board.currentColor);
+    mg_score -= h.d.mg;
+    eg_score -= h.d.eg;
+    phase   -= h.d.phase;
 }
 inline void addMove(Board& board,int from,int to,int promo,bool castle,bool enpassant,int ply) {
     int flag=0;
@@ -205,7 +238,6 @@ inline void addMove(Board& board,int from,int to,int promo,bool castle,bool enpa
     }
     if (promo)
         flag|=FLAG_PROMOTION;
-    int pieceMoved=board.mailbox[from];
     int pieceTaken=board.mailbox[to];
     int color=board.currentColor;
     if (pieceTaken!=EMPTY) {

@@ -95,7 +95,7 @@ inline int see(Board &board, int toSq, int targetType, int fromSq, int attackerT
         for (int p = 0; p < 6; ++p)
             temp_piece[s][p] = board.piece[s][p];
     U64 occ = board.allOccupied;
-    gain[d] = pieceValue[targetType];
+    gain[d] = mg_value[targetType];
     int opponent = side ^ 1;
     temp_piece[opponent][targetType] &= ~to_bb;
     temp_piece[side][attackerType] &= ~from_bb;
@@ -106,7 +106,7 @@ inline int see(Board &board, int toSq, int targetType, int fromSq, int attackerT
         side ^= 1;
         d++;
         if (d >= MAX_DEPTH - 1) break;
-        gain[d] = pieceValue[pieceOnSqType]-gain[d-1];
+        gain[d] = mg_value[pieceOnSqType]-gain[d-1];
         U64 attackers = 0ULL;
 
         attackers |= pawnAttacks[side^1][toSq] & temp_piece[side][PAWN];
@@ -189,7 +189,7 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
         bestMove=prevBestMove;
         return -INF;
     }
-    int standPat=eval(board,ply);
+    int standPat=eval(board);
     if (ply>=63) return standPat;
     if (standPat>=beta)
         return standPat;

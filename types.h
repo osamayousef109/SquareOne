@@ -18,7 +18,7 @@ inline uint16_t generation=0;
 inline auto start=std::chrono::high_resolution_clock::now();
 constexpr int TIME_LIMIT=5000;
 inline Move prevBestMove=-1;
-
+struct EvalDelta { int mg, eg, phase; };
 struct History {
     Move move;
     int captured;
@@ -27,6 +27,7 @@ struct History {
     int captureSquare;
     int halfMoveClock;
     U64 zobristKey;
+    EvalDelta d;
 };
 inline Move make_move(int from,int to,int promo=0,int flags=0) {
     return (from) | (to << 6) | (promo << 12) | (flags << 16);
