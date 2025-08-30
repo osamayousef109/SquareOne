@@ -9,6 +9,35 @@ constexpr int INF=1e7;
 constexpr int MATE=32000;
 constexpr int mg_value[6] = { 82, 337, 365, 477, 1025,  0};
 constexpr int eg_value[6] = { 94, 281, 297, 512,  936,  0};
+inline int file_of(int sq) { return sq & 7; }
+inline int rank_of(int sq) { return sq >> 3; }
+
+// Central areas
+static constexpr U64 CENTER_4 =
+    (1ULL<<27)|(1ULL<<28)|(1ULL<<35)|(1ULL<<36);
+static constexpr U64 CENTER_16 =
+    ((1ULL<<18)|(1ULL<<19)|(1ULL<<20)|(1ULL<<21)|
+     (1ULL<<26)|(1ULL<<27)|(1ULL<<28)|(1ULL<<29)|
+     (1ULL<<34)|(1ULL<<35)|(1ULL<<36)|(1ULL<<37)|
+     (1ULL<<42)|(1ULL<<43)|(1ULL<<44)|(1ULL<<45));
+
+// ---------- Tapered Evaluation Constants ----------
+// Each feature now has a middlegame (MG) and endgame (EG) value.
+constexpr int ISOLATED_PAWN_PENALTY[2] = {10, 20}; // MG, EG
+constexpr int DOUBLED_PAWN_PENALTY[2]  = {15, 25}; // MG, EG
+constexpr int PASSED_PAWN_BONUS[2]     = {20, 50}; // MG, EG
+constexpr int KING_PAWN_SHIELD_BONUS[2]= {15, 5};  // MG, EG
+constexpr int KING_ATTACKER_PENALTY[2] = {40, 10}; // MG, EG
+constexpr int ROOK_OPEN_FILE_BONUS[2]  = {25, 15}; // MG, EG
+constexpr int ROOK_SEMIOPEN_FILE_BONUS[2] = {15, 10}; // MG, EG
+constexpr int BISHOP_PAIR_BONUS[2]     = {50, 60}; // MG, EG
+constexpr int CENTER_CONTROL_BONUS[2]  = {8, 4};   // MG, EG
+
+// Pre-computed masks
+inline U64 allForwardRanksMask[2][64]; // [color][square]
+inline U64 kingFrontPawnShield[64];
+inline U64 kingBackPawnShield[64];
+
 
 constexpr int mg_pawn_table[64] = {
       0,   0,   0,   0,   0,   0,  0,   0,
@@ -179,8 +208,125 @@ inline int mg_score;
 inline int eg_score;
 inline int phase;
 inline int maxPhase;
+inline U64 attacksTo(const Board& board, int toSq, int side) {
+    U64 attackers = 0ULL;
+    U64 occ = board.allOccupied;
+    attackers |= pawnAttacks[side^1][toSq] & board.piece[side][PAWN];
+    attackers |= knightAttacks[toSq] & board.piece[side][KNIGHT];
+    attackers |= bishopAttacks(toSq, occ) & (board.piece[side][BISHOP] | board.piece[side][QUEEN]);
+    attackers |= rookAttacks(toSq, occ) & (board.piece[side][ROOK]     | board.piece[side][QUEEN]);
+    attackers |= kingAttacks[toSq] & board.piece[side][KING];
+    return attackers;
+}
+inline void pawn_structure_score(const Board& board, int color, int& mg, int& eg) {
+    U64 pawns = board.piece[color][PAWN];
+    U64 enemyPawns = board.piece[color^1][PAWN];
+
+    for (int f=0; f<8; ++f) {
+        int cnt = __builtin_popcountll(pawns & fileMask(f));
+        if (cnt > 1) {
+            mg -= DOUBLED_PAWN_PENALTY[0] * (cnt - 1);
+            eg -= DOUBLED_PAWN_PENALTY[1] * (cnt - 1);
+        }
+    }
+
+    U64 temp = pawns;
+    while (temp) {
+        int sq = __builtin_ctzll(temp);
+        temp &= temp-1;
+        int f = file_of(sq);
+
+        if ((((f > 0) ? fileMask(f-1) : 0ULL) | ((f < 7) ? fileMask(f+1) : 0ULL)) & pawns == 0) {
+            mg -= ISOLATED_PAWN_PENALTY[0];
+            eg -= ISOLATED_PAWN_PENALTY[1];
+        }
+
+        U64 forward_mask = allForwardRanksMask[color][sq];
+        U64 enemy_zone = forward_mask & (((f > 0) ? fileMask(f-1) : 0ULL) | fileMask(f) | ((f < 7) ? fileMask(f+1) : 0ULL));
+        if ((enemyPawns & enemy_zone) == 0) {
+            mg += PASSED_PAWN_BONUS[0];
+            eg += PASSED_PAWN_BONUS[1];
+        }
+    }
+}
+
+inline void king_safety_score(const Board& board, int color, int& mg, int& eg) {
+    int kingSq = __builtin_ctzll(board.piece[color][KING]);
+    if (kingSq < 0 || kingSq > 63) return;
+
+    int shield_count = 0;
+    U64 king_front_span = (color == WHITE) ? kingFrontPawnShield[kingSq] : kingBackPawnShield[kingSq];
+    shield_count = __builtin_popcountll(board.piece[color][PAWN] & king_front_span);
+    mg += KING_PAWN_SHIELD_BONUS[0] * shield_count;
+    eg += KING_PAWN_SHIELD_BONUS[1] * shield_count;
+
+    // *** BUG FIX ***: We must find attackers from the enemy side (color^1)
+    U64 attackers_bb = attacksTo(board, kingSq, color^1);
+    int num_attackers = __builtin_popcountll(attackers_bb);
+    mg -= KING_ATTACKER_PENALTY[0] * num_attackers;
+    eg -= KING_ATTACKER_PENALTY[1] * num_attackers;
+}
+
+inline void piece_activity_score(const Board& board, int color, int& mg, int& eg) {
+    // Rooks
+    U64 rooks = board.piece[color][ROOK];
+    while (rooks) {
+        int sq = __builtin_ctzll(rooks);
+        rooks &= rooks-1;
+        U64 file = fileMask(file_of(sq));
+        if ((board.piece[color][PAWN] & file) == 0) {
+            if ((board.piece[color^1][PAWN] & file) == 0) {
+                mg += ROOK_OPEN_FILE_BONUS[0];
+                eg += ROOK_OPEN_FILE_BONUS[1];
+            } else {
+                mg += ROOK_SEMIOPEN_FILE_BONUS[0];
+                eg += ROOK_SEMIOPEN_FILE_BONUS[1];
+            }
+        }
+    }
+
+    // Bishop Pair
+    if (__builtin_popcountll(board.piece[color][BISHOP]) >= 2) {
+        mg += BISHOP_PAIR_BONUS[0];
+        eg += BISHOP_PAIR_BONUS[1];
+    }
+
+    // Center Control
+    int center_pawns = __builtin_popcountll(board.piece[color][PAWN] & CENTER_16);
+    int center_pieces = __builtin_popcountll(board.occupied[color] & CENTER_16);
+    mg += (center_pawns * 2 + center_pieces) * CENTER_CONTROL_BONUS[0];
+    eg += (center_pawns * 2 + center_pieces) * CENTER_CONTROL_BONUS[1];
+}
+inline void init_masks() {
+
+    for (int sq = 0; sq < 64; ++sq) {
+        allForwardRanksMask[WHITE][sq] = 0ULL;
+        for (int r = rank_of(sq) + 1; r < 8; ++r) {
+            allForwardRanksMask[WHITE][sq] |= rankMask(r);
+        }
+
+        allForwardRanksMask[BLACK][sq] = 0ULL;
+        for (int r = rank_of(sq) - 1; r >= 0; --r) {
+            allForwardRanksMask[BLACK][sq] |= rankMask(r);
+        }
+
+        U64 king_bb = 1ULL << sq;
+        int f = file_of(sq);
+
+        U64 front_shield = (king_bb << 8);
+        if (f > 0) front_shield |= (king_bb << 7);
+        if (f < 7) front_shield |= (king_bb << 9);
+        kingFrontPawnShield[sq] = front_shield;
+
+        U64 back_shield = (king_bb >> 8);
+        if (f > 0) back_shield |= (king_bb >> 9);
+        if (f < 7) back_shield |= (king_bb >> 7);
+        kingBackPawnShield[sq] = back_shield;
+    }
+}
 inline void init_eval(Board& board) {
     init_tables();
+    init_masks();
     mg_score = 0; eg_score = 0; phase = 0; maxPhase=0;
     U64 occ = board.allOccupied;
     while (occ) {
@@ -196,14 +342,33 @@ inline void init_eval(Board& board) {
 }
 
 inline int eval(Board& board) {
-    int mg = mg_score;
-    int eg = eg_score;
+    // 1. Get base scores (incrementally updated by make/unmake)
+    int total_mg = mg_score;
+    int total_eg = eg_score;
+
+    // 2. Calculate scores for each feature for both sides
+    int mg_w = 0, eg_w = 0, mg_b = 0, eg_b = 0;
+    pawn_structure_score(board, WHITE, mg_w, eg_w);
+    pawn_structure_score(board, BLACK, mg_b, eg_b);
+    king_safety_score(board, WHITE, mg_w, eg_w);
+    king_safety_score(board, BLACK, mg_b, eg_b);
+    piece_activity_score(board, WHITE, mg_w, eg_w);
+    piece_activity_score(board, BLACK, mg_b, eg_b);
+
+    // 3. Add feature scores to the total
+    total_mg += (mg_w - mg_b);
+    total_eg += (eg_w - eg_b);
+
+    // 4. Taper the final score
     int current_phase = phase;
-    int mgWeight = current_phase;
-    int egWeight = maxPhase - current_phase;
-    int base = (mg * mgWeight + eg * egWeight) / maxPhase;
-    int perspective = (board.currentColor == WHITE) ? 1 : -1;
-    return base*perspective;
+    if (current_phase > maxPhase) current_phase = maxPhase; // Cap phase for promotions
+
+    // Avoid division by zero on boards with only kings
+    if (maxPhase == 0) return 0;
+
+    int final_score = (total_mg * current_phase + total_eg * (maxPhase - current_phase)) / maxPhase;
+
+    return (board.currentColor == WHITE) ? final_score : -final_score;
 }
 
 #endif //EVALUATION_H

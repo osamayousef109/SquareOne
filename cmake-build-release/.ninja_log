@@ -1,0 +1,19 @@
+# ninja log v6
+12	235	7782978888975644	CMakeFiles/ChessEngine.dir/attacks.cpp.obj.ddi	6b328a9c7c231a33
+21	237	7782978889060833	CMakeFiles/ChessEngine.dir/TT.cpp.obj.ddi	684d8c74de1e1a1d
+8	255	7782978888945667	CMakeFiles/ChessEngine.dir/bitboards.cpp.obj.ddi	62dea5b147dc77d7
+3	258	7782978888890216	CMakeFiles/ChessEngine.dir/main.cpp.obj.ddi	5afa2fc69e8984c4
+15	267	7782978889020749	CMakeFiles/ChessEngine.dir/test.cpp.obj.ddi	8981238eaf958f46
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/CXX.dd	6c7a99d8dec96bd8
+267	294	7782978891765926	C:/Users/MSi/CLionProjects/Chussy/cmake-build-release/CMakeFiles/ChessEngine.dir/CXXModules.json	6c7a99d8dec96bd8
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/main.cpp.obj.modmap	6c7a99d8dec96bd8
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/bitboards.cpp.obj.modmap	6c7a99d8dec96bd8
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/attacks.cpp.obj.modmap	6c7a99d8dec96bd8
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/test.cpp.obj.modmap	6c7a99d8dec96bd8
+267	294	7782978891765926	CMakeFiles/ChessEngine.dir/TT.cpp.obj.modmap	6c7a99d8dec96bd8
+313	1279	7782978891986516	CMakeFiles/ChessEngine.dir/TT.cpp.obj	a9032e4e1b8589d4
+301	1335	7782978891871010	CMakeFiles/ChessEngine.dir/attacks.cpp.obj	12430cfe65519de9
+299	1439	7782978891841010	CMakeFiles/ChessEngine.dir/bitboards.cpp.obj	91bf7ffd57091b2
+307	1443	7782978891926382	CMakeFiles/ChessEngine.dir/test.cpp.obj	948c6aa010b07300
+295	1540	7782978891810960	CMakeFiles/ChessEngine.dir/main.cpp.obj	19276890879b0485
+1540	3649	7782978904263681	ChessEngine.exe	24e95757e14b22db
