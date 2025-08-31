@@ -14,8 +14,10 @@
 
 
 
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 1 3
-# 40 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 1 3
+# 50 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 51 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 1 3
 # 37 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 #pragma GCC diagnostic push
@@ -117,350 +119,254 @@ namespace __gnu_cxx
 
 
 #pragma GCC diagnostic pop
-# 41 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 2 3
+# 52 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 2 3
+# 51 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 2 3
 
-
-
-
-
-
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 1 3 4
-# 9 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 3 4
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-# 1 "C:/msys64/mingw64/include/stdint.h" 1 3 4
-# 28 "C:/msys64/mingw64/include/stdint.h" 3 4
-# 1 "C:/msys64/mingw64/include/crtdefs.h" 1 3 4
-# 10 "C:/msys64/mingw64/include/crtdefs.h" 3 4
-# 1 "C:/msys64/mingw64/include/corecrt.h" 1 3 4
-# 10 "C:/msys64/mingw64/include/corecrt.h" 3 4
-# 1 "C:/msys64/mingw64/include/_mingw.h" 1 3 4
-# 10 "C:/msys64/mingw64/include/_mingw.h" 3 4
-# 1 "C:/msys64/mingw64/include/_mingw_mac.h" 1 3 4
-# 108 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
-             
-# 117 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
-             
-# 326 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
-       
-# 405 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
-       
-# 11 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
-# 1 "C:/msys64/mingw64/include/_mingw_secapi.h" 1 3 4
-# 44 "C:/msys64/mingw64/include/_mingw_secapi.h" 3 4
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 1 3
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/new" 1 3
+# 43 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 1 3
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 3
 extern "C++" {
-template <bool __test, typename __dsttype>
-  struct __if_array;
-template <typename __dsttype>
-  struct __if_array <true, __dsttype> {
-    typedef __dsttype __type;
-};
-}
-# 12 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
-# 306 "C:/msys64/mingw64/include/_mingw.h" 3 4
-# 1 "C:/msys64/mingw64/include/vadefs.h" 1 3 4
-# 9 "C:/msys64/mingw64/include/vadefs.h" 3 4
-# 1 "C:/msys64/mingw64/include/_mingw.h" 1 3 4
-# 685 "C:/msys64/mingw64/include/_mingw.h" 3 4
-# 1 "C:/msys64/mingw64/include/sdks/_mingw_ddk.h" 1 3 4
-# 686 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
-# 10 "C:/msys64/mingw64/include/vadefs.h" 2 3 4
 
-
-
-
-#pragma pack(push,_CRT_PACKING)
-
-
-
-extern "C" {
-
-
-
-
-
-  typedef __builtin_va_list __gnuc_va_list;
-
-
-
-
-
-
-  typedef __gnuc_va_list va_list;
-# 99 "C:/msys64/mingw64/include/vadefs.h" 3 4
-}
-
-
-
-#pragma pack(pop)
-# 307 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
-# 592 "C:/msys64/mingw64/include/_mingw.h" 3 4
-extern "C" {
-# 604 "C:/msys64/mingw64/include/_mingw.h" 3 4
-void __attribute__((__cdecl__)) __debugbreak(void);
-extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __debugbreak(void)
+namespace std
 {
+# 61 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 3
+  class exception
+  {
+  public:
+    exception() noexcept { }
+    virtual ~exception() noexcept;
+
+    exception(const exception&) = default;
+    exception& operator=(const exception&) = default;
+    exception(exception&&) = default;
+    exception& operator=(exception&&) = default;
 
 
 
-  __asm__ __volatile__("int {$}3":);
 
-
+    virtual const char*
+    what() const noexcept;
+  };
 
 
 
 }
-# 625 "C:/msys64/mingw64/include/_mingw.h" 3 4
-void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code);
-extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code)
-{
-
-
-
-
-  __asm__ __volatile__("int {$}0x29"::"c"(code));
-
-
-
-
-
-
-  __builtin_unreachable();
-}
-# 665 "C:/msys64/mingw64/include/_mingw.h" 3 4
-const char *__mingw_get_crt_info (void);
-
 
 }
-# 11 "C:/msys64/mingw64/include/corecrt.h" 2 3 4
+# 44 "C:/msys64/mingw64/include/c++/15.2.0/new" 2 3
 
 
 
 
-#pragma pack(push,_CRT_PACKING)
-# 35 "C:/msys64/mingw64/include/corecrt.h" 3 4
-__extension__ typedef unsigned long long size_t;
-# 45 "C:/msys64/mingw64/include/corecrt.h" 3 4
-__extension__ typedef long long ssize_t;
 
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 50 "C:/msys64/mingw64/include/c++/15.2.0/new" 2 3
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wc++11-extensions"
 
+#pragma GCC visibility push(default)
 
-
-
-typedef size_t rsize_t;
-# 62 "C:/msys64/mingw64/include/corecrt.h" 3 4
-__extension__ typedef long long intptr_t;
-# 75 "C:/msys64/mingw64/include/corecrt.h" 3 4
-__extension__ typedef unsigned long long uintptr_t;
-# 88 "C:/msys64/mingw64/include/corecrt.h" 3 4
-__extension__ typedef long long ptrdiff_t;
-# 106 "C:/msys64/mingw64/include/corecrt.h" 3 4
-typedef unsigned short wint_t;
-typedef unsigned short wctype_t;
-
-
-
-
-
-typedef int errno_t;
-
-
-
-
-typedef long __time32_t;
-
-
-
-
-__extension__ typedef long long __time64_t;
-# 138 "C:/msys64/mingw64/include/corecrt.h" 3 4
-typedef __time64_t time_t;
-# 430 "C:/msys64/mingw64/include/corecrt.h" 3 4
-struct threadlocaleinfostruct;
-struct threadmbcinfostruct;
-typedef struct threadlocaleinfostruct *pthreadlocinfo;
-typedef struct threadmbcinfostruct *pthreadmbcinfo;
-struct __lc_time_data;
-
-typedef struct localeinfo_struct {
-  pthreadlocinfo locinfo;
-  pthreadmbcinfo mbcinfo;
-} _locale_tstruct,*_locale_t;
-
-
-
-typedef struct tagLC_ID {
-  unsigned short wLanguage;
-  unsigned short wCountry;
-  unsigned short wCodePage;
-} LC_ID,*LPLC_ID;
-
-
-
-
-typedef struct threadlocaleinfostruct {
-
-
-
-
-
-  int refcount;
-  unsigned int lc_codepage;
-  unsigned int lc_collate_cp;
-  unsigned long lc_handle[6];
-  LC_ID lc_id[6];
-  struct {
-    char *locale;
-    wchar_t *wlocale;
-    int *refcount;
-    int *wrefcount;
-  } lc_category[6];
-  int lc_clike;
-  int mb_cur_max;
-  int *lconv_intl_refcount;
-  int *lconv_num_refcount;
-  int *lconv_mon_refcount;
-  struct lconv *lconv;
-  int *ctype1_refcount;
-  unsigned short *ctype1;
-  const unsigned short *pctype;
-  const unsigned char *pclmap;
-  const unsigned char *pcumap;
-  struct __lc_time_data *lc_time_curr;
-
-} threadlocinfo;
-# 501 "C:/msys64/mingw64/include/corecrt.h" 3 4
-#pragma pack(pop)
-# 11 "C:/msys64/mingw64/include/crtdefs.h" 2 3 4
-# 29 "C:/msys64/mingw64/include/stdint.h" 2 3 4
-
-
-
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
-# 13 "C:/msys64/mingw64/include/stddef.h" 3 4
-extern "C" {
-
-
-
-
-  __attribute__ ((__dllimport__)) extern int *__attribute__((__cdecl__)) _errno(void);
-
-  errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
-  errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
-
-
-  __attribute__ ((__dllimport__)) extern unsigned long __attribute__((__cdecl__)) __threadid(void);
-
-  __attribute__ ((__dllimport__)) extern uintptr_t __attribute__((__cdecl__)) __threadhandle(void);
-
-
-}
-# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 441 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 3 4
-typedef struct {
-  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
-  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
-# 452 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 3 4
-} max_align_t;
-
-
-
-
-
-
-  typedef decltype(nullptr) nullptr_t;
-# 33 "C:/msys64/mingw64/include/stdint.h" 2 3 4
-
-
-typedef signed char int8_t;
-typedef unsigned char uint8_t;
-typedef short int16_t;
-typedef unsigned short uint16_t;
-typedef int int32_t;
-typedef unsigned uint32_t;
-__extension__ typedef long long int64_t;
-__extension__ typedef unsigned long long uint64_t;
-
-
-typedef signed char int_least8_t;
-typedef unsigned char uint_least8_t;
-typedef short int_least16_t;
-typedef unsigned short uint_least16_t;
-typedef int int_least32_t;
-typedef unsigned uint_least32_t;
-__extension__ typedef long long int_least64_t;
-__extension__ typedef unsigned long long uint_least64_t;
-
-
-
-
-
-typedef signed char int_fast8_t;
-typedef unsigned char uint_fast8_t;
-typedef short int_fast16_t;
-typedef unsigned short uint_fast16_t;
-typedef int int_fast32_t;
-typedef unsigned int uint_fast32_t;
-__extension__ typedef long long int_fast64_t;
-__extension__ typedef unsigned long long uint_fast64_t;
-
-
-__extension__ typedef long long intmax_t;
-__extension__ typedef unsigned long long uintmax_t;
-# 12 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 2 3 4
-#pragma GCC diagnostic pop
-# 48 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 2 3
-
+extern "C++" {
 
 namespace std
 {
 
-  using ::int8_t;
-  using ::int16_t;
-  using ::int32_t;
-  using ::int64_t;
 
-  using ::int_fast8_t;
-  using ::int_fast16_t;
-  using ::int_fast32_t;
-  using ::int_fast64_t;
 
-  using ::int_least8_t;
-  using ::int_least16_t;
-  using ::int_least32_t;
-  using ::int_least64_t;
 
-  using ::intmax_t;
-  using ::intptr_t;
 
-  using ::uint8_t;
-  using ::uint16_t;
-  using ::uint32_t;
-  using ::uint64_t;
 
-  using ::uint_fast8_t;
-  using ::uint_fast16_t;
-  using ::uint_fast32_t;
-  using ::uint_fast64_t;
+  class bad_alloc : public exception
+  {
+  public:
+    bad_alloc() throw() { }
 
-  using ::uint_least8_t;
-  using ::uint_least16_t;
-  using ::uint_least32_t;
-  using ::uint_least64_t;
 
-  using ::uintmax_t;
-  using ::uintptr_t;
-# 144 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 3
+    bad_alloc(const bad_alloc&) = default;
+    bad_alloc& operator=(const bad_alloc&) = default;
+
+
+
+
+    virtual ~bad_alloc() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+  class bad_array_new_length : public bad_alloc
+  {
+  public:
+    bad_array_new_length() throw() { }
+
+
+
+    virtual ~bad_array_new_length() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+
+  enum class align_val_t: size_t {};
+
+
+  struct nothrow_t
+  {
+
+    explicit nothrow_t() = default;
+
+  };
+
+  extern const nothrow_t nothrow;
+
+
+
+  typedef void (*new_handler)();
+
+
+
+  new_handler set_new_handler(new_handler) throw();
+
+
+
+  new_handler get_new_handler() noexcept;
+
 }
-# 8 "C:/Users/MSi/CLionProjects/Chussy/types.h" 2
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/chrono" 1 3
-# 45 "C:/msys64/mingw64/include/c++/15.2.0/chrono" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 1 3
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 1 3
-# 41 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 3
+# 137 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
+[[__nodiscard__]] void* operator new(std::size_t)
+ 
+  __attribute__((__externally_visible__, __malloc__));
+[[__nodiscard__]] void* operator new[](std::size_t)
+ 
+  __attribute__((__externally_visible__, __malloc__));
+void operator delete(void*) noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*) noexcept
+  __attribute__((__externally_visible__));
+
+void operator delete(void*, std::size_t)
+  noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*, std::size_t)
+  noexcept
+  __attribute__((__externally_visible__));
+
+[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+void operator delete(void*, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__));
+
+[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t)
+ 
+  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+void operator delete(void*, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete(void*, std::align_val_t, const std::nothrow_t&)
+ 
+  noexcept __attribute__((__externally_visible__));
+[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t)
+ 
+  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
+  noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+void operator delete[](void*, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete[](void*, std::align_val_t, const std::nothrow_t&)
+ 
+  noexcept __attribute__((__externally_visible__));
+
+void operator delete(void*, std::size_t, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete[](void*, std::size_t, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+# 205 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
+[[__nodiscard__]] inline
+void* operator new(std::size_t, void* __p)
+  noexcept
+{ return __p; }
+[[__nodiscard__]] inline
+void* operator new[](std::size_t, void* __p)
+  noexcept
+{ return __p; }
+
+
+
+
+inline void operator delete (void*, void*)
+  noexcept
+{ }
+inline void operator delete[](void*, void*)
+  noexcept
+{ }
+
+}
+
+namespace std
+{
+
+
+  template<typename _Tp>
+    [[nodiscard]] constexpr _Tp*
+    launder(_Tp* __p) noexcept
+    {
+      if constexpr (__is_same(const volatile _Tp, const volatile void))
+ static_assert(!__is_same(const volatile _Tp, const volatile void),
+        "std::launder argument must not be a void pointer");
+
+      else if constexpr (__is_function(_Tp))
+ static_assert(!__is_function(_Tp),
+        "std::launder argument must not be a function pointer");
+
+      else
+ return __builtin_launder(__p);
+      return nullptr;
+    }
+
+
+
+  inline constexpr size_t hardware_destructive_interference_size = 64;
+  inline constexpr size_t hardware_constructive_interference_size = 64;
+
+
+
+
+
+
+  struct destroying_delete_t
+  {
+    explicit destroying_delete_t() = default;
+  };
+
+  inline constexpr destroying_delete_t destroying_delete{};
+
+}
+
+#pragma GCC visibility pop
+#pragma GCC diagnostic pop
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h" 1 3
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 1 3
+# 37 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/type_traits" 1 3
 # 66 "C:/msys64/mingw64/include/c++/15.2.0/type_traits" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
@@ -3635,10 +3541,6907 @@ template<typename _Ret, typename _Fn, typename... _Args>
 
 }
 }
-# 42 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 2 3
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 2 3
+
+
+namespace std
+{
 
 
 
+
+
+
+
+  template<typename _Tp>
+    __attribute__((__always_inline__))
+    inline constexpr _Tp*
+    __addressof(_Tp& __r) noexcept
+    { return __builtin_addressof(__r); }
+# 69 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__,__gnu__::__always_inline__]]
+    constexpr _Tp&&
+    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+    { return static_cast<_Tp&&>(__t); }
+# 82 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__,__gnu__::__always_inline__]]
+    constexpr _Tp&&
+    forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
+    {
+      static_assert(!std::is_lvalue_reference<_Tp>::value,
+   "std::forward must not be used to convert an rvalue to an lvalue");
+      return static_cast<_Tp&&>(__t);
+    }
+# 135 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__,__gnu__::__always_inline__]]
+    constexpr typename std::remove_reference<_Tp>::type&&
+    move(_Tp&& __t) noexcept
+    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+
+
+  template<typename _Tp>
+    struct __move_if_noexcept_cond
+    : public __and_<__not_<is_nothrow_move_constructible<_Tp>>,
+                    is_copy_constructible<_Tp>>::type { };
+# 156 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__,__gnu__::__always_inline__]]
+    constexpr
+    __conditional_t<__move_if_noexcept_cond<_Tp>::value, const _Tp&, _Tp&&>
+    move_if_noexcept(_Tp& __x) noexcept
+    { return std::move(__x); }
+# 173 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__,__gnu__::__always_inline__]]
+    inline constexpr _Tp*
+    addressof(_Tp& __r) noexcept
+    { return std::__addressof(__r); }
+
+
+
+  template<typename _Tp>
+    const _Tp* addressof(const _Tp&&) = delete;
+
+
+  template <typename _Tp, typename _Up = _Tp>
+    constexpr
+    inline _Tp
+    __exchange(_Tp& __obj, _Up&& __new_val)
+    {
+      _Tp __old_val = std::move(__obj);
+      __obj = std::forward<_Up>(__new_val);
+      return __old_val;
+    }
+# 217 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
+  template<typename _Tp>
+    constexpr
+    inline
+
+    typename enable_if<__and_<__not_<__is_tuple_like<_Tp>>,
+         is_move_constructible<_Tp>,
+         is_move_assignable<_Tp>>::value>::type
+
+
+
+    swap(_Tp& __a, _Tp& __b)
+    noexcept(__and_<is_nothrow_move_constructible<_Tp>, is_nothrow_move_assignable<_Tp>>::value)
+
+    {
+
+
+
+
+      _Tp __tmp = std::move(__a);
+      __a = std::move(__b);
+      __b = std::move(__tmp);
+    }
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    constexpr
+    inline
+
+    typename enable_if<__is_swappable<_Tp>::value>::type
+
+
+
+    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+    noexcept(__is_nothrow_swappable<_Tp>::value)
+    {
+      for (size_t __n = 0; __n < _Nm; ++__n)
+ swap(__a[__n], __b[__n]);
+    }
+
+
+
+}
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 2 3
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 1 3
+# 37 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 1 3
+# 47 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 3
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 1 3 4
+# 9 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 3 4
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
+# 1 "C:/msys64/mingw64/include/stdint.h" 1 3 4
+# 28 "C:/msys64/mingw64/include/stdint.h" 3 4
+# 1 "C:/msys64/mingw64/include/crtdefs.h" 1 3 4
+# 10 "C:/msys64/mingw64/include/crtdefs.h" 3 4
+# 1 "C:/msys64/mingw64/include/corecrt.h" 1 3 4
+# 10 "C:/msys64/mingw64/include/corecrt.h" 3 4
+# 1 "C:/msys64/mingw64/include/_mingw.h" 1 3 4
+# 10 "C:/msys64/mingw64/include/_mingw.h" 3 4
+# 1 "C:/msys64/mingw64/include/_mingw_mac.h" 1 3 4
+# 108 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
+             
+# 117 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
+             
+# 326 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
+       
+# 405 "C:/msys64/mingw64/include/_mingw_mac.h" 3 4
+       
+# 11 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
+# 1 "C:/msys64/mingw64/include/_mingw_secapi.h" 1 3 4
+# 44 "C:/msys64/mingw64/include/_mingw_secapi.h" 3 4
+extern "C++" {
+template <bool __test, typename __dsttype>
+  struct __if_array;
+template <typename __dsttype>
+  struct __if_array <true, __dsttype> {
+    typedef __dsttype __type;
+};
+}
+# 12 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
+# 306 "C:/msys64/mingw64/include/_mingw.h" 3 4
+# 1 "C:/msys64/mingw64/include/vadefs.h" 1 3 4
+# 9 "C:/msys64/mingw64/include/vadefs.h" 3 4
+# 1 "C:/msys64/mingw64/include/_mingw.h" 1 3 4
+# 685 "C:/msys64/mingw64/include/_mingw.h" 3 4
+# 1 "C:/msys64/mingw64/include/sdks/_mingw_ddk.h" 1 3 4
+# 686 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
+# 10 "C:/msys64/mingw64/include/vadefs.h" 2 3 4
+
+
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+
+extern "C" {
+
+
+
+
+
+  typedef __builtin_va_list __gnuc_va_list;
+
+
+
+
+
+
+  typedef __gnuc_va_list va_list;
+# 99 "C:/msys64/mingw64/include/vadefs.h" 3 4
+}
+
+
+
+#pragma pack(pop)
+# 307 "C:/msys64/mingw64/include/_mingw.h" 2 3 4
+# 592 "C:/msys64/mingw64/include/_mingw.h" 3 4
+extern "C" {
+# 604 "C:/msys64/mingw64/include/_mingw.h" 3 4
+void __attribute__((__cdecl__)) __debugbreak(void);
+extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __debugbreak(void)
+{
+
+
+
+  __asm__ __volatile__("int {$}3":);
+
+
+
+
+
+}
+# 625 "C:/msys64/mingw64/include/_mingw.h" 3 4
+void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code);
+extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code)
+{
+
+
+
+
+  __asm__ __volatile__("int {$}0x29"::"c"(code));
+
+
+
+
+
+
+  __builtin_unreachable();
+}
+# 665 "C:/msys64/mingw64/include/_mingw.h" 3 4
+const char *__mingw_get_crt_info (void);
+
+
+}
+# 11 "C:/msys64/mingw64/include/corecrt.h" 2 3 4
+
+
+
+
+#pragma pack(push,_CRT_PACKING)
+# 35 "C:/msys64/mingw64/include/corecrt.h" 3 4
+__extension__ typedef unsigned long long size_t;
+# 45 "C:/msys64/mingw64/include/corecrt.h" 3 4
+__extension__ typedef long long ssize_t;
+
+
+
+
+
+
+typedef size_t rsize_t;
+# 62 "C:/msys64/mingw64/include/corecrt.h" 3 4
+__extension__ typedef long long intptr_t;
+# 75 "C:/msys64/mingw64/include/corecrt.h" 3 4
+__extension__ typedef unsigned long long uintptr_t;
+# 88 "C:/msys64/mingw64/include/corecrt.h" 3 4
+__extension__ typedef long long ptrdiff_t;
+# 106 "C:/msys64/mingw64/include/corecrt.h" 3 4
+typedef unsigned short wint_t;
+typedef unsigned short wctype_t;
+
+
+
+
+
+typedef int errno_t;
+
+
+
+
+typedef long __time32_t;
+
+
+
+
+__extension__ typedef long long __time64_t;
+# 138 "C:/msys64/mingw64/include/corecrt.h" 3 4
+typedef __time64_t time_t;
+# 430 "C:/msys64/mingw64/include/corecrt.h" 3 4
+struct threadlocaleinfostruct;
+struct threadmbcinfostruct;
+typedef struct threadlocaleinfostruct *pthreadlocinfo;
+typedef struct threadmbcinfostruct *pthreadmbcinfo;
+struct __lc_time_data;
+
+typedef struct localeinfo_struct {
+  pthreadlocinfo locinfo;
+  pthreadmbcinfo mbcinfo;
+} _locale_tstruct,*_locale_t;
+
+
+
+typedef struct tagLC_ID {
+  unsigned short wLanguage;
+  unsigned short wCountry;
+  unsigned short wCodePage;
+} LC_ID,*LPLC_ID;
+
+
+
+
+typedef struct threadlocaleinfostruct {
+
+
+
+
+
+  int refcount;
+  unsigned int lc_codepage;
+  unsigned int lc_collate_cp;
+  unsigned long lc_handle[6];
+  LC_ID lc_id[6];
+  struct {
+    char *locale;
+    wchar_t *wlocale;
+    int *refcount;
+    int *wrefcount;
+  } lc_category[6];
+  int lc_clike;
+  int mb_cur_max;
+  int *lconv_intl_refcount;
+  int *lconv_num_refcount;
+  int *lconv_mon_refcount;
+  struct lconv *lconv;
+  int *ctype1_refcount;
+  unsigned short *ctype1;
+  const unsigned short *pctype;
+  const unsigned char *pclmap;
+  const unsigned char *pcumap;
+  struct __lc_time_data *lc_time_curr;
+
+} threadlocinfo;
+# 501 "C:/msys64/mingw64/include/corecrt.h" 3 4
+#pragma pack(pop)
+# 11 "C:/msys64/mingw64/include/crtdefs.h" 2 3 4
+# 29 "C:/msys64/mingw64/include/stdint.h" 2 3 4
+
+
+
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
+# 13 "C:/msys64/mingw64/include/stddef.h" 3 4
+extern "C" {
+
+
+
+
+  __attribute__ ((__dllimport__)) extern int *__attribute__((__cdecl__)) _errno(void);
+
+  errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
+  errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
+
+
+  __attribute__ ((__dllimport__)) extern unsigned long __attribute__((__cdecl__)) __threadid(void);
+
+  __attribute__ ((__dllimport__)) extern uintptr_t __attribute__((__cdecl__)) __threadhandle(void);
+
+
+}
+# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
+# 441 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 452 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 3 4
+} max_align_t;
+
+
+
+
+
+
+  typedef decltype(nullptr) nullptr_t;
+# 33 "C:/msys64/mingw64/include/stdint.h" 2 3 4
+
+
+typedef signed char int8_t;
+typedef unsigned char uint8_t;
+typedef short int16_t;
+typedef unsigned short uint16_t;
+typedef int int32_t;
+typedef unsigned uint32_t;
+__extension__ typedef long long int64_t;
+__extension__ typedef unsigned long long uint64_t;
+
+
+typedef signed char int_least8_t;
+typedef unsigned char uint_least8_t;
+typedef short int_least16_t;
+typedef unsigned short uint_least16_t;
+typedef int int_least32_t;
+typedef unsigned uint_least32_t;
+__extension__ typedef long long int_least64_t;
+__extension__ typedef unsigned long long uint_least64_t;
+
+
+
+
+
+typedef signed char int_fast8_t;
+typedef unsigned char uint_fast8_t;
+typedef short int_fast16_t;
+typedef unsigned short uint_fast16_t;
+typedef int int_fast32_t;
+typedef unsigned int uint_fast32_t;
+__extension__ typedef long long int_fast64_t;
+__extension__ typedef unsigned long long uint_fast64_t;
+
+
+__extension__ typedef long long intmax_t;
+__extension__ typedef unsigned long long uintmax_t;
+# 12 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 2 3 4
+#pragma GCC diagnostic pop
+# 48 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 2 3
+
+
+namespace std
+{
+
+  using ::int8_t;
+  using ::int16_t;
+  using ::int32_t;
+  using ::int64_t;
+
+  using ::int_fast8_t;
+  using ::int_fast16_t;
+  using ::int_fast32_t;
+  using ::int_fast64_t;
+
+  using ::int_least8_t;
+  using ::int_least16_t;
+  using ::int_least32_t;
+  using ::int_least64_t;
+
+  using ::intmax_t;
+  using ::intptr_t;
+
+  using ::uint8_t;
+  using ::uint16_t;
+  using ::uint32_t;
+  using ::uint64_t;
+
+  using ::uint_fast8_t;
+  using ::uint_fast16_t;
+  using ::uint_fast32_t;
+  using ::uint_fast64_t;
+
+  using ::uint_least8_t;
+  using ::uint_least16_t;
+  using ::uint_least32_t;
+  using ::uint_least64_t;
+
+  using ::uintmax_t;
+  using ::uintptr_t;
+# 144 "C:/msys64/mingw64/include/c++/15.2.0/cstdint" 3
+}
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 1 3
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/hash_bytes.h" 1 3
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/hash_bytes.h" 3
+namespace std
+{
+
+
+
+
+
+
+
+  size_t
+  _Hash_bytes(const void* __ptr, size_t __len, size_t __seed);
+
+
+
+
+
+  size_t
+  _Fnv_hash_bytes(const void* __ptr, size_t __len, size_t __seed);
+
+
+}
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 2 3
+
+namespace std
+{
+
+# 52 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
+  template<typename _Result, typename _Arg>
+    struct __hash_base
+    {
+
+
+
+
+    };
+
+
+
+  template<typename _Tp> struct __hash_empty_base { };
+
+
+
+  template<typename _Tp>
+    struct hash;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wc++14-extensions"
+  template<typename _Tp, typename = void>
+    constexpr bool __is_hash_enabled_for = false;
+
+  template<typename _Tp>
+    constexpr bool
+    __is_hash_enabled_for<_Tp,
+     __void_t<decltype(hash<_Tp>()(declval<_Tp>()))>>
+      = true;
+#pragma GCC diagnostic pop
+
+
+  template<typename _Tp>
+    struct __hash_not_enabled
+    {
+      __hash_not_enabled(__hash_not_enabled&&) = delete;
+      ~__hash_not_enabled() = delete;
+    };
+
+
+  template<typename _Tp, bool = true>
+    struct __hash_enum : public __hash_base<size_t, _Tp>
+    {
+      size_t
+      operator()(_Tp __val) const noexcept
+      {
+       using __type = typename underlying_type<_Tp>::type;
+       return hash<__type>{}(static_cast<__type>(__val));
+      }
+    };
+
+
+  template<typename _Tp>
+    struct hash
+    : __conditional_t<__is_enum(_Tp), __hash_enum<_Tp>, __hash_not_enabled<_Tp>>
+    { };
+
+
+  template<typename _Tp>
+    struct hash<_Tp*> : public __hash_base<size_t, _Tp*>
+    {
+      size_t
+      operator()(_Tp* __p) const noexcept
+      { return reinterpret_cast<size_t>(__p); }
+    };
+# 128 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
+  template<> struct hash<bool> : public __hash_base<size_t, bool> { size_t operator()(bool __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<char> : public __hash_base<size_t, char> { size_t operator()(char __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<signed char> : public __hash_base<size_t, signed char> { size_t operator()(signed char __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<unsigned char> : public __hash_base<size_t, unsigned char> { size_t operator()(unsigned char __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<wchar_t> : public __hash_base<size_t, wchar_t> { size_t operator()(wchar_t __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+
+  template<> struct hash<char8_t> : public __hash_base<size_t, char8_t> { size_t operator()(char8_t __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+
+  template<> struct hash<char16_t> : public __hash_base<size_t, char16_t> { size_t operator()(char16_t __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<char32_t> : public __hash_base<size_t, char32_t> { size_t operator()(char32_t __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<short> : public __hash_base<size_t, short> { size_t operator()(short __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<int> : public __hash_base<size_t, int> { size_t operator()(int __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<long> : public __hash_base<size_t, long> { size_t operator()(long __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<long long> : public __hash_base<size_t, long long> { size_t operator()(long long __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<unsigned short> : public __hash_base<size_t, unsigned short> { size_t operator()(unsigned short __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<unsigned int> : public __hash_base<size_t, unsigned int> { size_t operator()(unsigned int __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<unsigned long> : public __hash_base<size_t, unsigned long> { size_t operator()(unsigned long __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  template<> struct hash<unsigned long long> : public __hash_base<size_t, unsigned long long> { size_t operator()(unsigned long long __val) const noexcept { return static_cast<size_t>(__val); } };
+
+
+  __extension__
+  template<> struct hash<__int128> : public __hash_base<size_t, __int128> { size_t operator()(__int128 __val) const noexcept { return static_cast<size_t>(__val); } };
+  __extension__
+  template<> struct hash<__int128 unsigned> : public __hash_base<size_t, __int128 unsigned> { size_t operator()(__int128 unsigned __val) const noexcept { return static_cast<size_t>(__val); } };
+# 204 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
+  struct _Hash_impl
+  {
+    static size_t
+    hash(const void* __ptr, size_t __clength,
+  size_t __seed = static_cast<size_t>(0xc70f6907UL))
+    { return _Hash_bytes(__ptr, __clength, __seed); }
+
+    template<typename _Tp>
+      static size_t
+      hash(const _Tp& __val)
+      { return hash(&__val, sizeof(__val)); }
+
+    template<typename _Tp>
+      static size_t
+      __hash_combine(const _Tp& __val, size_t __hash)
+      { return hash(&__val, sizeof(__val), __hash); }
+  };
+
+
+  struct _Fnv_hash_impl
+  {
+    static size_t
+    hash(const void* __ptr, size_t __clength,
+  size_t __seed = static_cast<size_t>(2166136261UL))
+    { return _Fnv_hash_bytes(__ptr, __clength, __seed); }
+
+    template<typename _Tp>
+      static size_t
+      hash(const _Tp& __val)
+      { return hash(&__val, sizeof(__val)); }
+
+    template<typename _Tp>
+      static size_t
+      __hash_combine(const _Tp& __val, size_t __hash)
+      { return hash(&__val, sizeof(__val), __hash); }
+  };
+
+
+  template<>
+    struct hash<float> : public __hash_base<size_t, float>
+    {
+      size_t
+      operator()(float __val) const noexcept
+      {
+
+ return __val != 0.0f ? std::_Hash_impl::hash(__val) : 0;
+      }
+    };
+
+
+  template<>
+    struct hash<double> : public __hash_base<size_t, double>
+    {
+      size_t
+      operator()(double __val) const noexcept
+      {
+
+ return __val != 0.0 ? std::_Hash_impl::hash(__val) : 0;
+      }
+    };
+
+
+  template<>
+    struct hash<long double>
+    : public __hash_base<size_t, long double>
+    {
+      __attribute__ ((__pure__)) size_t
+      operator()(long double __val) const noexcept;
+    };
+
+
+  template<>
+    struct hash<nullptr_t> : public __hash_base<size_t, nullptr_t>
+    {
+      size_t
+      operator()(nullptr_t) const noexcept
+      { return 0; }
+    };
+# 297 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
+  template<typename _Hash>
+    struct __is_fast_hash : public std::true_type
+    { };
+
+  template<>
+    struct __is_fast_hash<hash<long double>> : public std::false_type
+    { };
+
+
+}
+# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 1 3
+# 30 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 3
+#pragma GCC visibility push(default)
+# 157 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 1 3
+# 35 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+# 1 "C:/msys64/mingw64/include/pthread.h" 1 3
+# 62 "C:/msys64/mingw64/include/pthread.h" 3
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
+# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
+# 63 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 1 "C:/msys64/mingw64/include/errno.h" 1 3
+# 12 "C:/msys64/mingw64/include/errno.h" 3
+extern "C" {
+# 239 "C:/msys64/mingw64/include/errno.h" 3
+}
+# 64 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 1 "C:/msys64/mingw64/include/sys/types.h" 1 3
+# 43 "C:/msys64/mingw64/include/sys/types.h" 3
+typedef unsigned short _ino_t;
+
+typedef unsigned short ino_t;
+
+
+
+
+
+typedef unsigned int _dev_t;
+
+typedef unsigned int dev_t;
+# 62 "C:/msys64/mingw64/include/sys/types.h" 3
+__extension__
+typedef long long _pid_t;
+
+
+
+
+typedef _pid_t pid_t;
+
+
+
+
+
+typedef unsigned short _mode_t;
+
+
+typedef _mode_t mode_t;
+
+
+
+# 1 "C:/msys64/mingw64/include/_mingw_off_t.h" 1 3
+
+
+
+
+  typedef long _off_t;
+
+  typedef long off32_t;
+
+
+
+
+
+  __extension__ typedef long long _off64_t;
+
+  __extension__ typedef long long off64_t;
+# 26 "C:/msys64/mingw64/include/_mingw_off_t.h" 3
+typedef off32_t off_t;
+# 82 "C:/msys64/mingw64/include/sys/types.h" 2 3
+
+
+typedef unsigned int useconds_t;
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
+
+
+
+__extension__
+typedef unsigned long long _sigset_t;
+# 65 "C:/msys64/mingw64/include/pthread.h" 2 3
+
+# 1 "C:/msys64/mingw64/include/process.h" 1 3
+# 10 "C:/msys64/mingw64/include/process.h" 3
+# 1 "C:/msys64/mingw64/include/corecrt_startup.h" 1 3
+# 13 "C:/msys64/mingw64/include/corecrt_startup.h" 3
+extern "C" {
+
+
+typedef enum _crt_app_type {
+    _crt_unknown_app,
+    _crt_console_app,
+    _crt_gui_app
+} _crt_app_type;
+
+__attribute__ ((__dllimport__)) _crt_app_type __attribute__((__cdecl__)) _query_app_type(void);
+__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _set_app_type(_crt_app_type _Type);
+
+typedef enum _crt_argv_mode {
+    _crt_argv_no_arguments,
+    _crt_argv_unexpanded_arguments,
+    _crt_argv_expanded_arguments
+} _crt_argv_mode;
+
+__attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _configure_narrow_argv(_crt_argv_mode mode);
+__attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _configure_wide_argv(_crt_argv_mode mode);
+
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_narrow_environment(void);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_wide_environment(void);
+
+__attribute__ ((__dllimport__)) char** __attribute__((__cdecl__)) _get_initial_narrow_environment(void);
+__attribute__ ((__dllimport__)) wchar_t** __attribute__((__cdecl__)) _get_initial_wide_environment(void);
+
+__attribute__ ((__dllimport__)) char* __attribute__((__cdecl__)) _get_narrow_winmain_command_line(void);
+__attribute__ ((__dllimport__)) wchar_t* __attribute__((__cdecl__)) _get_wide_winmain_command_line(void);
+
+__attribute__ ((__dllimport__)) char **__attribute__((__cdecl__)) __p__acmdln(void);
+
+
+__attribute__ ((__dllimport__)) wchar_t **__attribute__((__cdecl__)) __p__wcmdln(void);
+
+
+typedef void (__attribute__((__cdecl__)) *_PVFV)(void);
+typedef int (__attribute__((__cdecl__)) *_PIFV)(void);
+typedef void (__attribute__((__cdecl__)) *_PVFI)(int);
+
+__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _initterm(_PVFV* _First, _PVFV* _Last);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initterm_e(_PIFV* _First, _PIFV* _Last);
+
+typedef struct _onexit_table_t {
+    _PVFV* _first;
+    _PVFV* _last;
+    _PVFV* _end;
+} _onexit_table_t;
+
+typedef int (__attribute__((__cdecl__)) *_onexit_t)(void);
+
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_onexit_table(_onexit_table_t*);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _register_onexit_function(_onexit_table_t*,_onexit_t);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _execute_onexit_table(_onexit_table_t*);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _crt_atexit(_PVFV func);
+__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _crt_at_quick_exit(_PVFV func);
+
+
+}
+# 11 "C:/msys64/mingw64/include/process.h" 2 3
+
+
+
+
+
+
+extern "C" {
+# 32 "C:/msys64/mingw64/include/process.h" 3
+  typedef void (__attribute__((__cdecl__)) *_beginthread_proc_type)(void *);
+  typedef unsigned (__attribute__((__stdcall__)) *_beginthreadex_proc_type)(void *);
+
+  __attribute__ ((__dllimport__)) uintptr_t __attribute__((__cdecl__)) _beginthread(_beginthread_proc_type _StartAddress,unsigned _StackSize,void *_ArgList);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _endthread(void) __attribute__ ((__noreturn__));
+  __attribute__ ((__dllimport__)) uintptr_t __attribute__((__cdecl__)) _beginthreadex(void *_Security,unsigned _StackSize,_beginthreadex_proc_type _StartAddress,void *_ArgList,unsigned _InitFlag,unsigned *_ThrdAddr);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _endthreadex(unsigned _Retval) __attribute__ ((__noreturn__));
+
+
+
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
+
+
+
+
+
+
+  void __attribute__((__cdecl__)) _Exit(int) __attribute__ ((__noreturn__));
+
+  inline __attribute__ ((__noreturn__)) void __attribute__((__cdecl__)) _Exit(int status)
+  { _exit(status); }
+
+
+
+       
+
+  void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) abort(void);
+       
+
+
+
+  typedef void (__attribute__((__stdcall__)) *_tls_callback_type)(void*,unsigned long,void*);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _register_thread_local_exe_atexit_callback(_tls_callback_type callback);
+
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _cexit(void);
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _c_exit(void);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _getpid(void);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _cwait(int *_TermStat,intptr_t _ProcHandle,int _Action);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execl(const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execle(const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execlp(const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execlpe(const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execv(const char *_Filename,const char *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execve(const char *_Filename,const char *const *_ArgList,const char *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execvp(const char *_Filename,const char *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execvpe(const char *_Filename,const char *const *_ArgList,const char *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnl(int _Mode,const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnle(int _Mode,const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnlp(int _Mode,const char *_Filename,const char *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnlpe(int _Mode,const char *_Filename,const char *_ArgList,...);
+
+
+
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnv(int _Mode,const char *_Filename,const char *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnve(int _Mode,const char *_Filename,const char *const *_ArgList,const char *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnvp(int _Mode,const char *_Filename,const char *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnvpe(int _Mode,const char *_Filename,const char *const *_ArgList,const char *const *_Env);
+
+
+
+
+  int __attribute__((__cdecl__)) system(const char *_Command);
+
+
+
+
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecl(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecle(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexeclp(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexeclpe(const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecv(const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecve(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecvp(const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecvpe(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+
+
+
+
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnl(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnle(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnlp(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnlpe(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnv(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnve(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvp(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvpe(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
+
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wsystem(const wchar_t *_Command);
+
+
+
+
+  intptr_t __attribute__((__cdecl__)) _loaddll(char *_Filename);
+  int __attribute__((__cdecl__)) _unloaddll(intptr_t _Handle);
+  int (__attribute__((__cdecl__)) *__attribute__((__cdecl__)) _getdllprocaddr(intptr_t _Handle,char *_ProcedureName,intptr_t _Ordinal))(void);
+# 161 "C:/msys64/mingw64/include/process.h" 3
+  int __attribute__((__cdecl__)) getpid(void) ;
+
+
+
+  intptr_t __attribute__((__cdecl__)) cwait(int *_TermStat,intptr_t _ProcHandle,int _Action) ;
+
+  int __attribute__((__cdecl__)) execl(const char *_Filename,const char *_ArgList,...) ;
+  int __attribute__((__cdecl__)) execle(const char *_Filename,const char *_ArgList,...) ;
+  int __attribute__((__cdecl__)) execlp(const char *_Filename,const char *_ArgList,...) ;
+  int __attribute__((__cdecl__)) execlpe(const char *_Filename,const char *_ArgList,...) ;
+
+
+
+
+
+
+  intptr_t __attribute__((__cdecl__)) spawnl(int,const char *_Filename,const char *_ArgList,...) ;
+  intptr_t __attribute__((__cdecl__)) spawnle(int,const char *_Filename,const char *_ArgList,...) ;
+  intptr_t __attribute__((__cdecl__)) spawnlp(int,const char *_Filename,const char *_ArgList,...) ;
+  intptr_t __attribute__((__cdecl__)) spawnlpe(int,const char *_Filename,const char *_ArgList,...) ;
+
+
+
+
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execv(const char *_Filename,char *const _ArgList[]) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execve(const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execvp(const char *_Filename,char *const _ArgList[]) ;
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execvpe(const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
+
+
+
+
+
+
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnv(int,const char *_Filename,char *const _ArgList[]) ;
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnve(int,const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnvp(int,const char *_Filename,char *const _ArgList[]) ;
+  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnvpe(int,const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
+
+
+
+
+}
+# 67 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
+# 34 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 1 3 4
+
+
+
+
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
+# 210 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
+# 1 "C:/msys64/mingw64/include/limits.h" 1 3 4
+# 211 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
+# 10 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 2 3 4
+#pragma GCC diagnostic pop
+# 35 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
+# 68 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 1 "C:/msys64/mingw64/include/signal.h" 1 3
+# 10 "C:/msys64/mingw64/include/signal.h" 3
+# 1 "C:/msys64/mingw64/include/pthread_signal.h" 1 3
+# 11 "C:/msys64/mingw64/include/signal.h" 2 3
+
+
+extern "C" {
+
+
+
+
+  typedef int sig_atomic_t;
+# 48 "C:/msys64/mingw64/include/signal.h" 3
+  typedef void (*__p_sig_fn_t)(int);
+# 57 "C:/msys64/mingw64/include/signal.h" 3
+  extern void **__attribute__((__cdecl__)) __pxcptinfoptrs(void);
+
+
+  __p_sig_fn_t __attribute__((__cdecl__)) signal(int _SigNum,__p_sig_fn_t _Func);
+  int __attribute__((__cdecl__)) raise(int _SigNum);
+
+
+}
+# 69 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 1 "C:/msys64/mingw64/include/time.h" 1 3
+# 25 "C:/msys64/mingw64/include/time.h" 3
+# 1 "C:/msys64/mingw64/include/sys/timeb.h" 1 3
+# 15 "C:/msys64/mingw64/include/sys/timeb.h" 3
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 53 "C:/msys64/mingw64/include/sys/timeb.h" 3
+  struct __timeb32 {
+    __time32_t time;
+    unsigned short millitm;
+    short timezone;
+    short dstflag;
+  };
+
+
+  struct timeb {
+    time_t time;
+    unsigned short millitm;
+    short timezone;
+    short dstflag;
+  };
+
+
+  struct __timeb64 {
+    __time64_t time;
+    unsigned short millitm;
+    short timezone;
+    short dstflag;
+  };
+
+
+
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _ftime64(struct __timeb64 *_Time);
+  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _ftime32(struct __timeb32 *_Time);
+# 89 "C:/msys64/mingw64/include/sys/timeb.h" 3
+struct _timespec32 {
+  __time32_t tv_sec;
+  long tv_nsec;
+};
+
+struct _timespec64 {
+  __time64_t tv_sec;
+  long tv_nsec;
+};
+# 114 "C:/msys64/mingw64/include/sys/timeb.h" 3
+  void __attribute__((__cdecl__)) ftime (struct timeb *) __asm__("_ftime64");
+
+
+
+
+
+
+}
+
+
+#pragma pack(pop)
+
+# 1 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 1 3
+# 10 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 3
+# 1 "C:/msys64/mingw64/include/sys/timeb.h" 1 3
+# 11 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 2 3
+
+
+extern "C" {
+
+
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _ftime32_s(struct __timeb32 *_Time);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _ftime64_s(struct __timeb64 *_Time);
+# 26 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 3
+}
+# 127 "C:/msys64/mingw64/include/sys/timeb.h" 2 3
+# 26 "C:/msys64/mingw64/include/time.h" 2 3
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+# 63 "C:/msys64/mingw64/include/time.h" 3
+  typedef long clock_t;
+# 100 "C:/msys64/mingw64/include/time.h" 3
+  struct tm {
+    int tm_sec;
+    int tm_min;
+    int tm_hour;
+    int tm_mday;
+    int tm_mon;
+    int tm_year;
+    int tm_wday;
+    int tm_yday;
+    int tm_isdst;
+  };
+# 119 "C:/msys64/mingw64/include/time.h" 3
+  __attribute__ ((__dllimport__)) int *__attribute__((__cdecl__)) __daylight(void);
+  __attribute__ ((__dllimport__)) long *__attribute__((__cdecl__)) __dstbias(void);
+  __attribute__ ((__dllimport__)) long *__attribute__((__cdecl__)) __timezone(void);
+  __attribute__ ((__dllimport__)) char **__attribute__((__cdecl__)) __tzname(void);
+# 138 "C:/msys64/mingw64/include/time.h" 3
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_daylight(int *_Daylight);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_dstbias(long *_Daylight_savings_bias);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_timezone(long *_Timezone);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_tzname(size_t *_ReturnValue,char *_Buffer,size_t _SizeInBytes,int _Index);
+  char *__attribute__((__cdecl__)) asctime(const struct tm *_Tm) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) asctime_s (char *_Buf,size_t _SizeInWords,const struct tm *_Tm);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ctime32(const __time32_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _ctime32_s (char *_Buf,size_t _SizeInBytes,const __time32_t *_Time);
+  clock_t __attribute__((__cdecl__)) clock(void);
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _difftime32(__time32_t _Time1,__time32_t _Time2);
+  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _gmtime32(const __time32_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _gmtime32_s (struct tm *_Tm,const __time32_t *_Time);
+  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _localtime32(const __time32_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _localtime32_s (struct tm *_Tm,const __time32_t *_Time);
+  size_t __attribute__((__cdecl__)) strftime(char * __restrict__ _Buf,size_t _SizeInBytes,const char * __restrict__ _Format,const struct tm * __restrict__ _Tm) __attribute__((__format__ (ms_strftime, 3, 0)));
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _strftime_l(char * __restrict__ _Buf,size_t _Max_size,const char * __restrict__ _Format,const struct tm * __restrict__ _Tm,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strdate(char *_Buffer) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _strdate_s (char *_Buf,size_t _SizeInBytes);
+  extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _strdate_s(char (&_Str)[__size]) { return _strdate_s(_Str,__size); } }
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strtime(char *_Buffer) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _strtime_s (char *_Buf ,size_t _SizeInBytes);
+  extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _strtime_s(char (&_Str)[__size]) { return _strtime_s(_Str,__size); } }
+  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _time32(__time32_t *_Time);
+
+
+
+  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _mktime32(struct tm *_Tm);
+  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _mkgmtime32(struct tm *_Tm);
+
+
+  void __attribute__((__cdecl__)) tzset(void) ;
+
+
+
+  __attribute__ ((__dllimport__))
+
+  void __attribute__((__cdecl__)) _tzset(void);
+
+
+  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _difftime64(__time64_t _Time1,__time64_t _Time2);
+  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ctime64(const __time64_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _ctime64_s (char *_Buf,size_t _SizeInBytes,const __time64_t *_Time);
+  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _gmtime64(const __time64_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _gmtime64_s (struct tm *_Tm,const __time64_t *_Time);
+  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _localtime64(const __time64_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _localtime64_s (struct tm *_Tm,const __time64_t *_Time);
+  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _mktime64(struct tm *_Tm);
+  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _mkgmtime64(struct tm *_Tm);
+  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _time64(__time64_t *_Time);
+
+
+
+  unsigned __attribute__((__cdecl__)) _getsystime(struct tm *_Tm);
+  unsigned __attribute__((__cdecl__)) _setsystime(struct tm *_Tm,unsigned _MilliSec);
+
+
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wasctime(const struct tm *_Tm);
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wasctime_s (wchar_t *_Buf,size_t _SizeInWords,const struct tm *_Tm);
+  wchar_t *__attribute__((__cdecl__)) _wctime32(const __time32_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wctime32_s (wchar_t *_Buf,size_t _SizeInWords,const __time32_t *_Time);
+  size_t __attribute__((__cdecl__)) wcsftime(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcsftime_l(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wstrdate(wchar_t *_Buffer) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wstrdate_s (wchar_t *_Buf,size_t _SizeInWords);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wstrtime(wchar_t *_Buffer) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wstrtime_s (wchar_t *_Buf,size_t _SizeInWords);
+  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wctime64(const __time64_t *_Time) ;
+  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wctime64_s (wchar_t *_Buf,size_t _SizeInWords,const __time64_t *_Time);
+
+
+
+
+  wchar_t *__attribute__((__cdecl__)) _wctime(const time_t *_Time) __asm__("_wctime64") ;
+# 219 "C:/msys64/mingw64/include/time.h" 3
+  errno_t __attribute__((__cdecl__)) _wctime_s (wchar_t *_Buffer,size_t _SizeInWords,const time_t *_Time) __asm__("_wctime64_s");
+# 245 "C:/msys64/mingw64/include/time.h" 3
+time_t __attribute__((__cdecl__)) time(time_t *_Time) __asm__("_time64");
+
+
+
+double __attribute__((__cdecl__)) difftime(time_t _Time1,time_t _Time2) __asm__("_difftime64");
+struct tm *__attribute__((__cdecl__)) localtime(const time_t *_Time) __asm__("_localtime64");
+errno_t __attribute__((__cdecl__)) localtime_s(struct tm *_Tm,const time_t *_Time) __asm__("_localtime64_s");
+struct tm *__attribute__((__cdecl__)) gmtime(const time_t *_Time) __asm__("_gmtime64");
+errno_t __attribute__((__cdecl__)) gmtime_s(struct tm *_Tm, const time_t *_Time) __asm__("_gmtime64_s");
+char *__attribute__((__cdecl__)) ctime(const time_t *_Time) __asm__("_ctime64");
+errno_t __attribute__((__cdecl__)) ctime_s(char *_Buf,size_t _SizeInBytes,const time_t *_Time) __asm__("_ctime64_s");
+time_t __attribute__((__cdecl__)) mktime(struct tm *_Tm) __asm__("_mktime64");
+time_t __attribute__((__cdecl__)) _mkgmtime(struct tm *_Tm) __asm__("_mkgmtime64");
+# 274 "C:/msys64/mingw64/include/time.h" 3
+  __attribute__ ((__dllimport__)) extern int daylight ;
+  __attribute__ ((__dllimport__)) extern long timezone ;
+  __attribute__ ((__dllimport__)) extern char *tzname[2] ;
+  void __attribute__((__cdecl__)) tzset(void) ;
+
+
+# 1 "C:/msys64/mingw64/include/_timeval.h" 1 3
+# 10 "C:/msys64/mingw64/include/_timeval.h" 3
+struct timeval
+{
+ long tv_sec;
+ long tv_usec;
+};
+# 281 "C:/msys64/mingw64/include/time.h" 2 3
+
+
+
+struct timezone {
+  int tz_minuteswest;
+  int tz_dsttime;
+};
+
+  extern int __attribute__((__cdecl__)) mingw_gettimeofday (struct timeval *p, struct timezone *z);
+
+
+#pragma pack(pop)
+# 314 "C:/msys64/mingw64/include/time.h" 3
+}
+# 323 "C:/msys64/mingw64/include/time.h" 3
+# 1 "C:/msys64/mingw64/include/pthread_time.h" 1 3
+# 27 "C:/msys64/mingw64/include/pthread_time.h" 3
+# 1 "C:/msys64/mingw64/include/pthread_compat.h" 1 3 4
+# 78 "C:/msys64/mingw64/include/pthread_compat.h" 3 4
+typedef int clockid_t;
+# 28 "C:/msys64/mingw64/include/pthread_time.h" 2 3
+# 74 "C:/msys64/mingw64/include/pthread_time.h" 3
+extern "C" {
+
+
+ int __attribute__((__cdecl__)) nanosleep32(const struct _timespec32 *request, struct _timespec32 *remain);
+ int __attribute__((__cdecl__)) nanosleep64(const struct _timespec64 *request, struct _timespec64 *remain);
+__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) nanosleep(const struct timespec *request, struct timespec *remain)
+{
+
+
+
+  return nanosleep64 ((struct _timespec64 *)request, (struct _timespec64 *)remain);
+
+}
+
+ int __attribute__((__cdecl__)) clock_nanosleep32(clockid_t clock_id, int flags, const struct _timespec32 *request, struct _timespec32 *remain);
+ int __attribute__((__cdecl__)) clock_nanosleep64(clockid_t clock_id, int flags, const struct _timespec64 *request, struct _timespec64 *remain);
+__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_nanosleep(clockid_t clock_id, int flags, const struct timespec *request, struct timespec *remain)
+{
+
+
+
+  return clock_nanosleep64 (clock_id, flags, (struct _timespec64 *)request, (struct _timespec64 *)remain);
+
+}
+
+ int __attribute__((__cdecl__)) clock_getres32(clockid_t clock_id, struct _timespec32 *res);
+ int __attribute__((__cdecl__)) clock_getres64(clockid_t clock_id, struct _timespec64 *res);
+__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_getres(clockid_t clock_id, struct timespec *res)
+{
+
+
+
+  return clock_getres64 (clock_id, (struct _timespec64 *)res);
+
+}
+
+ int __attribute__((__cdecl__)) clock_gettime32(clockid_t clock_id, struct _timespec32 *tp);
+ int __attribute__((__cdecl__)) clock_gettime64(clockid_t clock_id, struct _timespec64 *tp);
+__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_gettime(clockid_t clock_id, struct timespec *tp)
+{
+
+
+
+  return clock_gettime64 (clock_id, (struct _timespec64 *)tp);
+
+}
+
+ int __attribute__((__cdecl__)) clock_settime32(clockid_t clock_id, const struct _timespec32 *tp);
+ int __attribute__((__cdecl__)) clock_settime64(clockid_t clock_id, const struct _timespec64 *tp);
+__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_settime(clockid_t clock_id, const struct timespec *tp)
+{
+
+
+
+  return clock_settime64 (clock_id, (struct _timespec64 *)tp);
+
+}
+
+
+}
+# 324 "C:/msys64/mingw64/include/time.h" 2 3
+# 70 "C:/msys64/mingw64/include/pthread.h" 2 3
+
+
+# 1 "C:/msys64/mingw64/include/sched.h" 1 3 4
+# 25 "C:/msys64/mingw64/include/sched.h" 3 4
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
+# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
+# 26 "C:/msys64/mingw64/include/sched.h" 2 3 4
+
+
+
+
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
+# 31 "C:/msys64/mingw64/include/sched.h" 2 3 4
+# 42 "C:/msys64/mingw64/include/sched.h" 3 4
+struct sched_param {
+  int sched_priority;
+};
+
+
+extern "C" {
+
+
+ int sched_yield(void);
+ int sched_get_priority_min(int pol);
+ int sched_get_priority_max(int pol);
+ int sched_getscheduler(pid_t pid);
+ int sched_setscheduler(pid_t pid, int pol, const struct sched_param *param);
+
+
+}
+# 73 "C:/msys64/mingw64/include/pthread.h" 2 3
+
+
+
+
+
+
+extern "C" {
+# 141 "C:/msys64/mingw64/include/pthread.h" 3
+ void * pthread_timechange_handler_np(void * dummy);
+ int pthread_delay32_np (const struct _timespec32 *interval);
+ int pthread_delay64_np (const struct _timespec64 *interval);
+__inline__ __attribute__((__always_inline__)) int pthread_delay_np (const struct timespec *interval)
+{
+
+
+
+  return pthread_delay64_np ((const struct _timespec64 *) interval);
+
+}
+ int pthread_num_processors_np(void);
+ int pthread_set_num_processors_np(int n);
+# 170 "C:/msys64/mingw64/include/pthread.h" 3
+typedef long pthread_once_t;
+typedef unsigned pthread_mutexattr_t;
+typedef unsigned pthread_key_t;
+typedef void *pthread_barrierattr_t;
+typedef int pthread_condattr_t;
+typedef int pthread_rwlockattr_t;
+typedef uintptr_t pthread_t;
+
+typedef struct _pthread_cleanup _pthread_cleanup;
+struct _pthread_cleanup
+{
+    void (*func)(void *);
+    void *arg;
+    _pthread_cleanup *next;
+};
+# 212 "C:/msys64/mingw64/include/pthread.h" 3
+typedef struct pthread_attr_t pthread_attr_t;
+struct pthread_attr_t
+{
+    unsigned p_state;
+    void *stack;
+    size_t s_size;
+    struct sched_param param;
+};
+
+ int pthread_attr_setschedparam(pthread_attr_t *attr, const struct sched_param *param);
+ int pthread_attr_getschedparam(const pthread_attr_t *attr, struct sched_param *param);
+ int pthread_getschedparam(pthread_t thread, int *pol, struct sched_param *param);
+ int pthread_setschedparam(pthread_t thread, int pol, const struct sched_param *param);
+ int pthread_attr_setschedpolicy (pthread_attr_t *attr, int pol);
+ int pthread_attr_getschedpolicy (const pthread_attr_t *attr, int *pol);
+
+
+typedef intptr_t pthread_spinlock_t;
+typedef intptr_t pthread_mutex_t;
+typedef intptr_t pthread_cond_t;
+typedef intptr_t pthread_rwlock_t;
+typedef void *pthread_barrier_t;
+# 252 "C:/msys64/mingw64/include/pthread.h" 3
+ extern void (**_pthread_key_dest)(void *);
+ int pthread_key_create(pthread_key_t *key, void (* dest)(void *));
+ int pthread_key_delete(pthread_key_t key);
+ void * pthread_getspecific(pthread_key_t key);
+ int pthread_setspecific(pthread_key_t key, const void *value);
+
+ pthread_t pthread_self(void);
+ int pthread_once(pthread_once_t *o, void (*func)(void));
+ void pthread_testcancel(void);
+ int pthread_equal(pthread_t t1, pthread_t t2);
+ void pthread_tls_init(void);
+ void _pthread_cleanup_dest(pthread_t t);
+ int pthread_get_concurrency(int *val);
+ int pthread_set_concurrency(int val);
+ void pthread_exit(void *res);
+ void _pthread_invoke_cancel(void);
+ int pthread_cancel(pthread_t t);
+ int pthread_kill(pthread_t t, int sig);
+ unsigned _pthread_get_state(const pthread_attr_t *attr, unsigned flag);
+ int _pthread_set_state(pthread_attr_t *attr, unsigned flag, unsigned val);
+ int pthread_setcancelstate(int state, int *oldstate);
+ int pthread_setcanceltype(int type, int *oldtype);
+ unsigned __attribute__((__stdcall__)) pthread_create_wrapper(void *args);
+ int pthread_create(pthread_t *th, const pthread_attr_t *attr, void *(* func)(void *), void *arg);
+ int pthread_join(pthread_t t, void **res);
+ int pthread_detach(pthread_t t);
+ int pthread_setname_np(pthread_t thread, const char *name);
+ int pthread_getname_np(pthread_t thread, char *name, size_t len);
+
+ int pthread_rwlock_init(pthread_rwlock_t *rwlock_, const pthread_rwlockattr_t *attr);
+ int pthread_rwlock_wrlock(pthread_rwlock_t *l);
+ int pthread_rwlock_timedwrlock32(pthread_rwlock_t *rwlock, const struct _timespec32 *ts);
+ int pthread_rwlock_timedwrlock64(pthread_rwlock_t *rwlock, const struct _timespec64 *ts);
+__inline__ __attribute__((__always_inline__)) int pthread_rwlock_timedwrlock(pthread_rwlock_t *rwlock, const struct timespec *ts)
+{
+
+
+
+  return pthread_rwlock_timedwrlock64 (rwlock, (const struct _timespec64 *) ts);
+
+}
+ int pthread_rwlock_rdlock(pthread_rwlock_t *l);
+ int pthread_rwlock_timedrdlock32(pthread_rwlock_t *l, const struct _timespec32 *ts);
+ int pthread_rwlock_timedrdlock64(pthread_rwlock_t *l, const struct _timespec64 *ts);
+__inline__ __attribute__((__always_inline__)) int pthread_rwlock_timedrdlock(pthread_rwlock_t *l, const struct timespec *ts)
+{
+
+
+
+  return pthread_rwlock_timedrdlock64 (l, (const struct _timespec64 *) ts);
+
+}
+ int pthread_rwlock_unlock(pthread_rwlock_t *l);
+ int pthread_rwlock_tryrdlock(pthread_rwlock_t *l);
+ int pthread_rwlock_trywrlock(pthread_rwlock_t *l);
+ int pthread_rwlock_destroy (pthread_rwlock_t *l);
+
+ int pthread_cond_init(pthread_cond_t *cv, const pthread_condattr_t *a);
+ int pthread_cond_destroy(pthread_cond_t *cv);
+ int pthread_cond_signal (pthread_cond_t *cv);
+ int pthread_cond_broadcast (pthread_cond_t *cv);
+ int pthread_cond_wait (pthread_cond_t *cv, pthread_mutex_t *external_mutex);
+ int pthread_cond_timedwait32(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec32 *t);
+ int pthread_cond_timedwait64(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec64 *t);
+__inline__ __attribute__((__always_inline__)) int pthread_cond_timedwait(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct timespec *t)
+{
+
+
+
+  return pthread_cond_timedwait64 (cv, external_mutex, (const struct _timespec64 *) t);
+
+}
+ int pthread_cond_timedwait32_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec32 *t);
+ int pthread_cond_timedwait64_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec64 *t);
+__inline__ __attribute__((__always_inline__)) int pthread_cond_timedwait_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct timespec *t)
+{
+
+
+
+  return pthread_cond_timedwait64_relative_np (cv, external_mutex, (const struct _timespec64 *) t);
+
+}
+
+ int pthread_mutex_lock(pthread_mutex_t *m);
+ int pthread_mutex_timedlock32(pthread_mutex_t *m, const struct _timespec32 *ts);
+ int pthread_mutex_timedlock64(pthread_mutex_t *m, const struct _timespec64 *ts);
+__inline__ __attribute__((__always_inline__)) int pthread_mutex_timedlock(pthread_mutex_t *m, const struct timespec *ts)
+{
+
+
+
+  return pthread_mutex_timedlock64 (m, (const struct _timespec64 *) ts);
+
+}
+ int pthread_mutex_unlock(pthread_mutex_t *m);
+ int pthread_mutex_trylock(pthread_mutex_t *m);
+ int pthread_mutex_init(pthread_mutex_t *m, const pthread_mutexattr_t *a);
+ int pthread_mutex_destroy(pthread_mutex_t *m);
+
+ int pthread_barrier_destroy(pthread_barrier_t *b);
+ int pthread_barrier_init(pthread_barrier_t *b, const void *attr, unsigned int count);
+ int pthread_barrier_wait(pthread_barrier_t *b);
+
+ int pthread_spin_init(pthread_spinlock_t *l, int pshared);
+ int pthread_spin_destroy(pthread_spinlock_t *l);
+
+ int pthread_spin_lock(pthread_spinlock_t *l);
+ int pthread_spin_trylock(pthread_spinlock_t *l);
+ int pthread_spin_unlock(pthread_spinlock_t *l);
+
+ int pthread_attr_init(pthread_attr_t *attr);
+ int pthread_attr_destroy(pthread_attr_t *attr);
+ int pthread_attr_setdetachstate(pthread_attr_t *a, int flag);
+ int pthread_attr_getdetachstate(const pthread_attr_t *a, int *flag);
+ int pthread_attr_setinheritsched(pthread_attr_t *a, int flag);
+ int pthread_attr_getinheritsched(const pthread_attr_t *a, int *flag);
+ int pthread_attr_setscope(pthread_attr_t *a, int flag);
+ int pthread_attr_getscope(const pthread_attr_t *a, int *flag);
+ int pthread_attr_getstack(const pthread_attr_t *attr, void **stack, size_t *size);
+ int pthread_attr_setstack(pthread_attr_t *attr, void *stack, size_t size);
+ int pthread_attr_getstackaddr(const pthread_attr_t *attr, void **stack);
+ int pthread_attr_setstackaddr(pthread_attr_t *attr, void *stack);
+ int pthread_attr_getstacksize(const pthread_attr_t *attr, size_t *size);
+ int pthread_attr_setstacksize(pthread_attr_t *attr, size_t size);
+
+ int pthread_mutexattr_init(pthread_mutexattr_t *a);
+ int pthread_mutexattr_destroy(pthread_mutexattr_t *a);
+ int pthread_mutexattr_gettype(const pthread_mutexattr_t *a, int *type);
+ int pthread_mutexattr_settype(pthread_mutexattr_t *a, int type);
+ int pthread_mutexattr_getpshared(const pthread_mutexattr_t *a, int *type);
+ int pthread_mutexattr_setpshared(pthread_mutexattr_t * a, int type);
+ int pthread_mutexattr_getprotocol(const pthread_mutexattr_t *a, int *type);
+ int pthread_mutexattr_setprotocol(pthread_mutexattr_t *a, int type);
+ int pthread_mutexattr_getprioceiling(const pthread_mutexattr_t *a, int * prio);
+ int pthread_mutexattr_setprioceiling(pthread_mutexattr_t *a, int prio);
+ int pthread_getconcurrency(void);
+ int pthread_setconcurrency(int new_level);
+
+ int pthread_condattr_destroy(pthread_condattr_t *a);
+ int pthread_condattr_init(pthread_condattr_t *a);
+ int pthread_condattr_getpshared(const pthread_condattr_t *a, int *s);
+ int pthread_condattr_setpshared(pthread_condattr_t *a, int s);
+
+ int pthread_condattr_getclock (const pthread_condattr_t *attr,
+       clockid_t *clock_id);
+ int pthread_condattr_setclock(pthread_condattr_t *attr,
+       clockid_t clock_id);
+
+ int pthread_barrierattr_init(void **attr);
+ int pthread_barrierattr_destroy(void **attr);
+ int pthread_barrierattr_setpshared(void **attr, int s);
+ int pthread_barrierattr_getpshared(void **attr, int *s);
+
+
+ struct _pthread_cleanup ** pthread_getclean (void);
+ void * pthread_gethandle (pthread_t t);
+ void * pthread_getevent (void);
+
+ int _pthread_tryjoin (pthread_t t, void **res);
+ int pthread_rwlockattr_destroy(pthread_rwlockattr_t *a);
+ int pthread_rwlockattr_getpshared(pthread_rwlockattr_t *a, int *s);
+ int pthread_rwlockattr_init(pthread_rwlockattr_t *a);
+ int pthread_rwlockattr_setpshared(pthread_rwlockattr_t *a, int s);
+# 426 "C:/msys64/mingw64/include/pthread.h" 3
+# 1 "C:/msys64/mingw64/include/pthread_unistd.h" 1 3
+# 427 "C:/msys64/mingw64/include/pthread.h" 2 3
+# 688 "C:/msys64/mingw64/include/pthread.h" 3
+}
+# 36 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 2 3
+# 62 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+typedef pthread_t __gthread_t;
+typedef pthread_key_t __gthread_key_t;
+typedef pthread_once_t __gthread_once_t;
+typedef pthread_mutex_t __gthread_mutex_t;
+
+
+
+typedef pthread_mutex_t __gthread_recursive_mutex_t;
+typedef pthread_cond_t __gthread_cond_t;
+typedef struct timespec __gthread_time_t;
+# 123 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 345 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+inline __attribute__((__always_inline__)) int
+__gthread_active_p (void)
+{
+  return 1;
+}
+# 705 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+inline __attribute__((__always_inline__)) int
+__gthread_create (__gthread_t *__threadid, void *(*__func) (void*),
+    void *__args)
+{
+  return pthread_create (__threadid, __null, __func, __args);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_join (__gthread_t __threadid, void **__value_ptr)
+{
+  return pthread_join (__threadid, __value_ptr);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_detach (__gthread_t __threadid)
+{
+  return pthread_detach (__threadid);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_equal (__gthread_t __t1, __gthread_t __t2)
+{
+  return pthread_equal (__t1, __t2);
+}
+
+inline __attribute__((__always_inline__)) __gthread_t
+__gthread_self (void)
+{
+  return pthread_self ();
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_yield (void)
+{
+  return sched_yield ();
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_once (__gthread_once_t *__once, void (*__func) (void))
+{
+  if (__gthread_active_p ())
+    return pthread_once (__once, __func);
+  else
+    return -1;
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_key_create (__gthread_key_t *__key, void (*__dtor) (void *))
+{
+  return pthread_key_create (__key, __dtor);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_key_delete (__gthread_key_t __key)
+{
+  return pthread_key_delete (__key);
+}
+
+inline __attribute__((__always_inline__)) void *
+__gthread_getspecific (__gthread_key_t __key)
+{
+  return pthread_getspecific (__key);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_setspecific (__gthread_key_t __key, const void *__ptr)
+{
+  return pthread_setspecific (__key, __ptr);
+}
+
+inline __attribute__((__always_inline__)) void
+__gthread_mutex_init_function (__gthread_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    pthread_mutex_init (__mutex, __null);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_mutex_destroy (__gthread_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    return pthread_mutex_destroy (__mutex);
+  else
+    return 0;
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_mutex_lock (__gthread_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    return pthread_mutex_lock (__mutex);
+  else
+    return 0;
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_mutex_trylock (__gthread_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    return pthread_mutex_trylock (__mutex);
+  else
+    return 0;
+}
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_mutex_timedlock (__gthread_mutex_t *__mutex,
+      const __gthread_time_t *__abs_timeout)
+{
+  if (__gthread_active_p ())
+    return pthread_mutex_timedlock (__mutex, __abs_timeout);
+  else
+    return 0;
+}
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_mutex_unlock (__gthread_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    return pthread_mutex_unlock (__mutex);
+  else
+    return 0;
+}
+
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex)
+{
+  if (__gthread_active_p ())
+    {
+      pthread_mutexattr_t __attr;
+      int __r;
+
+      __r = pthread_mutexattr_init (&__attr);
+      if (!__r)
+ __r = pthread_mutexattr_settype (&__attr,
+         2);
+      if (!__r)
+ __r = pthread_mutex_init (__mutex, &__attr);
+      if (!__r)
+ __r = pthread_mutexattr_destroy (&__attr);
+      return __r;
+    }
+  return 0;
+}
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
+{
+  return __gthread_mutex_lock (__mutex);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex)
+{
+  return __gthread_mutex_trylock (__mutex);
+}
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_timedlock (__gthread_recursive_mutex_t *__mutex,
+         const __gthread_time_t *__abs_timeout)
+{
+  return __gthread_mutex_timedlock (__mutex, __abs_timeout);
+}
+
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex)
+{
+  return __gthread_mutex_unlock (__mutex);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_recursive_mutex_destroy (__gthread_recursive_mutex_t *__mutex)
+{
+  return __gthread_mutex_destroy (__mutex);
+}
+# 896 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
+inline __attribute__((__always_inline__)) int
+__gthread_cond_broadcast (__gthread_cond_t *__cond)
+{
+  return pthread_cond_broadcast (__cond);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_cond_signal (__gthread_cond_t *__cond)
+{
+  return pthread_cond_signal (__cond);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex)
+{
+  return pthread_cond_wait (__cond, __mutex);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_cond_timedwait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex,
+     const __gthread_time_t *__abs_timeout)
+{
+  return pthread_cond_timedwait (__cond, __mutex, __abs_timeout);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_cond_wait_recursive (__gthread_cond_t *__cond,
+          __gthread_recursive_mutex_t *__mutex)
+{
+  return __gthread_cond_wait (__cond, __mutex);
+}
+
+inline __attribute__((__always_inline__)) int
+__gthread_cond_destroy (__gthread_cond_t* __cond)
+{
+  return pthread_cond_destroy (__cond);
+}
+# 158 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 2 3
+
+
+#pragma GCC visibility pop
+# 43 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 1 3
+# 36 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 1 3
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 2 3
+
+
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wlong-long"
+# 76 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+extern "C++" {
+
+namespace std
+{
+
+
+  struct __true_type { };
+  struct __false_type { };
+
+  template<bool>
+    struct __truth_type
+    { typedef __false_type __type; };
+
+  template<>
+    struct __truth_type<true>
+    { typedef __true_type __type; };
+
+
+
+  template<class _Sp, class _Tp>
+    struct __traitor
+    {
+      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+
+
+  template<typename, typename>
+    struct __are_same
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __are_same<_Tp, _Tp>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_integer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+
+  template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_integer<char8_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_integer<char16_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char32_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 264 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+__extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; typedef __true_type __type; }; __extension__ template<> struct __is_integer<unsigned __int128> { enum { __value = 1 }; typedef __true_type __type; };
+# 281 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+  template<typename _Tp>
+    struct __is_floating
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+  template<>
+    struct __is_floating<float>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<long double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 358 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+  template<typename _Tp>
+    struct __is_arithmetic
+    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_char
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_char<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_char<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_byte
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_byte<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  enum class byte : unsigned char;
+
+  template<>
+    struct __is_byte<byte>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_byte<char8_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<typename _Tp>
+    struct __is_nonvolatile_trivially_copyable
+    {
+      enum { __value = __is_trivially_copyable(_Tp) };
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_nonvolatile_trivially_copyable<volatile _Tp>
+    {
+      enum { __value = 0 };
+    };
+
+
+  template<typename _OutputIter, typename _InputIter>
+    struct __memcpyable
+    {
+      enum { __value = 0 };
+    };
+
+
+  template<typename _Tp>
+    struct __memcpyable<_Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+
+  template<typename _Tp>
+    struct __memcpyable<_Tp*, const _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp> struct __memcpyable_integer;
+
+
+
+
+  template<typename _Tp, typename _Up>
+    struct __memcpyable<_Tp*, _Up*>
+    {
+      enum {
+ __value = __memcpyable_integer<_Tp>::__width != 0
+      && ((int)__memcpyable_integer<_Tp>::__width
+     == (int)__memcpyable_integer<_Up>::__width)
+      };
+    };
+
+
+  template<typename _Tp, typename _Up>
+    struct __memcpyable<_Tp*, const _Up*>
+    : __memcpyable<_Tp*, _Up*>
+    { };
+
+  template<typename _Tp>
+    struct __memcpyable_integer
+    {
+      enum {
+ __width = __is_integer<_Tp>::__value ? (sizeof(_Tp) * 8) : 0
+      };
+    };
+
+
+  template<typename _Tp>
+    struct __memcpyable_integer<volatile _Tp>
+    { enum { __width = 0 }; };
+# 592 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+  template<typename _Iter1, typename _Iter2>
+    struct __memcmpable
+    {
+      enum { __value = 0 };
+    };
+
+
+  template<typename _Tp>
+    struct __memcmpable<_Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct __memcmpable<const _Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct __memcmpable<_Tp*, const _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+
+
+
+
+
+
+  template<typename _Tp, bool _TreatAsBytes =
+
+
+
+ __is_byte<_Tp>::__value
+
+    >
+    struct __is_memcmp_ordered
+    {
+      static const bool __value = _Tp(-1) > _Tp(1);
+    };
+
+  template<typename _Tp>
+    struct __is_memcmp_ordered<_Tp, false>
+    {
+      static const bool __value = false;
+    };
+
+
+  template<typename _Tp, typename _Up, bool = sizeof(_Tp) == sizeof(_Up)>
+    struct __is_memcmp_ordered_with
+    {
+      static const bool __value = __is_memcmp_ordered<_Tp>::__value
+ && __is_memcmp_ordered<_Up>::__value;
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __is_memcmp_ordered_with<_Tp, _Up, false>
+    {
+      static const bool __value = false;
+    };
+# 661 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+  template<>
+    struct __is_memcmp_ordered_with<std::byte, std::byte, true>
+    { static constexpr bool __value = true; };
+
+  template<typename _Tp, bool _SameSize>
+    struct __is_memcmp_ordered_with<_Tp, std::byte, _SameSize>
+    { static constexpr bool __value = false; };
+
+  template<typename _Up, bool _SameSize>
+    struct __is_memcmp_ordered_with<std::byte, _Up, _SameSize>
+    { static constexpr bool __value = false; };
+
+
+
+  template<typename _ValT, typename _Tp>
+    constexpr bool __can_use_memchr_for_find
+
+      = __is_byte<_ValT>::__value
+
+   && (is_same_v<_Tp, _ValT> || is_integral_v<_Tp>);
+
+
+
+
+
+  template<typename _Tp>
+    struct __is_move_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __miter_base(_Iterator __it)
+    { return __it; }
+
+
+}
+}
+
+#pragma GCC diagnostic pop
+# 37 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 2 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 1 3
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wlong-long"
+
+extern "C++" {
+
+namespace __gnu_cxx
+{
+
+
+
+  template<bool, typename>
+    struct __enable_if
+    { };
+
+  template<typename _Tp>
+    struct __enable_if<true, _Tp>
+    { typedef _Tp __type; };
+
+
+
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct __conditional_type
+    { typedef _Iftrue __type; };
+
+  template<typename _Iftrue, typename _Iffalse>
+    struct __conditional_type<false, _Iftrue, _Iffalse>
+    { typedef _Iffalse __type; };
+
+
+
+  template<typename _Tp>
+    struct __add_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __add_unsigned<char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<signed char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<short>
+    { typedef unsigned short __type; };
+
+  template<>
+    struct __add_unsigned<int>
+    { typedef unsigned int __type; };
+
+  template<>
+    struct __add_unsigned<long>
+    { typedef unsigned long __type; };
+
+  template<>
+    struct __add_unsigned<long long>
+    { typedef unsigned long long __type; };
+
+
+  template<>
+    struct __add_unsigned<bool>;
+
+  template<>
+    struct __add_unsigned<wchar_t>;
+
+
+
+  template<typename _Tp>
+    struct __remove_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __remove_unsigned<char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned short>
+    { typedef short __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned int>
+    { typedef int __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long>
+    { typedef long __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long long>
+    { typedef long long __type; };
+
+
+  template<>
+    struct __remove_unsigned<bool>;
+
+  template<>
+    struct __remove_unsigned<wchar_t>;
+
+
+
+  template<typename _Type>
+    constexpr
+    inline bool
+    __is_null_pointer(_Type* __ptr)
+    { return __ptr == 0; }
+
+  template<typename _Type>
+    constexpr
+    inline bool
+    __is_null_pointer(_Type)
+    { return false; }
+
+
+  constexpr bool
+  __is_null_pointer(std::nullptr_t)
+  { return true; }
+
+
+
+
+  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
+    struct __promote
+    { typedef double __type; };
+
+
+
+
+  template<typename _Tp>
+    struct __promote<_Tp, false>
+    { };
+
+  template<>
+    struct __promote<long double>
+    { typedef long double __type; };
+
+  template<>
+    struct __promote<double>
+    { typedef double __type; };
+
+  template<>
+    struct __promote<float>
+    { typedef float __type; };
+# 230 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
+  template<typename... _Tp>
+    using __promoted_t = decltype((typename __promote<_Tp>::__type(0) + ...));
+
+
+
+  template<typename _Tp, typename _Up>
+    using __promote_2 = __promote<__promoted_t<_Tp, _Up>>;
+
+  template<typename _Tp, typename _Up, typename _Vp>
+    using __promote_3 = __promote<__promoted_t<_Tp, _Up, _Vp>>;
+
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
+    using __promote_4 = __promote<__promoted_t<_Tp, _Up, _Vp, _Wp>>;
+# 274 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
+
+}
+}
+
+#pragma GCC diagnostic pop
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 2 3
+
+namespace __gnu_cxx
+{
+
+# 52 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+  template<typename _Tp>
+    struct __is_integer_nonstrict
+    : public std::__is_integer<_Tp>
+    {
+      using std::__is_integer<_Tp>::__value;
+
+
+      enum { __width = __value ? sizeof(_Tp) * 8 : 0 };
+    };
+
+  template<typename _Value>
+    struct __numeric_traits_integer
+    {
+
+      static_assert(__is_integer_nonstrict<_Value>::__value,
+      "invalid specialization");
+
+
+
+
+      static const bool __is_signed = (_Value)(-1) < 0;
+      static const int __digits
+ = __is_integer_nonstrict<_Value>::__width - __is_signed;
+
+
+      static const _Value __max = __is_signed
+ ? (((((_Value)1 << (__digits - 1)) - 1) << 1) + 1)
+ : ~(_Value)0;
+      static const _Value __min = __is_signed ? -__max - 1 : (_Value)0;
+    };
+
+  template<typename _Value>
+    const _Value __numeric_traits_integer<_Value>::__min;
+
+  template<typename _Value>
+    const _Value __numeric_traits_integer<_Value>::__max;
+
+  template<typename _Value>
+    const bool __numeric_traits_integer<_Value>::__is_signed;
+
+  template<typename _Value>
+    const int __numeric_traits_integer<_Value>::__digits;
+# 139 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+  template<typename _Tp>
+    using __int_traits = __numeric_traits_integer<_Tp>;
+# 159 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+  template<typename _Value>
+    struct __numeric_traits_floating
+    {
+
+      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 643L / 2136);
+
+
+      static const bool __is_signed = true;
+      static const int __digits10 = (std::__are_same<_Value, float>::__value ? 6 : std::__are_same<_Value, double>::__value ? 15 : 18);
+      static const int __max_exponent10 = (std::__are_same<_Value, float>::__value ? 38 : std::__are_same<_Value, double>::__value ? 308 : 4932);
+    };
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__max_digits10;
+
+  template<typename _Value>
+    const bool __numeric_traits_floating<_Value>::__is_signed;
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__digits10;
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__max_exponent10;
+
+
+
+
+
+
+  template<typename _Value>
+    struct __numeric_traits
+    : public __numeric_traits_integer<_Value>
+    { };
+
+  template<>
+    struct __numeric_traits<float>
+    : public __numeric_traits_floating<float>
+    { };
+
+  template<>
+    struct __numeric_traits<double>
+    : public __numeric_traits_floating<double>
+    { };
+
+  template<>
+    struct __numeric_traits<long double>
+    : public __numeric_traits_floating<long double>
+    { };
+# 240 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+
+}
+# 44 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+# 53 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 1 3
+# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 1 3
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h" 1 3
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 2 3
+
+namespace std
+{
+
+
+
+
+  void
+  __throw_bad_exception(void) __attribute__((__noreturn__));
+
+
+  void
+  __throw_bad_alloc(void) __attribute__((__noreturn__));
+
+  void
+  __throw_bad_array_new_length(void) __attribute__((__noreturn__));
+
+
+  void
+  __throw_bad_cast(void) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_bad_typeid(void) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_logic_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_domain_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_invalid_argument(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_length_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_out_of_range(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_out_of_range_fmt(const char*, ...) __attribute__((__noreturn__,__cold__))
+    __attribute__((__format__(__gnu_printf__, 1, 2)));
+
+  void
+  __throw_runtime_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_range_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_overflow_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_underflow_error(const char*) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_ios_failure(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_ios_failure(const char*, int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_system_error(int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_future_error(int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_bad_function_call() __attribute__((__noreturn__,__cold__));
+# 140 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
+
+}
+# 43 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 2 3
+
+
+namespace std
+{
+
+# 61 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 3
+  class __mutex_base
+  {
+  protected:
+    typedef __gthread_mutex_t __native_type;
+
+
+
+
+
+
+    __native_type _M_mutex;
+
+    __mutex_base() noexcept
+    {
+
+      __gthread_mutex_init_function(&_M_mutex);
+    }
+
+    ~__mutex_base() noexcept { __gthread_mutex_destroy(&_M_mutex); }
+
+
+    __mutex_base(const __mutex_base&) = delete;
+    __mutex_base& operator=(const __mutex_base&) = delete;
+  };
+# 98 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 3
+  class mutex : private __mutex_base
+  {
+  public:
+    typedef __native_type* native_handle_type;
+
+
+
+
+    mutex() noexcept = default;
+    ~mutex() = default;
+
+    mutex(const mutex&) = delete;
+    mutex& operator=(const mutex&) = delete;
+
+    void
+    lock()
+    {
+      int __e = __gthread_mutex_lock(&_M_mutex);
+
+
+      if (__e)
+ __throw_system_error(__e);
+    }
+
+    [[__nodiscard__]]
+    bool
+    try_lock() noexcept
+    {
+
+      return !__gthread_mutex_trylock(&_M_mutex);
+    }
+
+    void
+    unlock()
+    {
+
+      __gthread_mutex_unlock(&_M_mutex);
+    }
+
+    native_handle_type
+    native_handle() noexcept
+    { return &_M_mutex; }
+  };
+
+
+
+
+  class __condvar
+  {
+    using timespec = __gthread_time_t;
+
+  public:
+    __condvar() noexcept
+    {
+
+
+
+    }
+
+    ~__condvar()
+    {
+      int __e __attribute__((__unused__)) = __gthread_cond_destroy(&_M_cond);
+      do { if (std::__is_constant_evaluated() && !bool(__e != 16)) std::__glibcxx_assert_fail(); } while (false);
+    }
+
+    __condvar(const __condvar&) = delete;
+    __condvar& operator=(const __condvar&) = delete;
+
+    __gthread_cond_t* native_handle() noexcept { return &_M_cond; }
+
+
+    void
+    wait(mutex& __m)
+    {
+      int __e __attribute__((__unused__))
+ = __gthread_cond_wait(&_M_cond, __m.native_handle());
+      do { if (std::__is_constant_evaluated() && !bool(__e == 0)) std::__glibcxx_assert_fail(); } while (false);
+    }
+
+    void
+    wait_until(mutex& __m, timespec& __abs_time)
+    {
+      __gthread_cond_timedwait(&_M_cond, __m.native_handle(), &__abs_time);
+    }
+# 192 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 3
+    void
+    notify_one() noexcept
+    {
+      int __e __attribute__((__unused__)) = __gthread_cond_signal(&_M_cond);
+      do { if (std::__is_constant_evaluated() && !bool(__e == 0)) std::__glibcxx_assert_fail(); } while (false);
+    }
+
+    void
+    notify_all() noexcept
+    {
+      int __e __attribute__((__unused__)) = __gthread_cond_broadcast(&_M_cond);
+      do { if (std::__is_constant_evaluated() && !bool(__e == 0)) std::__glibcxx_assert_fail(); } while (false);
+    }
+
+  protected:
+
+    __gthread_cond_t _M_cond = (pthread_cond_t)-1;
+
+
+
+  };
+
+
+
+
+
+  struct defer_lock_t { explicit defer_lock_t() = default; };
+
+
+  struct try_to_lock_t { explicit try_to_lock_t() = default; };
+
+
+
+  struct adopt_lock_t { explicit adopt_lock_t() = default; };
+
+
+  inline constexpr defer_lock_t defer_lock { };
+
+
+  inline constexpr try_to_lock_t try_to_lock { };
+
+
+  inline constexpr adopt_lock_t adopt_lock { };
+# 244 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h" 3
+  template<typename _Mutex>
+    class lock_guard
+    {
+    public:
+      typedef _Mutex mutex_type;
+
+      [[__nodiscard__]]
+      explicit lock_guard(mutex_type& __m) : _M_device(__m)
+      { _M_device.lock(); }
+
+      [[__nodiscard__]]
+      lock_guard(mutex_type& __m, adopt_lock_t) noexcept : _M_device(__m)
+      { }
+
+      ~lock_guard()
+      { _M_device.unlock(); }
+
+      lock_guard(const lock_guard&) = delete;
+      lock_guard& operator=(const lock_guard&) = delete;
+
+    private:
+      mutex_type& _M_device;
+    };
+
+
+
+}
+# 54 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 2 3
+
+namespace std
+{
+
+  namespace __detail
+  {
+# 70 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+    using __platform_wait_t = unsigned long;
+
+
+
+    inline constexpr size_t __platform_wait_alignment
+      = __alignof__(__platform_wait_t);
+
+  }
+
+  template<typename _Tp>
+    inline constexpr bool __platform_wait_uses_type
+
+
+
+
+
+      = false;
+
+
+  namespace __detail
+  {
+# 133 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+    inline void
+    __thread_yield() noexcept
+    {
+
+     __gthread_yield();
+
+    }
+
+    inline void
+    __thread_relax() noexcept
+    {
+
+      __builtin_ia32_pause();
+
+
+
+    }
+
+    inline constexpr auto __atomic_spin_count_relax = 12;
+    inline constexpr auto __atomic_spin_count = 16;
+
+    struct __default_spin_policy
+    {
+      bool
+      operator()() const noexcept
+      { return false; }
+    };
+
+    template<typename _Pred,
+      typename _Spin = __default_spin_policy>
+      bool
+      __atomic_spin(_Pred& __pred, _Spin __spin = _Spin{ }) noexcept
+      {
+ for (auto __i = 0; __i < __atomic_spin_count; ++__i)
+   {
+     if (__pred())
+       return true;
+
+     if (__i < __atomic_spin_count_relax)
+       __detail::__thread_relax();
+     else
+       __detail::__thread_yield();
+   }
+
+ while (__spin())
+   {
+     if (__pred())
+       return true;
+   }
+
+ return false;
+      }
+
+
+    template<typename _Tp>
+      bool __atomic_compare(const _Tp& __a, const _Tp& __b)
+      {
+
+ return __builtin_memcmp(&__a, &__b, sizeof(_Tp)) == 0;
+      }
+
+    struct __waiter_pool_base
+    {
+
+
+      static constexpr auto _S_align = 64;
+
+      alignas(_S_align) __platform_wait_t _M_wait = 0;
+
+
+      mutex _M_mtx;
+
+
+      alignas(_S_align) __platform_wait_t _M_ver = 0;
+
+
+      __condvar _M_cv;
+
+      __waiter_pool_base() = default;
+
+      void
+      _M_enter_wait() noexcept
+      { __atomic_fetch_add(&_M_wait, 1, 5); }
+
+      void
+      _M_leave_wait() noexcept
+      { __atomic_fetch_sub(&_M_wait, 1, 3); }
+
+      bool
+      _M_waiting() const noexcept
+      {
+ __platform_wait_t __res;
+ __atomic_load(&_M_wait, &__res, 5);
+ return __res != 0;
+      }
+
+      void
+      _M_notify(__platform_wait_t* __addr, [[maybe_unused]] bool __all,
+  bool __bare) noexcept
+      {
+# 243 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+ {
+   lock_guard<mutex> __l(_M_mtx);
+   __atomic_fetch_add(__addr, 1, 0);
+ }
+ if (__bare || _M_waiting())
+   _M_cv.notify_all();
+
+      }
+
+      static __waiter_pool_base&
+      _S_for(const void* __addr) noexcept
+      {
+ constexpr long long unsigned int __ct = 16;
+ static __waiter_pool_base __w[__ct];
+ auto __key = ((long long unsigned int)__addr >> 2) % __ct;
+ return __w[__key];
+      }
+    };
+
+    struct __waiter_pool : __waiter_pool_base
+    {
+      void
+      _M_do_wait(const __platform_wait_t* __addr, __platform_wait_t __old) noexcept
+      {
+
+
+
+ __platform_wait_t __val;
+ __atomic_load(__addr, &__val, 5);
+ if (__val == __old)
+   {
+     lock_guard<mutex> __l(_M_mtx);
+     __atomic_load(__addr, &__val, 0);
+     if (__val == __old)
+       _M_cv.wait(_M_mtx);
+   }
+
+      }
+    };
+
+    template<typename _Tp>
+      struct __waiter_base
+      {
+ using __waiter_type = _Tp;
+
+ __waiter_type& _M_w;
+ __platform_wait_t* _M_addr;
+
+ template<typename _Up>
+   static __platform_wait_t*
+   _S_wait_addr(const _Up* __a, __platform_wait_t* __b)
+   {
+     if constexpr (__platform_wait_uses_type<_Up>)
+       return reinterpret_cast<__platform_wait_t*>(const_cast<_Up*>(__a));
+     else
+       return __b;
+   }
+
+ static __waiter_type&
+ _S_for(const void* __addr) noexcept
+ {
+   static_assert(sizeof(__waiter_type) == sizeof(__waiter_pool_base));
+   auto& res = __waiter_pool_base::_S_for(__addr);
+   return reinterpret_cast<__waiter_type&>(res);
+ }
+
+ template<typename _Up>
+   explicit __waiter_base(const _Up* __addr) noexcept
+     : _M_w(_S_for(__addr))
+     , _M_addr(_S_wait_addr(__addr, &_M_w._M_ver))
+   { }
+
+ void
+ _M_notify(bool __all, bool __bare = false) noexcept
+ { _M_w._M_notify(_M_addr, __all, __bare); }
+
+ template<typename _Up, typename _ValFn,
+   typename _Spin = __default_spin_policy>
+   static bool
+   _S_do_spin_v(__platform_wait_t* __addr,
+         const _Up& __old, _ValFn __vfn,
+         __platform_wait_t& __val,
+         _Spin __spin = _Spin{ })
+   {
+     auto const __pred = [=]
+       { return !__detail::__atomic_compare(__old, __vfn()); };
+
+     if constexpr (__platform_wait_uses_type<_Up>)
+       {
+  __builtin_memcpy(&__val, &__old, sizeof(__val));
+       }
+     else
+       {
+  __atomic_load(__addr, &__val, 2);
+       }
+     return __atomic_spin(__pred, __spin);
+   }
+
+ template<typename _Up, typename _ValFn,
+   typename _Spin = __default_spin_policy>
+   bool
+   _M_do_spin_v(const _Up& __old, _ValFn __vfn,
+         __platform_wait_t& __val,
+         _Spin __spin = _Spin{ })
+   { return _S_do_spin_v(_M_addr, __old, __vfn, __val, __spin); }
+
+ template<typename _Pred,
+   typename _Spin = __default_spin_policy>
+   static bool
+   _S_do_spin(const __platform_wait_t* __addr,
+       _Pred __pred,
+       __platform_wait_t& __val,
+       _Spin __spin = _Spin{ })
+   {
+     __atomic_load(__addr, &__val, 2);
+     return __atomic_spin(__pred, __spin);
+   }
+
+ template<typename _Pred,
+   typename _Spin = __default_spin_policy>
+   bool
+   _M_do_spin(_Pred __pred, __platform_wait_t& __val,
+       _Spin __spin = _Spin{ })
+   { return _S_do_spin(_M_addr, __pred, __val, __spin); }
+      };
+
+    template<typename _EntersWait>
+      struct __waiter : __waiter_base<__waiter_pool>
+      {
+ using __base_type = __waiter_base<__waiter_pool>;
+
+ template<typename _Tp>
+   explicit __waiter(const _Tp* __addr) noexcept
+     : __base_type(__addr)
+   {
+     if constexpr (_EntersWait::value)
+       _M_w._M_enter_wait();
+   }
+
+ ~__waiter()
+ {
+   if constexpr (_EntersWait::value)
+     _M_w._M_leave_wait();
+ }
+
+ template<typename _Tp, typename _ValFn>
+   void
+   _M_do_wait_v(_Tp __old, _ValFn __vfn)
+   {
+     do
+       {
+  __platform_wait_t __val;
+  if (__base_type::_M_do_spin_v(__old, __vfn, __val))
+    return;
+  __base_type::_M_w._M_do_wait(__base_type::_M_addr, __val);
+       }
+     while (__detail::__atomic_compare(__old, __vfn()));
+   }
+
+ template<typename _Pred>
+   void
+   _M_do_wait(_Pred __pred) noexcept
+   {
+     do
+       {
+  __platform_wait_t __val;
+  if (__base_type::_M_do_spin(__pred, __val))
+    return;
+  __base_type::_M_w._M_do_wait(__base_type::_M_addr, __val);
+       }
+     while (!__pred());
+   }
+      };
+
+    using __enters_wait = __waiter<std::true_type>;
+    using __bare_wait = __waiter<std::false_type>;
+  }
+
+  template<typename _Tp, typename _ValFn>
+    void
+    __atomic_wait_address_v(const _Tp* __addr, _Tp __old,
+       _ValFn __vfn) noexcept
+    {
+      __detail::__enters_wait __w(__addr);
+      __w._M_do_wait_v(__old, __vfn);
+    }
+
+  template<typename _Tp, typename _Pred>
+    void
+    __atomic_wait_address(const _Tp* __addr, _Pred __pred) noexcept
+    {
+      __detail::__enters_wait __w(__addr);
+      __w._M_do_wait(__pred);
+    }
+
+
+  template<typename _Pred>
+    void
+    __atomic_wait_address_bare(const __detail::__platform_wait_t* __addr,
+          _Pred __pred) noexcept
+    {
+# 454 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h" 3
+      __detail::__bare_wait __w(__addr);
+      __w._M_do_wait(__pred);
+
+    }
+
+  template<typename _Tp>
+    void
+    __atomic_notify_address(const _Tp* __addr, bool __all) noexcept
+    {
+      __detail::__bare_wait __w(__addr);
+      __w._M_notify(__all);
+    }
+
+
+  inline void
+  __atomic_notify_address_bare(const __detail::__platform_wait_t* __addr,
+          bool __all) noexcept
+  {
+
+
+
+    __detail::__bare_wait __w(__addr);
+    __w._M_notify(__all, true);
+
+  }
+
+}
+# 44 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 2 3
+
+
+
+
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 51 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 2 3
+
+namespace std
+{
+
+# 65 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+  enum class memory_order : int
+    {
+      relaxed,
+      consume,
+      acquire,
+      release,
+      acq_rel,
+      seq_cst
+    };
+
+  inline constexpr memory_order memory_order_relaxed = memory_order::relaxed;
+  inline constexpr memory_order memory_order_consume = memory_order::consume;
+  inline constexpr memory_order memory_order_acquire = memory_order::acquire;
+  inline constexpr memory_order memory_order_release = memory_order::release;
+  inline constexpr memory_order memory_order_acq_rel = memory_order::acq_rel;
+  inline constexpr memory_order memory_order_seq_cst = memory_order::seq_cst;
+# 94 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+  enum __memory_order_modifier
+    {
+      __memory_order_mask = 0x0ffff,
+      __memory_order_modifier_mask = 0xffff0000,
+      __memory_order_hle_acquire = 0x10000,
+      __memory_order_hle_release = 0x20000
+    };
+
+
+  constexpr memory_order
+  operator|(memory_order __m, __memory_order_modifier __mod) noexcept
+  {
+    return memory_order(int(__m) | int(__mod));
+  }
+
+  constexpr memory_order
+  operator&(memory_order __m, __memory_order_modifier __mod) noexcept
+  {
+    return memory_order(int(__m) & int(__mod));
+  }
+
+
+
+
+  constexpr memory_order
+  __cmpexch_failure_order2(memory_order __m) noexcept
+  {
+    return __m == memory_order_acq_rel ? memory_order_acquire
+      : __m == memory_order_release ? memory_order_relaxed : __m;
+  }
+
+  constexpr memory_order
+  __cmpexch_failure_order(memory_order __m) noexcept
+  {
+    return memory_order(__cmpexch_failure_order2(__m & __memory_order_mask)
+      | __memory_order_modifier(__m & __memory_order_modifier_mask));
+  }
+
+  constexpr bool
+  __is_valid_cmpexch_failure_order(memory_order __m) noexcept
+  {
+    return (__m & __memory_order_mask) != memory_order_release
+ && (__m & __memory_order_mask) != memory_order_acq_rel;
+  }
+
+
+  template<typename _IntTp>
+    struct __atomic_base;
+
+
+
+  inline __attribute__((__always_inline__)) void
+  atomic_thread_fence(memory_order __m) noexcept
+  { __atomic_thread_fence(int(__m)); }
+
+  inline __attribute__((__always_inline__)) void
+  atomic_signal_fence(memory_order __m) noexcept
+  { __atomic_signal_fence(int(__m)); }
+
+
+  template<typename _Tp>
+    inline _Tp
+    kill_dependency(_Tp __y) noexcept
+    {
+      _Tp __ret(__y);
+      return __ret;
+    }
+# 172 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+  template<typename _Tp>
+    struct atomic;
+
+  template<typename _Tp>
+    struct atomic<_Tp*>;
+
+
+
+    typedef bool __atomic_flag_data_type;
+# 197 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+  extern "C" {
+
+  struct __atomic_flag_base
+  {
+    __atomic_flag_data_type _M_i = {};
+  };
+
+  }
+
+
+
+
+
+
+  struct atomic_flag : public __atomic_flag_base
+  {
+    atomic_flag() noexcept = default;
+    ~atomic_flag() noexcept = default;
+    atomic_flag(const atomic_flag&) = delete;
+    atomic_flag& operator=(const atomic_flag&) = delete;
+    atomic_flag& operator=(const atomic_flag&) volatile = delete;
+
+
+    constexpr atomic_flag(bool __i) noexcept
+      : __atomic_flag_base{ _S_init(__i) }
+    { }
+
+    inline __attribute__((__always_inline__)) bool
+    test_and_set(memory_order __m = memory_order_seq_cst) noexcept
+    {
+      return __atomic_test_and_set (&_M_i, int(__m));
+    }
+
+    inline __attribute__((__always_inline__)) bool
+    test_and_set(memory_order __m = memory_order_seq_cst) volatile noexcept
+    {
+      return __atomic_test_and_set (&_M_i, int(__m));
+    }
+
+
+    inline __attribute__((__always_inline__)) bool
+    test(memory_order __m = memory_order_seq_cst) const noexcept
+    {
+      __atomic_flag_data_type __v;
+      __atomic_load(&_M_i, &__v, int(__m));
+      return __v == 1;
+    }
+
+    inline __attribute__((__always_inline__)) bool
+    test(memory_order __m = memory_order_seq_cst) const volatile noexcept
+    {
+      __atomic_flag_data_type __v;
+      __atomic_load(&_M_i, &__v, int(__m));
+      return __v == 1;
+    }
+
+
+
+    inline __attribute__((__always_inline__)) void
+    wait(bool __old,
+ memory_order __m = memory_order_seq_cst) const noexcept
+    {
+      const __atomic_flag_data_type __v
+ = __old ? 1 : 0;
+
+      std::__atomic_wait_address_v(&_M_i, __v,
+   [__m, this] { return __atomic_load_n(&_M_i, int(__m)); });
+    }
+
+
+
+    inline __attribute__((__always_inline__)) void
+    notify_one() noexcept
+    { std::__atomic_notify_address(&_M_i, false); }
+
+
+
+    inline __attribute__((__always_inline__)) void
+    notify_all() noexcept
+    { std::__atomic_notify_address(&_M_i, true); }
+
+
+
+
+    inline __attribute__((__always_inline__)) void
+    clear(memory_order __m = memory_order_seq_cst) noexcept
+    {
+      memory_order __b __attribute__ ((__unused__))
+ = __m & __memory_order_mask;
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+      __atomic_clear (&_M_i, int(__m));
+    }
+
+    inline __attribute__((__always_inline__)) void
+    clear(memory_order __m = memory_order_seq_cst) volatile noexcept
+    {
+      memory_order __b __attribute__ ((__unused__))
+ = __m & __memory_order_mask;
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+      do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+      __atomic_clear (&_M_i, int(__m));
+    }
+
+  private:
+    static constexpr __atomic_flag_data_type
+    _S_init(bool __i)
+    { return __i ? 1 : 0; }
+  };
+# 337 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+  template<typename _ITp>
+    struct __atomic_base
+    {
+      using value_type = _ITp;
+      using difference_type = value_type;
+
+    private:
+      typedef _ITp __int_type;
+
+      static constexpr int _S_alignment =
+ sizeof(_ITp) > alignof(_ITp) ? sizeof(_ITp) : alignof(_ITp);
+
+      alignas(_S_alignment) __int_type _M_i = 0;
+
+    public:
+      __atomic_base() noexcept = default;
+      ~__atomic_base() noexcept = default;
+      __atomic_base(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) volatile = delete;
+
+      constexpr __atomic_base(__int_type __i) noexcept : _M_i (__i) { }
+
+      operator __int_type() const noexcept
+      { return load(); }
+
+      operator __int_type() const volatile noexcept
+      { return load(); }
+
+      __int_type
+      operator=(__int_type __i) noexcept
+      {
+ store(__i);
+ return __i;
+      }
+
+      __int_type
+      operator=(__int_type __i) volatile noexcept
+      {
+ store(__i);
+ return __i;
+      }
+
+      __int_type
+      operator++(int) noexcept
+      { return fetch_add(1); }
+
+      __int_type
+      operator++(int) volatile noexcept
+      { return fetch_add(1); }
+
+      __int_type
+      operator--(int) noexcept
+      { return fetch_sub(1); }
+
+      __int_type
+      operator--(int) volatile noexcept
+      { return fetch_sub(1); }
+
+      __int_type
+      operator++() noexcept
+      { return __atomic_add_fetch(&_M_i, 1, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator++() volatile noexcept
+      { return __atomic_add_fetch(&_M_i, 1, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator--() noexcept
+      { return __atomic_sub_fetch(&_M_i, 1, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator--() volatile noexcept
+      { return __atomic_sub_fetch(&_M_i, 1, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator+=(__int_type __i) noexcept
+      { return __atomic_add_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator+=(__int_type __i) volatile noexcept
+      { return __atomic_add_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator-=(__int_type __i) noexcept
+      { return __atomic_sub_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator-=(__int_type __i) volatile noexcept
+      { return __atomic_sub_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator&=(__int_type __i) noexcept
+      { return __atomic_and_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator&=(__int_type __i) volatile noexcept
+      { return __atomic_and_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator|=(__int_type __i) noexcept
+      { return __atomic_or_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator|=(__int_type __i) volatile noexcept
+      { return __atomic_or_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator^=(__int_type __i) noexcept
+      { return __atomic_xor_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      __int_type
+      operator^=(__int_type __i) volatile noexcept
+      { return __atomic_xor_fetch(&_M_i, __i, int(memory_order_seq_cst)); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-_S_alignment));
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-_S_alignment));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__int_type __i, memory_order __m = memory_order_seq_cst) noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+
+ __atomic_store_n(&_M_i, __i, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__int_type __i,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+
+ __atomic_store_n(&_M_i, __i, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_release)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_load_n(&_M_i, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_release)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_load_n(&_M_i, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __int_type
+      exchange(__int_type __i,
+        memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return __atomic_exchange_n(&_M_i, __i, int(__m));
+      }
+
+
+      inline __attribute__((__always_inline__)) __int_type
+      exchange(__int_type __i,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return __atomic_exchange_n(&_M_i, __i, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m1, memory_order __m2) noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m1,
+       memory_order __m2) volatile noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 1,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+       memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return compare_exchange_weak(__i1, __i2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__int_type& __i1, __int_type __i2,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return compare_exchange_weak(__i1, __i2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m1, memory_order __m2) noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m1,
+         memory_order __m2) volatile noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_i, &__i1, __i2, 0,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+         memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return compare_exchange_strong(__i1, __i2, __m,
+           __cmpexch_failure_order(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__int_type& __i1, __int_type __i2,
+   memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return compare_exchange_strong(__i1, __i2, __m,
+           __cmpexch_failure_order(__m));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(__int_type __old,
+   memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ std::__atomic_wait_address_v(&_M_i, __old,
+      [__m, this] { return this->load(__m); });
+      }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() noexcept
+      { std::__atomic_notify_address(&_M_i, false); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() noexcept
+      { std::__atomic_notify_address(&_M_i, true); }
+
+
+
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_add(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_add(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_add(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_add(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_sub(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_sub(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_sub(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_sub(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_and(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_and(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_and(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_and(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_or(__int_type __i,
+        memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_or(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_or(__int_type __i,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_or(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_xor(__int_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_xor(&_M_i, __i, int(__m)); }
+
+      inline __attribute__((__always_inline__)) __int_type
+      fetch_xor(__int_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_xor(&_M_i, __i, int(__m)); }
+    };
+
+
+
+  template<typename _PTp>
+    struct __atomic_base<_PTp*>
+    {
+    private:
+      typedef _PTp* __pointer_type;
+
+      __pointer_type _M_p = nullptr;
+
+      static constexpr ptrdiff_t
+      _S_type_size(ptrdiff_t __d)
+      { return __d * sizeof(_PTp); }
+
+    public:
+      __atomic_base() noexcept = default;
+      ~__atomic_base() noexcept = default;
+      __atomic_base(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) = delete;
+      __atomic_base& operator=(const __atomic_base&) volatile = delete;
+
+
+      constexpr __atomic_base(__pointer_type __p) noexcept : _M_p (__p) { }
+
+      operator __pointer_type() const noexcept
+      { return load(); }
+
+      operator __pointer_type() const volatile noexcept
+      { return load(); }
+
+      __pointer_type
+      operator=(__pointer_type __p) noexcept
+      {
+ store(__p);
+ return __p;
+      }
+
+      __pointer_type
+      operator=(__pointer_type __p) volatile noexcept
+      {
+ store(__p);
+ return __p;
+      }
+
+      __pointer_type
+      operator++(int) noexcept
+      { return fetch_add(1); }
+
+      __pointer_type
+      operator++(int) volatile noexcept
+      { return fetch_add(1); }
+
+      __pointer_type
+      operator--(int) noexcept
+      { return fetch_sub(1); }
+
+      __pointer_type
+      operator--(int) volatile noexcept
+      { return fetch_sub(1); }
+
+      __pointer_type
+      operator++() noexcept
+      { return __atomic_add_fetch(&_M_p, _S_type_size(1),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator++() volatile noexcept
+      { return __atomic_add_fetch(&_M_p, _S_type_size(1),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator--() noexcept
+      { return __atomic_sub_fetch(&_M_p, _S_type_size(1),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator--() volatile noexcept
+      { return __atomic_sub_fetch(&_M_p, _S_type_size(1),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) noexcept
+      { return __atomic_add_fetch(&_M_p, _S_type_size(__d),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) volatile noexcept
+      { return __atomic_add_fetch(&_M_p, _S_type_size(__d),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) noexcept
+      { return __atomic_sub_fetch(&_M_p, _S_type_size(__d),
+      int(memory_order_seq_cst)); }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) volatile noexcept
+      { return __atomic_sub_fetch(&_M_p, _S_type_size(__d),
+      int(memory_order_seq_cst)); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_p),
+     reinterpret_cast<void *>(-__alignof(_M_p)));
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_p),
+     reinterpret_cast<void *>(-__alignof(_M_p)));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+
+ __atomic_store_n(&_M_p, __p, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acquire)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_consume)) std::__glibcxx_assert_fail(); } while (false);
+
+ __atomic_store_n(&_M_p, __p, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_release)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_load_n(&_M_p, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      {
+ memory_order __b __attribute__ ((__unused__))
+   = __m & __memory_order_mask;
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_release)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated() && !bool(__b != memory_order_acq_rel)) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_load_n(&_M_p, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return __atomic_exchange_n(&_M_p, __p, int(__m));
+      }
+
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return __atomic_exchange_n(&_M_p, __p, int(__m));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+       memory_order __m1,
+       memory_order __m2) noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 1,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+       memory_order __m1,
+       memory_order __m2) volatile noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 1,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1,
+         memory_order __m2) noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0,
+        int(__m1), int(__m2));
+      }
+
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1,
+         memory_order __m2) volatile noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__m2))) std::__glibcxx_assert_fail(); } while (false);
+
+ return __atomic_compare_exchange_n(&_M_p, &__p1, __p2, 0,
+        int(__m1), int(__m2));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(__pointer_type __old,
+    memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ std::__atomic_wait_address_v(&_M_p, __old,
+         [__m, this]
+         { return this->load(__m); });
+      }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { std::__atomic_notify_address(&_M_p, false); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { std::__atomic_notify_address(&_M_p, true); }
+
+
+
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_add(&_M_p, _S_type_size(__d), int(__m)); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_add(&_M_p, _S_type_size(__d), int(__m)); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_fetch_sub(&_M_p, _S_type_size(__d), int(__m)); }
+
+      inline __attribute__((__always_inline__)) __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_fetch_sub(&_M_p, _S_type_size(__d), int(__m)); }
+    };
+
+  namespace __atomic_impl
+  {
+
+
+    template<typename _Tp>
+      constexpr bool
+      __maybe_has_padding()
+      {
+
+
+
+ return !__has_unique_object_representations(_Tp)
+   && !is_same<_Tp, float>::value && !is_same<_Tp, double>::value;
+
+
+
+      }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) constexpr _Tp*
+      __clear_padding(_Tp& __val) noexcept
+      {
+ auto* __ptr = std::__addressof(__val);
+
+ if constexpr (__atomic_impl::__maybe_has_padding<_Tp>())
+   __builtin_clear_padding(__ptr);
+
+ return __ptr;
+      }
+
+
+    template<typename _Tp>
+      using _Val = typename remove_volatile<_Tp>::type;
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wc++17-extensions"
+
+    template<bool _AtomicRef = false, typename _Tp>
+      inline __attribute__((__always_inline__)) bool
+      __compare_exchange(_Tp& __val, _Val<_Tp>& __e, _Val<_Tp>& __i,
+    bool __is_weak,
+    memory_order __s, memory_order __f) noexcept
+      {
+ do { if (std::__is_constant_evaluated() && !bool(__is_valid_cmpexch_failure_order(__f))) std::__glibcxx_assert_fail(); } while (false);
+
+ using _Vp = _Val<_Tp>;
+ _Tp* const __pval = std::__addressof(__val);
+
+ if constexpr (!__atomic_impl::__maybe_has_padding<_Vp>())
+   {
+     return __atomic_compare_exchange(__pval, std::__addressof(__e),
+          std::__addressof(__i), __is_weak,
+          int(__s), int(__f));
+   }
+ else if constexpr (!_AtomicRef)
+   {
+
+     _Vp* const __pi = __atomic_impl::__clear_padding(__i);
+
+     _Vp __exp = __e;
+
+     _Vp* const __pexp = __atomic_impl::__clear_padding(__exp);
+
+
+
+     if (__atomic_compare_exchange(__pval, __pexp, __pi,
+       __is_weak, int(__s), int(__f)))
+       return true;
+
+     __builtin_memcpy(std::__addressof(__e), __pexp, sizeof(_Vp));
+     return false;
+   }
+ else
+   {
+
+     _Vp* const __pi = __atomic_impl::__clear_padding(__i);
+
+
+     _Vp __exp = __e;
+
+
+     _Vp* const __pexp = __atomic_impl::__clear_padding(__exp);
+# 1042 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h" 3
+     while (true)
+       {
+
+  _Vp __orig = __exp;
+
+  if (__atomic_compare_exchange(__pval, __pexp, __pi,
+           __is_weak, int(__s), int(__f)))
+    return true;
+
+
+  _Vp __curr = __exp;
+
+
+  if (__builtin_memcmp(__atomic_impl::__clear_padding(__orig),
+         __atomic_impl::__clear_padding(__curr),
+         sizeof(_Vp)))
+    {
+
+      __builtin_memcpy(std::__addressof(__e), __pexp,
+         sizeof(_Vp));
+      return false;
+    }
+       }
+   }
+      }
+#pragma GCC diagnostic pop
+  }
+
+
+
+  namespace __atomic_impl
+  {
+
+    template<typename _Tp>
+      using _Diff = __conditional_t<is_pointer_v<_Tp>, ptrdiff_t, _Val<_Tp>>;
+
+    template<size_t _Size, size_t _Align>
+      inline __attribute__((__always_inline__)) bool
+      is_lock_free() noexcept
+      {
+
+ return __atomic_is_lock_free(_Size, reinterpret_cast<void *>(-_Align));
+      }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) void
+      store(_Tp* __ptr, _Val<_Tp> __t, memory_order __m) noexcept
+      {
+ __atomic_store(__ptr, __atomic_impl::__clear_padding(__t), int(__m));
+      }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Val<_Tp>
+      load(const _Tp* __ptr, memory_order __m) noexcept
+      {
+ alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ auto* __dest = reinterpret_cast<_Val<_Tp>*>(__buf);
+ __atomic_load(__ptr, __dest, int(__m));
+ return *__dest;
+      }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Val<_Tp>
+      exchange(_Tp* __ptr, _Val<_Tp> __desired, memory_order __m) noexcept
+      {
+        alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ auto* __dest = reinterpret_cast<_Val<_Tp>*>(__buf);
+ __atomic_exchange(__ptr, __atomic_impl::__clear_padding(__desired),
+     __dest, int(__m));
+ return *__dest;
+      }
+
+    template<bool _AtomicRef = false, typename _Tp>
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_weak(_Tp* __ptr, _Val<_Tp>& __expected,
+       _Val<_Tp> __desired, memory_order __success,
+       memory_order __failure) noexcept
+      {
+ return __atomic_impl::__compare_exchange<_AtomicRef>(
+     *__ptr, __expected, __desired, true, __success, __failure);
+      }
+
+    template<bool _AtomicRef = false, typename _Tp>
+      inline __attribute__((__always_inline__)) bool
+      compare_exchange_strong(_Tp* __ptr, _Val<_Tp>& __expected,
+         _Val<_Tp> __desired, memory_order __success,
+         memory_order __failure) noexcept
+      {
+ return __atomic_impl::__compare_exchange<_AtomicRef>(
+     *__ptr, __expected, __desired, false, __success, __failure);
+      }
+
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) void
+      wait(const _Tp* __ptr, _Val<_Tp> __old,
+    memory_order __m = memory_order_seq_cst) noexcept
+      {
+ std::__atomic_wait_address_v(__ptr, __old,
+     [__ptr, __m]() { return __atomic_impl::load(__ptr, __m); });
+      }
+
+
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) void
+      notify_one(const _Tp* __ptr) noexcept
+      { std::__atomic_notify_address(__ptr, false); }
+
+
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) void
+      notify_all(const _Tp* __ptr) noexcept
+      { std::__atomic_notify_address(__ptr, true); }
+
+
+
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      fetch_add(_Tp* __ptr, _Diff<_Tp> __i, memory_order __m) noexcept
+      { return __atomic_fetch_add(__ptr, __i, int(__m)); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      fetch_sub(_Tp* __ptr, _Diff<_Tp> __i, memory_order __m) noexcept
+      { return __atomic_fetch_sub(__ptr, __i, int(__m)); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      fetch_and(_Tp* __ptr, _Val<_Tp> __i, memory_order __m) noexcept
+      { return __atomic_fetch_and(__ptr, __i, int(__m)); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      fetch_or(_Tp* __ptr, _Val<_Tp> __i, memory_order __m) noexcept
+      { return __atomic_fetch_or(__ptr, __i, int(__m)); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      fetch_xor(_Tp* __ptr, _Val<_Tp> __i, memory_order __m) noexcept
+      { return __atomic_fetch_xor(__ptr, __i, int(__m)); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      __add_fetch(_Tp* __ptr, _Diff<_Tp> __i) noexcept
+      { return __atomic_add_fetch(__ptr, __i, 5); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      __sub_fetch(_Tp* __ptr, _Diff<_Tp> __i) noexcept
+      { return __atomic_sub_fetch(__ptr, __i, 5); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      __and_fetch(_Tp* __ptr, _Val<_Tp> __i) noexcept
+      { return __atomic_and_fetch(__ptr, __i, 5); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      __or_fetch(_Tp* __ptr, _Val<_Tp> __i) noexcept
+      { return __atomic_or_fetch(__ptr, __i, 5); }
+
+    template<typename _Tp>
+      inline __attribute__((__always_inline__)) _Tp
+      __xor_fetch(_Tp* __ptr, _Val<_Tp> __i) noexcept
+      { return __atomic_xor_fetch(__ptr, __i, 5); }
+
+    template<typename _Tp>
+      concept __atomic_fetch_addable
+ = requires (_Tp __t) { __atomic_fetch_add(&__t, __t, 0); };
+
+    template<typename _Tp>
+      _Tp
+      __fetch_add_flt(_Tp* __ptr, _Val<_Tp> __i, memory_order __m) noexcept
+      {
+ if constexpr (__atomic_fetch_addable<_Tp>)
+   return __atomic_fetch_add(__ptr, __i, int(__m));
+ else
+   {
+     _Val<_Tp> __oldval = load (__ptr, memory_order_relaxed);
+     _Val<_Tp> __newval = __oldval + __i;
+     while (!compare_exchange_weak (__ptr, __oldval, __newval, __m,
+        memory_order_relaxed))
+       __newval = __oldval + __i;
+     return __oldval;
+   }
+      }
+
+    template<typename _Tp>
+      concept __atomic_fetch_subtractable
+ = requires (_Tp __t) { __atomic_fetch_sub(&__t, __t, 0); };
+
+    template<typename _Tp>
+      _Tp
+      __fetch_sub_flt(_Tp* __ptr, _Val<_Tp> __i, memory_order __m) noexcept
+      {
+ if constexpr (__atomic_fetch_subtractable<_Tp>)
+   return __atomic_fetch_sub(__ptr, __i, int(__m));
+ else
+   {
+     _Val<_Tp> __oldval = load (__ptr, memory_order_relaxed);
+     _Val<_Tp> __newval = __oldval - __i;
+     while (!compare_exchange_weak (__ptr, __oldval, __newval, __m,
+        memory_order_relaxed))
+       __newval = __oldval - __i;
+     return __oldval;
+   }
+      }
+
+    template<typename _Tp>
+      concept __atomic_add_fetchable
+ = requires (_Tp __t) { __atomic_add_fetch(&__t, __t, 0); };
+
+    template<typename _Tp>
+      _Tp
+      __add_fetch_flt(_Tp* __ptr, _Val<_Tp> __i) noexcept
+      {
+ if constexpr (__atomic_add_fetchable<_Tp>)
+   return __atomic_add_fetch(__ptr, __i, 5);
+ else
+   {
+     _Val<_Tp> __oldval = load (__ptr, memory_order_relaxed);
+     _Val<_Tp> __newval = __oldval + __i;
+     while (!compare_exchange_weak (__ptr, __oldval, __newval,
+        memory_order_seq_cst,
+        memory_order_relaxed))
+       __newval = __oldval + __i;
+     return __newval;
+   }
+      }
+
+    template<typename _Tp>
+      concept __atomic_sub_fetchable
+ = requires (_Tp __t) { __atomic_sub_fetch(&__t, __t, 0); };
+
+    template<typename _Tp>
+      _Tp
+      __sub_fetch_flt(_Tp* __ptr, _Val<_Tp> __i) noexcept
+      {
+ if constexpr (__atomic_sub_fetchable<_Tp>)
+   return __atomic_sub_fetch(__ptr, __i, 5);
+ else
+   {
+     _Val<_Tp> __oldval = load (__ptr, memory_order_relaxed);
+     _Val<_Tp> __newval = __oldval - __i;
+     while (!compare_exchange_weak (__ptr, __oldval, __newval,
+        memory_order_seq_cst,
+        memory_order_relaxed))
+       __newval = __oldval - __i;
+     return __newval;
+   }
+      }
+  }
+
+
+  template<typename _Fp>
+    struct __atomic_float
+    {
+      static_assert(is_floating_point_v<_Fp>);
+
+      static constexpr size_t _S_alignment = __alignof__(_Fp);
+
+    public:
+      using value_type = _Fp;
+      using difference_type = value_type;
+
+      static constexpr bool is_always_lock_free
+ = __atomic_always_lock_free(sizeof(_Fp), 0);
+
+      __atomic_float() = default;
+
+      constexpr
+      __atomic_float(_Fp __t) : _M_fp(__t)
+      { __atomic_impl::__clear_padding(_M_fp); }
+
+      __atomic_float(const __atomic_float&) = delete;
+      __atomic_float& operator=(const __atomic_float&) = delete;
+      __atomic_float& operator=(const __atomic_float&) volatile = delete;
+
+      _Fp
+      operator=(_Fp __t) volatile noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      _Fp
+      operator=(_Fp __t) noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      { return __atomic_impl::is_lock_free<sizeof(_Fp), _S_alignment>(); }
+
+      bool
+      is_lock_free() const noexcept
+      { return __atomic_impl::is_lock_free<sizeof(_Fp), _S_alignment>(); }
+
+      void
+      store(_Fp __t, memory_order __m = memory_order_seq_cst) volatile noexcept
+      { __atomic_impl::store(&_M_fp, __t, __m); }
+
+      void
+      store(_Fp __t, memory_order __m = memory_order_seq_cst) noexcept
+      { __atomic_impl::store(&_M_fp, __t, __m); }
+
+      _Fp
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      { return __atomic_impl::load(&_M_fp, __m); }
+
+      _Fp
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::load(&_M_fp, __m); }
+
+      operator _Fp() const volatile noexcept { return this->load(); }
+      operator _Fp() const noexcept { return this->load(); }
+
+      _Fp
+      exchange(_Fp __desired,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_impl::exchange(&_M_fp, __desired, __m); }
+
+      _Fp
+      exchange(_Fp __desired,
+        memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_impl::exchange(&_M_fp, __desired, __m); }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __success,
+       memory_order __failure) noexcept
+      {
+ return __atomic_impl::compare_exchange_weak(&_M_fp,
+          __expected, __desired,
+          __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __success,
+       memory_order __failure) volatile noexcept
+      {
+ return __atomic_impl::compare_exchange_weak(&_M_fp,
+          __expected, __desired,
+          __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __success,
+         memory_order __failure) noexcept
+      {
+ return __atomic_impl::compare_exchange_strong(&_M_fp,
+            __expected, __desired,
+            __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __success,
+         memory_order __failure) volatile noexcept
+      {
+ return __atomic_impl::compare_exchange_strong(&_M_fp,
+            __expected, __desired,
+            __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __order = memory_order_seq_cst)
+      noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __order = memory_order_seq_cst)
+      volatile noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __order = memory_order_seq_cst)
+      noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __order = memory_order_seq_cst)
+      volatile noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(_Fp __old, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::wait(&_M_fp, __old, __m); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { __atomic_impl::notify_one(&_M_fp); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { __atomic_impl::notify_all(&_M_fp); }
+
+
+
+
+      value_type
+      fetch_add(value_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_impl::__fetch_add_flt(&_M_fp, __i, __m); }
+
+      value_type
+      fetch_add(value_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_impl::__fetch_add_flt(&_M_fp, __i, __m); }
+
+      value_type
+      fetch_sub(value_type __i,
+  memory_order __m = memory_order_seq_cst) noexcept
+      { return __atomic_impl::__fetch_sub_flt(&_M_fp, __i, __m); }
+
+      value_type
+      fetch_sub(value_type __i,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return __atomic_impl::__fetch_sub_flt(&_M_fp, __i, __m); }
+
+      value_type
+      operator+=(value_type __i) noexcept
+      { return __atomic_impl::__add_fetch_flt(&_M_fp, __i); }
+
+      value_type
+      operator+=(value_type __i) volatile noexcept
+      { return __atomic_impl::__add_fetch_flt(&_M_fp, __i); }
+
+      value_type
+      operator-=(value_type __i) noexcept
+      { return __atomic_impl::__sub_fetch_flt(&_M_fp, __i); }
+
+      value_type
+      operator-=(value_type __i) volatile noexcept
+      { return __atomic_impl::__sub_fetch_flt(&_M_fp, __i); }
+
+    private:
+      alignas(_S_alignment) _Fp _M_fp = 0;
+    };
+
+
+  template<typename _Tp,
+           bool = is_integral_v<_Tp> && !is_same_v<_Tp, bool>,
+           bool = is_floating_point_v<_Tp>>
+    struct __atomic_ref;
+
+
+  template<typename _Tp>
+    struct __atomic_ref<_Tp, false, false>
+    {
+      static_assert(is_trivially_copyable_v<_Tp>);
+
+
+      static constexpr int _S_min_alignment
+ = (sizeof(_Tp) & (sizeof(_Tp) - 1)) || sizeof(_Tp) > 16
+ ? 0 : sizeof(_Tp);
+
+    public:
+      using value_type = _Tp;
+
+      static constexpr bool is_always_lock_free
+ = __atomic_always_lock_free(sizeof(_Tp), 0);
+
+      static constexpr size_t required_alignment
+ = _S_min_alignment > alignof(_Tp) ? _S_min_alignment : alignof(_Tp);
+
+      __atomic_ref& operator=(const __atomic_ref&) = delete;
+
+      explicit
+      __atomic_ref(_Tp& __t) : _M_ptr(std::__addressof(__t))
+      {
+ do { if (std::__is_constant_evaluated() && !bool(((long long unsigned int)_M_ptr % required_alignment) == 0)) std::__glibcxx_assert_fail(); } while (false);
+      }
+
+      __atomic_ref(const __atomic_ref&) noexcept = default;
+
+      _Tp
+      operator=(_Tp __t) const noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      operator _Tp() const noexcept { return this->load(); }
+
+      bool
+      is_lock_free() const noexcept
+      { return __atomic_impl::is_lock_free<sizeof(_Tp), required_alignment>(); }
+
+      void
+      store(_Tp __t, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::store(_M_ptr, __t, __m); }
+
+      _Tp
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::load(_M_ptr, __m); }
+
+      _Tp
+      exchange(_Tp __desired, memory_order __m = memory_order_seq_cst)
+      const noexcept
+      { return __atomic_impl::exchange(_M_ptr, __desired, __m); }
+
+      bool
+      compare_exchange_weak(_Tp& __expected, _Tp __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_weak<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __expected, _Tp __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_strong<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Tp& __expected, _Tp __desired,
+       memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __expected, _Tp __desired,
+         memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(_Tp __old, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::wait(_M_ptr, __old, __m); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { __atomic_impl::notify_one(_M_ptr); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { __atomic_impl::notify_all(_M_ptr); }
+
+
+
+
+    private:
+      _Tp* _M_ptr;
+    };
+
+
+  template<typename _Tp>
+    struct __atomic_ref<_Tp, true, false>
+    {
+      static_assert(is_integral_v<_Tp>);
+
+    public:
+      using value_type = _Tp;
+      using difference_type = value_type;
+
+      static constexpr bool is_always_lock_free
+ = __atomic_always_lock_free(sizeof(_Tp), 0);
+
+      static constexpr size_t required_alignment
+ = sizeof(_Tp) > alignof(_Tp) ? sizeof(_Tp) : alignof(_Tp);
+
+      __atomic_ref() = delete;
+      __atomic_ref& operator=(const __atomic_ref&) = delete;
+
+      explicit
+      __atomic_ref(_Tp& __t) : _M_ptr(&__t)
+      {
+ do { if (std::__is_constant_evaluated() && !bool(((long long unsigned int)_M_ptr % required_alignment) == 0)) std::__glibcxx_assert_fail(); } while (false);
+      }
+
+      __atomic_ref(const __atomic_ref&) noexcept = default;
+
+      _Tp
+      operator=(_Tp __t) const noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      operator _Tp() const noexcept { return this->load(); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+ return __atomic_impl::is_lock_free<sizeof(_Tp), required_alignment>();
+      }
+
+      void
+      store(_Tp __t, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::store(_M_ptr, __t, __m); }
+
+      _Tp
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::load(_M_ptr, __m); }
+
+      _Tp
+      exchange(_Tp __desired,
+        memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::exchange(_M_ptr, __desired, __m); }
+
+      bool
+      compare_exchange_weak(_Tp& __expected, _Tp __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_weak<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __expected, _Tp __desired,
+         memory_order __success,
+         memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_strong<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Tp& __expected, _Tp __desired,
+       memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __expected, _Tp __desired,
+         memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(_Tp __old, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::wait(_M_ptr, __old, __m); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { __atomic_impl::notify_one(_M_ptr); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { __atomic_impl::notify_all(_M_ptr); }
+
+
+
+
+      value_type
+      fetch_add(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_add(_M_ptr, __i, __m); }
+
+      value_type
+      fetch_sub(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_sub(_M_ptr, __i, __m); }
+
+      value_type
+      fetch_and(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_and(_M_ptr, __i, __m); }
+
+      value_type
+      fetch_or(value_type __i,
+        memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_or(_M_ptr, __i, __m); }
+
+      value_type
+      fetch_xor(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_xor(_M_ptr, __i, __m); }
+
+      inline __attribute__((__always_inline__)) value_type
+      operator++(int) const noexcept
+      { return fetch_add(1); }
+
+      inline __attribute__((__always_inline__)) value_type
+      operator--(int) const noexcept
+      { return fetch_sub(1); }
+
+      value_type
+      operator++() const noexcept
+      { return __atomic_impl::__add_fetch(_M_ptr, value_type(1)); }
+
+      value_type
+      operator--() const noexcept
+      { return __atomic_impl::__sub_fetch(_M_ptr, value_type(1)); }
+
+      value_type
+      operator+=(value_type __i) const noexcept
+      { return __atomic_impl::__add_fetch(_M_ptr, __i); }
+
+      value_type
+      operator-=(value_type __i) const noexcept
+      { return __atomic_impl::__sub_fetch(_M_ptr, __i); }
+
+      value_type
+      operator&=(value_type __i) const noexcept
+      { return __atomic_impl::__and_fetch(_M_ptr, __i); }
+
+      value_type
+      operator|=(value_type __i) const noexcept
+      { return __atomic_impl::__or_fetch(_M_ptr, __i); }
+
+      value_type
+      operator^=(value_type __i) const noexcept
+      { return __atomic_impl::__xor_fetch(_M_ptr, __i); }
+
+    private:
+      _Tp* _M_ptr;
+    };
+
+
+  template<typename _Fp>
+    struct __atomic_ref<_Fp, false, true>
+    {
+      static_assert(is_floating_point_v<_Fp>);
+
+    public:
+      using value_type = _Fp;
+      using difference_type = value_type;
+
+      static constexpr bool is_always_lock_free
+ = __atomic_always_lock_free(sizeof(_Fp), 0);
+
+      static constexpr size_t required_alignment = __alignof__(_Fp);
+
+      __atomic_ref() = delete;
+      __atomic_ref& operator=(const __atomic_ref&) = delete;
+
+      explicit
+      __atomic_ref(_Fp& __t) : _M_ptr(&__t)
+      {
+ do { if (std::__is_constant_evaluated() && !bool(((long long unsigned int)_M_ptr % required_alignment) == 0)) std::__glibcxx_assert_fail(); } while (false);
+      }
+
+      __atomic_ref(const __atomic_ref&) noexcept = default;
+
+      _Fp
+      operator=(_Fp __t) const noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      operator _Fp() const noexcept { return this->load(); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+ return __atomic_impl::is_lock_free<sizeof(_Fp), required_alignment>();
+      }
+
+      void
+      store(_Fp __t, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::store(_M_ptr, __t, __m); }
+
+      _Fp
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::load(_M_ptr, __m); }
+
+      _Fp
+      exchange(_Fp __desired,
+        memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::exchange(_M_ptr, __desired, __m); }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_weak<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __success,
+         memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_strong<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Fp& __expected, _Fp __desired,
+       memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Fp& __expected, _Fp __desired,
+         memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(_Fp __old, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::wait(_M_ptr, __old, __m); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { __atomic_impl::notify_one(_M_ptr); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { __atomic_impl::notify_all(_M_ptr); }
+
+
+
+
+      value_type
+      fetch_add(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::__fetch_add_flt(_M_ptr, __i, __m); }
+
+      value_type
+      fetch_sub(value_type __i,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::__fetch_sub_flt(_M_ptr, __i, __m); }
+
+      value_type
+      operator+=(value_type __i) const noexcept
+      { return __atomic_impl::__add_fetch_flt(_M_ptr, __i); }
+
+      value_type
+      operator-=(value_type __i) const noexcept
+      { return __atomic_impl::__sub_fetch_flt(_M_ptr, __i); }
+
+    private:
+      _Fp* _M_ptr;
+    };
+
+
+  template<typename _Tp>
+    struct __atomic_ref<_Tp*, false, false>
+    {
+    public:
+      using value_type = _Tp*;
+      using difference_type = ptrdiff_t;
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+      static constexpr size_t required_alignment = __alignof__(_Tp*);
+
+      __atomic_ref() = delete;
+      __atomic_ref& operator=(const __atomic_ref&) = delete;
+
+      explicit
+      __atomic_ref(_Tp*& __t) : _M_ptr(std::__addressof(__t))
+      {
+ do { if (std::__is_constant_evaluated() && !bool(((long long unsigned int)_M_ptr % required_alignment) == 0)) std::__glibcxx_assert_fail(); } while (false);
+      }
+
+      __atomic_ref(const __atomic_ref&) noexcept = default;
+
+      _Tp*
+      operator=(_Tp* __t) const noexcept
+      {
+ this->store(__t);
+ return __t;
+      }
+
+      operator _Tp*() const noexcept { return this->load(); }
+
+      bool
+      is_lock_free() const noexcept
+      {
+ return __atomic_impl::is_lock_free<sizeof(_Tp*), required_alignment>();
+      }
+
+      void
+      store(_Tp* __t, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::store(_M_ptr, __t, __m); }
+
+      _Tp*
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::load(_M_ptr, __m); }
+
+      _Tp*
+      exchange(_Tp* __desired,
+        memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::exchange(_M_ptr, __desired, __m); }
+
+      bool
+      compare_exchange_weak(_Tp*& __expected, _Tp* __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_weak<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_strong(_Tp*& __expected, _Tp* __desired,
+       memory_order __success,
+       memory_order __failure) const noexcept
+      {
+ return __atomic_impl::compare_exchange_strong<true>(
+   _M_ptr, __expected, __desired, __success, __failure);
+      }
+
+      bool
+      compare_exchange_weak(_Tp*& __expected, _Tp* __desired,
+       memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_weak(__expected, __desired, __order,
+                                     __cmpexch_failure_order(__order));
+      }
+
+      bool
+      compare_exchange_strong(_Tp*& __expected, _Tp* __desired,
+         memory_order __order = memory_order_seq_cst)
+      const noexcept
+      {
+ return compare_exchange_strong(__expected, __desired, __order,
+           __cmpexch_failure_order(__order));
+      }
+
+
+      inline __attribute__((__always_inline__)) void
+      wait(_Tp* __old, memory_order __m = memory_order_seq_cst) const noexcept
+      { __atomic_impl::wait(_M_ptr, __old, __m); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_one() const noexcept
+      { __atomic_impl::notify_one(_M_ptr); }
+
+
+
+      inline __attribute__((__always_inline__)) void
+      notify_all() const noexcept
+      { __atomic_impl::notify_all(_M_ptr); }
+
+
+
+
+      inline __attribute__((__always_inline__)) value_type
+      fetch_add(difference_type __d,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_add(_M_ptr, _S_type_size(__d), __m); }
+
+      inline __attribute__((__always_inline__)) value_type
+      fetch_sub(difference_type __d,
+  memory_order __m = memory_order_seq_cst) const noexcept
+      { return __atomic_impl::fetch_sub(_M_ptr, _S_type_size(__d), __m); }
+
+      value_type
+      operator++(int) const noexcept
+      { return fetch_add(1); }
+
+      value_type
+      operator--(int) const noexcept
+      { return fetch_sub(1); }
+
+      value_type
+      operator++() const noexcept
+      {
+ return __atomic_impl::__add_fetch(_M_ptr, _S_type_size(1));
+      }
+
+      value_type
+      operator--() const noexcept
+      {
+ return __atomic_impl::__sub_fetch(_M_ptr, _S_type_size(1));
+      }
+
+      value_type
+      operator+=(difference_type __d) const noexcept
+      {
+ return __atomic_impl::__add_fetch(_M_ptr, _S_type_size(__d));
+      }
+
+      value_type
+      operator-=(difference_type __d) const noexcept
+      {
+ return __atomic_impl::__sub_fetch(_M_ptr, _S_type_size(__d));
+      }
+
+    private:
+      static constexpr ptrdiff_t
+      _S_type_size(ptrdiff_t __d) noexcept
+      {
+ static_assert(is_object_v<_Tp>);
+ return __d * sizeof(_Tp);
+      }
+
+      _Tp** _M_ptr;
+    };
+
+
+
+
+
+
+
+}
+# 53 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 2 3
+
+
+
+namespace std
+{
+
+
+
+
+
+
+
+  template<typename _Tp>
+    struct atomic;
+
+
+
+  template<>
+  struct atomic<bool>
+  {
+    using value_type = bool;
+
+  private:
+    __atomic_base<bool> _M_base;
+
+  public:
+    atomic() noexcept = default;
+    ~atomic() noexcept = default;
+    atomic(const atomic&) = delete;
+    atomic& operator=(const atomic&) = delete;
+    atomic& operator=(const atomic&) volatile = delete;
+
+    constexpr atomic(bool __i) noexcept : _M_base(__i) { }
+
+    bool
+    operator=(bool __i) noexcept
+    { return _M_base.operator=(__i); }
+
+    bool
+    operator=(bool __i) volatile noexcept
+    { return _M_base.operator=(__i); }
+
+    operator bool() const noexcept
+    { return _M_base.load(); }
+
+    operator bool() const volatile noexcept
+    { return _M_base.load(); }
+
+    bool
+    is_lock_free() const noexcept { return _M_base.is_lock_free(); }
+
+    bool
+    is_lock_free() const volatile noexcept { return _M_base.is_lock_free(); }
+
+
+    static constexpr bool is_always_lock_free = 2 == 2;
+
+
+    void
+    store(bool __i, memory_order __m = memory_order_seq_cst) noexcept
+    { _M_base.store(__i, __m); }
+
+    void
+    store(bool __i, memory_order __m = memory_order_seq_cst) volatile noexcept
+    { _M_base.store(__i, __m); }
+
+    bool
+    load(memory_order __m = memory_order_seq_cst) const noexcept
+    { return _M_base.load(__m); }
+
+    bool
+    load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+    { return _M_base.load(__m); }
+
+    bool
+    exchange(bool __i, memory_order __m = memory_order_seq_cst) noexcept
+    { return _M_base.exchange(__i, __m); }
+
+    bool
+    exchange(bool __i,
+      memory_order __m = memory_order_seq_cst) volatile noexcept
+    { return _M_base.exchange(__i, __m); }
+
+    bool
+    compare_exchange_weak(bool& __i1, bool __i2, memory_order __m1,
+     memory_order __m2) noexcept
+    { return _M_base.compare_exchange_weak(__i1, __i2, __m1, __m2); }
+
+    bool
+    compare_exchange_weak(bool& __i1, bool __i2, memory_order __m1,
+     memory_order __m2) volatile noexcept
+    { return _M_base.compare_exchange_weak(__i1, __i2, __m1, __m2); }
+
+    bool
+    compare_exchange_weak(bool& __i1, bool __i2,
+     memory_order __m = memory_order_seq_cst) noexcept
+    { return _M_base.compare_exchange_weak(__i1, __i2, __m); }
+
+    bool
+    compare_exchange_weak(bool& __i1, bool __i2,
+       memory_order __m = memory_order_seq_cst) volatile noexcept
+    { return _M_base.compare_exchange_weak(__i1, __i2, __m); }
+
+    bool
+    compare_exchange_strong(bool& __i1, bool __i2, memory_order __m1,
+       memory_order __m2) noexcept
+    { return _M_base.compare_exchange_strong(__i1, __i2, __m1, __m2); }
+
+    bool
+    compare_exchange_strong(bool& __i1, bool __i2, memory_order __m1,
+       memory_order __m2) volatile noexcept
+    { return _M_base.compare_exchange_strong(__i1, __i2, __m1, __m2); }
+
+    bool
+    compare_exchange_strong(bool& __i1, bool __i2,
+       memory_order __m = memory_order_seq_cst) noexcept
+    { return _M_base.compare_exchange_strong(__i1, __i2, __m); }
+
+    bool
+    compare_exchange_strong(bool& __i1, bool __i2,
+      memory_order __m = memory_order_seq_cst) volatile noexcept
+    { return _M_base.compare_exchange_strong(__i1, __i2, __m); }
+
+
+    void
+    wait(bool __old, memory_order __m = memory_order_seq_cst) const noexcept
+    { _M_base.wait(__old, __m); }
+
+
+
+    void
+    notify_one() noexcept
+    { _M_base.notify_one(); }
+
+    void
+    notify_all() noexcept
+    { _M_base.notify_all(); }
+
+  };
+
+
+
+
+
+
+  template<typename _Tp>
+    struct atomic
+    {
+      using value_type = _Tp;
+
+    private:
+
+      static constexpr int _S_min_alignment
+ = (sizeof(_Tp) & (sizeof(_Tp) - 1)) || sizeof(_Tp) > 16
+ ? 0 : sizeof(_Tp);
+
+      static constexpr int _S_alignment
+        = _S_min_alignment > alignof(_Tp) ? _S_min_alignment : alignof(_Tp);
+
+      alignas(_S_alignment) _Tp _M_i;
+
+      static_assert(__is_trivially_copyable(_Tp),
+      "std::atomic requires a trivially copyable type");
+
+      static_assert(sizeof(_Tp) > 0,
+      "Incomplete or zero-sized types are not supported");
+
+
+      static_assert(is_copy_constructible_v<_Tp>);
+      static_assert(is_move_constructible_v<_Tp>);
+      static_assert(is_copy_assignable_v<_Tp>);
+      static_assert(is_move_assignable_v<_Tp>);
+
+
+    public:
+
+
+
+      constexpr atomic() noexcept(is_nothrow_default_constructible_v<_Tp>)
+ requires is_default_constructible_v<_Tp>
+ : _M_i()
+      {}
+
+
+
+
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(_Tp __i) noexcept : _M_i(__i)
+      {
+
+ if constexpr (__atomic_impl::__maybe_has_padding<_Tp>())
+   __builtin_clear_padding(std::__addressof(_M_i));
+
+      }
+
+      operator _Tp() const noexcept
+      { return load(); }
+
+      operator _Tp() const volatile noexcept
+      { return load(); }
+
+      _Tp
+      operator=(_Tp __i) noexcept
+      { store(__i); return __i; }
+
+      _Tp
+      operator=(_Tp __i) volatile noexcept
+      { store(__i); return __i; }
+
+      bool
+      is_lock_free() const noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-_S_alignment));
+      }
+
+      bool
+      is_lock_free() const volatile noexcept
+      {
+
+ return __atomic_is_lock_free(sizeof(_M_i),
+     reinterpret_cast<void *>(-_S_alignment));
+      }
+
+
+      static constexpr bool is_always_lock_free
+ = __atomic_always_lock_free(sizeof(_M_i), 0);
+
+
+      void
+      store(_Tp __i, memory_order __m = memory_order_seq_cst) noexcept
+      {
+ __atomic_store(std::__addressof(_M_i),
+         __atomic_impl::__clear_padding(__i),
+         int(__m));
+      }
+
+      void
+      store(_Tp __i, memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ __atomic_store(std::__addressof(_M_i),
+         __atomic_impl::__clear_padding(__i),
+         int(__m));
+      }
+
+      _Tp
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ _Tp* __ptr = reinterpret_cast<_Tp*>(__buf);
+ __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+ return *__ptr;
+      }
+
+      _Tp
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      {
+        alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ _Tp* __ptr = reinterpret_cast<_Tp*>(__buf);
+ __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+ return *__ptr;
+      }
+
+      _Tp
+      exchange(_Tp __i, memory_order __m = memory_order_seq_cst) noexcept
+      {
+        alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ _Tp* __ptr = reinterpret_cast<_Tp*>(__buf);
+ __atomic_exchange(std::__addressof(_M_i),
+     __atomic_impl::__clear_padding(__i),
+     __ptr, int(__m));
+ return *__ptr;
+      }
+
+      _Tp
+      exchange(_Tp __i,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+        alignas(_Tp) unsigned char __buf[sizeof(_Tp)];
+ _Tp* __ptr = reinterpret_cast<_Tp*>(__buf);
+ __atomic_exchange(std::__addressof(_M_i),
+     __atomic_impl::__clear_padding(__i),
+     __ptr, int(__m));
+ return *__ptr;
+      }
+
+      bool
+      compare_exchange_weak(_Tp& __e, _Tp __i, memory_order __s,
+       memory_order __f) noexcept
+      {
+ return __atomic_impl::__compare_exchange(_M_i, __e, __i, true,
+       __s, __f);
+      }
+
+      bool
+      compare_exchange_weak(_Tp& __e, _Tp __i, memory_order __s,
+       memory_order __f) volatile noexcept
+      {
+ return __atomic_impl::__compare_exchange(_M_i, __e, __i, true,
+       __s, __f);
+      }
+
+      bool
+      compare_exchange_weak(_Tp& __e, _Tp __i,
+       memory_order __m = memory_order_seq_cst) noexcept
+      { return compare_exchange_weak(__e, __i, __m,
+                                     __cmpexch_failure_order(__m)); }
+
+      bool
+      compare_exchange_weak(_Tp& __e, _Tp __i,
+       memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return compare_exchange_weak(__e, __i, __m,
+                                     __cmpexch_failure_order(__m)); }
+
+      bool
+      compare_exchange_strong(_Tp& __e, _Tp __i, memory_order __s,
+         memory_order __f) noexcept
+      {
+ return __atomic_impl::__compare_exchange(_M_i, __e, __i, false,
+       __s, __f);
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __e, _Tp __i, memory_order __s,
+         memory_order __f) volatile noexcept
+      {
+ return __atomic_impl::__compare_exchange(_M_i, __e, __i, false,
+       __s, __f);
+      }
+
+      bool
+      compare_exchange_strong(_Tp& __e, _Tp __i,
+          memory_order __m = memory_order_seq_cst) noexcept
+      { return compare_exchange_strong(__e, __i, __m,
+                                       __cmpexch_failure_order(__m)); }
+
+      bool
+      compare_exchange_strong(_Tp& __e, _Tp __i,
+       memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return compare_exchange_strong(__e, __i, __m,
+                                       __cmpexch_failure_order(__m)); }
+
+
+      void
+      wait(_Tp __old, memory_order __m = memory_order_seq_cst) const noexcept
+      {
+ std::__atomic_wait_address_v(&_M_i, __old,
+      [__m, this] { return this->load(__m); });
+      }
+
+
+
+      void
+      notify_one() noexcept
+      { std::__atomic_notify_address(&_M_i, false); }
+
+      void
+      notify_all() noexcept
+      { std::__atomic_notify_address(&_M_i, true); }
+
+
+    };
+
+
+  template<typename _Tp>
+    struct atomic<_Tp*>
+    {
+      using value_type = _Tp*;
+      using difference_type = ptrdiff_t;
+
+      typedef _Tp* __pointer_type;
+      typedef __atomic_base<_Tp*> __base_type;
+      __base_type _M_b;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__pointer_type __p) noexcept : _M_b(__p) { }
+
+      operator __pointer_type() const noexcept
+      { return __pointer_type(_M_b); }
+
+      operator __pointer_type() const volatile noexcept
+      { return __pointer_type(_M_b); }
+
+      __pointer_type
+      operator=(__pointer_type __p) noexcept
+      { return _M_b.operator=(__p); }
+
+      __pointer_type
+      operator=(__pointer_type __p) volatile noexcept
+      { return _M_b.operator=(__p); }
+
+      __pointer_type
+      operator++(int) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b++;
+      }
+
+      __pointer_type
+      operator++(int) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b++;
+      }
+
+      __pointer_type
+      operator--(int) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b--;
+      }
+
+      __pointer_type
+      operator--(int) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b--;
+      }
+
+      __pointer_type
+      operator++() noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return ++_M_b;
+      }
+
+      __pointer_type
+      operator++() volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return ++_M_b;
+      }
+
+      __pointer_type
+      operator--() noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return --_M_b;
+      }
+
+      __pointer_type
+      operator--() volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return --_M_b;
+      }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.operator+=(__d);
+      }
+
+      __pointer_type
+      operator+=(ptrdiff_t __d) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.operator+=(__d);
+      }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.operator-=(__d);
+      }
+
+      __pointer_type
+      operator-=(ptrdiff_t __d) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.operator-=(__d);
+      }
+
+      bool
+      is_lock_free() const noexcept
+      { return _M_b.is_lock_free(); }
+
+      bool
+      is_lock_free() const volatile noexcept
+      { return _M_b.is_lock_free(); }
+
+
+      static constexpr bool is_always_lock_free
+ = 2 == 2;
+
+
+      void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) noexcept
+      { return _M_b.store(__p, __m); }
+
+      void
+      store(__pointer_type __p,
+     memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return _M_b.store(__p, __m); }
+
+      __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const noexcept
+      { return _M_b.load(__m); }
+
+      __pointer_type
+      load(memory_order __m = memory_order_seq_cst) const volatile noexcept
+      { return _M_b.load(__m); }
+
+      __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) noexcept
+      { return _M_b.exchange(__p, __m); }
+
+      __pointer_type
+      exchange(__pointer_type __p,
+        memory_order __m = memory_order_seq_cst) volatile noexcept
+      { return _M_b.exchange(__p, __m); }
+
+      bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+       memory_order __m1, memory_order __m2) noexcept
+      { return _M_b.compare_exchange_weak(__p1, __p2, __m1, __m2); }
+
+      bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+       memory_order __m1,
+       memory_order __m2) volatile noexcept
+      { return _M_b.compare_exchange_weak(__p1, __p2, __m1, __m2); }
+
+      bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+       memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return compare_exchange_weak(__p1, __p2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      bool
+      compare_exchange_weak(__pointer_type& __p1, __pointer_type __p2,
+      memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return compare_exchange_weak(__p1, __p2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1, memory_order __m2) noexcept
+      { return _M_b.compare_exchange_strong(__p1, __p2, __m1, __m2); }
+
+      bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m1,
+         memory_order __m2) volatile noexcept
+      { return _M_b.compare_exchange_strong(__p1, __p2, __m1, __m2); }
+
+      bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+         memory_order __m = memory_order_seq_cst) noexcept
+      {
+ return _M_b.compare_exchange_strong(__p1, __p2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+      bool
+      compare_exchange_strong(__pointer_type& __p1, __pointer_type __p2,
+      memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+ return _M_b.compare_exchange_strong(__p1, __p2, __m,
+         __cmpexch_failure_order(__m));
+      }
+
+
+    void
+    wait(__pointer_type __old, memory_order __m = memory_order_seq_cst) const noexcept
+    { _M_b.wait(__old, __m); }
+
+
+
+    void
+    notify_one() noexcept
+    { _M_b.notify_one(); }
+
+    void
+    notify_all() noexcept
+    { _M_b.notify_all(); }
+
+
+      __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.fetch_add(__d, __m);
+      }
+
+      __pointer_type
+      fetch_add(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.fetch_add(__d, __m);
+      }
+
+      __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.fetch_sub(__d, __m);
+      }
+
+      __pointer_type
+      fetch_sub(ptrdiff_t __d,
+  memory_order __m = memory_order_seq_cst) volatile noexcept
+      {
+
+ static_assert( is_object_v<_Tp>, "pointer to object type" );
+
+ return _M_b.fetch_sub(__d, __m);
+      }
+    };
+
+
+
+  template<>
+    struct atomic<char> : __atomic_base<char>
+    {
+      typedef char __integral_type;
+      typedef __atomic_base<char> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<signed char> : __atomic_base<signed char>
+    {
+      typedef signed char __integral_type;
+      typedef __atomic_base<signed char> __base_type;
+
+      atomic() noexcept= default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<unsigned char> : __atomic_base<unsigned char>
+    {
+      typedef unsigned char __integral_type;
+      typedef __atomic_base<unsigned char> __base_type;
+
+      atomic() noexcept= default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<short> : __atomic_base<short>
+    {
+      typedef short __integral_type;
+      typedef __atomic_base<short> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<unsigned short> : __atomic_base<unsigned short>
+    {
+      typedef unsigned short __integral_type;
+      typedef __atomic_base<unsigned short> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<int> : __atomic_base<int>
+    {
+      typedef int __integral_type;
+      typedef __atomic_base<int> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<unsigned int> : __atomic_base<unsigned int>
+    {
+      typedef unsigned int __integral_type;
+      typedef __atomic_base<unsigned int> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<long> : __atomic_base<long>
+    {
+      typedef long __integral_type;
+      typedef __atomic_base<long> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<unsigned long> : __atomic_base<unsigned long>
+    {
+      typedef unsigned long __integral_type;
+      typedef __atomic_base<unsigned long> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<long long> : __atomic_base<long long>
+    {
+      typedef long long __integral_type;
+      typedef __atomic_base<long long> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<unsigned long long> : __atomic_base<unsigned long long>
+    {
+      typedef unsigned long long __integral_type;
+      typedef __atomic_base<unsigned long long> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<wchar_t> : __atomic_base<wchar_t>
+    {
+      typedef wchar_t __integral_type;
+      typedef __atomic_base<wchar_t> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free = 2 == 2;
+
+    };
+
+
+
+  template<>
+    struct atomic<char8_t> : __atomic_base<char8_t>
+    {
+      typedef char8_t __integral_type;
+      typedef __atomic_base<char8_t> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free
+ = 2 == 2;
+
+    };
+
+
+
+  template<>
+    struct atomic<char16_t> : __atomic_base<char16_t>
+    {
+      typedef char16_t __integral_type;
+      typedef __atomic_base<char16_t> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free
+ = 2 == 2;
+
+    };
+
+
+  template<>
+    struct atomic<char32_t> : __atomic_base<char32_t>
+    {
+      typedef char32_t __integral_type;
+      typedef __atomic_base<char32_t> __base_type;
+
+      atomic() noexcept = default;
+      ~atomic() noexcept = default;
+      atomic(const atomic&) = delete;
+      atomic& operator=(const atomic&) = delete;
+      atomic& operator=(const atomic&) volatile = delete;
+
+      constexpr atomic(__integral_type __i) noexcept : __base_type(__i) { }
+
+      using __base_type::operator __integral_type;
+      using __base_type::operator=;
+
+
+      static constexpr bool is_always_lock_free
+ = 2 == 2;
+
+    };
+
+
+
+  typedef atomic<bool> atomic_bool;
+
+
+  typedef atomic<char> atomic_char;
+
+
+  typedef atomic<signed char> atomic_schar;
+
+
+  typedef atomic<unsigned char> atomic_uchar;
+
+
+  typedef atomic<short> atomic_short;
+
+
+  typedef atomic<unsigned short> atomic_ushort;
+
+
+  typedef atomic<int> atomic_int;
+
+
+  typedef atomic<unsigned int> atomic_uint;
+
+
+  typedef atomic<long> atomic_long;
+
+
+  typedef atomic<unsigned long> atomic_ulong;
+
+
+  typedef atomic<long long> atomic_llong;
+
+
+  typedef atomic<unsigned long long> atomic_ullong;
+
+
+  typedef atomic<wchar_t> atomic_wchar_t;
+
+
+
+  typedef atomic<char8_t> atomic_char8_t;
+
+
+
+  typedef atomic<char16_t> atomic_char16_t;
+
+
+  typedef atomic<char32_t> atomic_char32_t;
+
+
+
+
+
+
+  typedef atomic<int8_t> atomic_int8_t;
+
+
+  typedef atomic<uint8_t> atomic_uint8_t;
+
+
+  typedef atomic<int16_t> atomic_int16_t;
+
+
+  typedef atomic<uint16_t> atomic_uint16_t;
+
+
+  typedef atomic<int32_t> atomic_int32_t;
+
+
+  typedef atomic<uint32_t> atomic_uint32_t;
+
+
+  typedef atomic<int64_t> atomic_int64_t;
+
+
+  typedef atomic<uint64_t> atomic_uint64_t;
+
+
+
+  typedef atomic<int_least8_t> atomic_int_least8_t;
+
+
+  typedef atomic<uint_least8_t> atomic_uint_least8_t;
+
+
+  typedef atomic<int_least16_t> atomic_int_least16_t;
+
+
+  typedef atomic<uint_least16_t> atomic_uint_least16_t;
+
+
+  typedef atomic<int_least32_t> atomic_int_least32_t;
+
+
+  typedef atomic<uint_least32_t> atomic_uint_least32_t;
+
+
+  typedef atomic<int_least64_t> atomic_int_least64_t;
+
+
+  typedef atomic<uint_least64_t> atomic_uint_least64_t;
+
+
+
+  typedef atomic<int_fast8_t> atomic_int_fast8_t;
+
+
+  typedef atomic<uint_fast8_t> atomic_uint_fast8_t;
+
+
+  typedef atomic<int_fast16_t> atomic_int_fast16_t;
+
+
+  typedef atomic<uint_fast16_t> atomic_uint_fast16_t;
+
+
+  typedef atomic<int_fast32_t> atomic_int_fast32_t;
+
+
+  typedef atomic<uint_fast32_t> atomic_uint_fast32_t;
+
+
+  typedef atomic<int_fast64_t> atomic_int_fast64_t;
+
+
+  typedef atomic<uint_fast64_t> atomic_uint_fast64_t;
+
+
+
+  typedef atomic<intptr_t> atomic_intptr_t;
+
+
+  typedef atomic<uintptr_t> atomic_uintptr_t;
+
+
+  typedef atomic<size_t> atomic_size_t;
+
+
+  typedef atomic<ptrdiff_t> atomic_ptrdiff_t;
+
+
+  typedef atomic<intmax_t> atomic_intmax_t;
+
+
+  typedef atomic<uintmax_t> atomic_uintmax_t;
+
+
+  inline bool
+  atomic_flag_test_and_set_explicit(atomic_flag* __a,
+        memory_order __m) noexcept
+  { return __a->test_and_set(__m); }
+
+  inline bool
+  atomic_flag_test_and_set_explicit(volatile atomic_flag* __a,
+        memory_order __m) noexcept
+  { return __a->test_and_set(__m); }
+
+
+  inline bool
+  atomic_flag_test(const atomic_flag* __a) noexcept
+  { return __a->test(); }
+
+  inline bool
+  atomic_flag_test(const volatile atomic_flag* __a) noexcept
+  { return __a->test(); }
+
+  inline bool
+  atomic_flag_test_explicit(const atomic_flag* __a,
+       memory_order __m) noexcept
+  { return __a->test(__m); }
+
+  inline bool
+  atomic_flag_test_explicit(const volatile atomic_flag* __a,
+       memory_order __m) noexcept
+  { return __a->test(__m); }
+
+
+  inline void
+  atomic_flag_clear_explicit(atomic_flag* __a, memory_order __m) noexcept
+  { __a->clear(__m); }
+
+  inline void
+  atomic_flag_clear_explicit(volatile atomic_flag* __a,
+        memory_order __m) noexcept
+  { __a->clear(__m); }
+
+  inline bool
+  atomic_flag_test_and_set(atomic_flag* __a) noexcept
+  { return atomic_flag_test_and_set_explicit(__a, memory_order_seq_cst); }
+
+  inline bool
+  atomic_flag_test_and_set(volatile atomic_flag* __a) noexcept
+  { return atomic_flag_test_and_set_explicit(__a, memory_order_seq_cst); }
+
+  inline void
+  atomic_flag_clear(atomic_flag* __a) noexcept
+  { atomic_flag_clear_explicit(__a, memory_order_seq_cst); }
+
+  inline void
+  atomic_flag_clear(volatile atomic_flag* __a) noexcept
+  { atomic_flag_clear_explicit(__a, memory_order_seq_cst); }
+
+
+  inline void
+  atomic_flag_wait(atomic_flag* __a, bool __old) noexcept
+  { __a->wait(__old); }
+
+  inline void
+  atomic_flag_wait_explicit(atomic_flag* __a, bool __old,
+                                memory_order __m) noexcept
+  { __a->wait(__old, __m); }
+
+  inline void
+  atomic_flag_notify_one(atomic_flag* __a) noexcept
+  { __a->notify_one(); }
+
+  inline void
+  atomic_flag_notify_all(atomic_flag* __a) noexcept
+  { __a->notify_all(); }
+
+
+
+
+
+  template<typename _Tp>
+    using __atomic_val_t = __type_identity_t<_Tp>;
+  template<typename _Tp>
+    using __atomic_diff_t = typename atomic<_Tp>::difference_type;
+
+
+
+
+  template<typename _ITp>
+    inline bool
+    atomic_is_lock_free(const atomic<_ITp>* __a) noexcept
+    { return __a->is_lock_free(); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_is_lock_free(const volatile atomic<_ITp>* __a) noexcept
+    { return __a->is_lock_free(); }
+
+  template<typename _ITp>
+    inline void
+    atomic_init(atomic<_ITp>* __a, __atomic_val_t<_ITp> __i) noexcept
+    { __a->store(__i, memory_order_relaxed); }
+
+  template<typename _ITp>
+    inline void
+    atomic_init(volatile atomic<_ITp>* __a, __atomic_val_t<_ITp> __i) noexcept
+    { __a->store(__i, memory_order_relaxed); }
+
+  template<typename _ITp>
+    inline void
+    atomic_store_explicit(atomic<_ITp>* __a, __atomic_val_t<_ITp> __i,
+     memory_order __m) noexcept
+    { __a->store(__i, __m); }
+
+  template<typename _ITp>
+    inline void
+    atomic_store_explicit(volatile atomic<_ITp>* __a, __atomic_val_t<_ITp> __i,
+     memory_order __m) noexcept
+    { __a->store(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_load_explicit(const atomic<_ITp>* __a, memory_order __m) noexcept
+    { return __a->load(__m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_load_explicit(const volatile atomic<_ITp>* __a,
+    memory_order __m) noexcept
+    { return __a->load(__m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_exchange_explicit(atomic<_ITp>* __a, __atomic_val_t<_ITp> __i,
+        memory_order __m) noexcept
+    { return __a->exchange(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_exchange_explicit(volatile atomic<_ITp>* __a,
+        __atomic_val_t<_ITp> __i,
+        memory_order __m) noexcept
+    { return __a->exchange(__i, __m); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_weak_explicit(atomic<_ITp>* __a,
+       __atomic_val_t<_ITp>* __i1,
+       __atomic_val_t<_ITp> __i2,
+       memory_order __m1,
+       memory_order __m2) noexcept
+    { return __a->compare_exchange_weak(*__i1, __i2, __m1, __m2); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_weak_explicit(volatile atomic<_ITp>* __a,
+       __atomic_val_t<_ITp>* __i1,
+       __atomic_val_t<_ITp> __i2,
+       memory_order __m1,
+       memory_order __m2) noexcept
+    { return __a->compare_exchange_weak(*__i1, __i2, __m1, __m2); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_strong_explicit(atomic<_ITp>* __a,
+         __atomic_val_t<_ITp>* __i1,
+         __atomic_val_t<_ITp> __i2,
+         memory_order __m1,
+         memory_order __m2) noexcept
+    { return __a->compare_exchange_strong(*__i1, __i2, __m1, __m2); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_strong_explicit(volatile atomic<_ITp>* __a,
+         __atomic_val_t<_ITp>* __i1,
+         __atomic_val_t<_ITp> __i2,
+         memory_order __m1,
+         memory_order __m2) noexcept
+    { return __a->compare_exchange_strong(*__i1, __i2, __m1, __m2); }
+
+
+  template<typename _ITp>
+    inline void
+    atomic_store(atomic<_ITp>* __a, __atomic_val_t<_ITp> __i) noexcept
+    { atomic_store_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline void
+    atomic_store(volatile atomic<_ITp>* __a, __atomic_val_t<_ITp> __i) noexcept
+    { atomic_store_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_load(const atomic<_ITp>* __a) noexcept
+    { return atomic_load_explicit(__a, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_load(const volatile atomic<_ITp>* __a) noexcept
+    { return atomic_load_explicit(__a, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_exchange(atomic<_ITp>* __a, __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_exchange_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_exchange(volatile atomic<_ITp>* __a,
+      __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_exchange_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_weak(atomic<_ITp>* __a,
+     __atomic_val_t<_ITp>* __i1,
+     __atomic_val_t<_ITp> __i2) noexcept
+    {
+      return atomic_compare_exchange_weak_explicit(__a, __i1, __i2,
+         memory_order_seq_cst,
+         memory_order_seq_cst);
+    }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_weak(volatile atomic<_ITp>* __a,
+     __atomic_val_t<_ITp>* __i1,
+     __atomic_val_t<_ITp> __i2) noexcept
+    {
+      return atomic_compare_exchange_weak_explicit(__a, __i1, __i2,
+         memory_order_seq_cst,
+         memory_order_seq_cst);
+    }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_strong(atomic<_ITp>* __a,
+       __atomic_val_t<_ITp>* __i1,
+       __atomic_val_t<_ITp> __i2) noexcept
+    {
+      return atomic_compare_exchange_strong_explicit(__a, __i1, __i2,
+           memory_order_seq_cst,
+           memory_order_seq_cst);
+    }
+
+  template<typename _ITp>
+    inline bool
+    atomic_compare_exchange_strong(volatile atomic<_ITp>* __a,
+       __atomic_val_t<_ITp>* __i1,
+       __atomic_val_t<_ITp> __i2) noexcept
+    {
+      return atomic_compare_exchange_strong_explicit(__a, __i1, __i2,
+           memory_order_seq_cst,
+           memory_order_seq_cst);
+    }
+
+
+
+  template<typename _Tp>
+    inline void
+    atomic_wait(const atomic<_Tp>* __a,
+         typename std::atomic<_Tp>::value_type __old) noexcept
+    { __a->wait(__old); }
+
+  template<typename _Tp>
+    inline void
+    atomic_wait_explicit(const atomic<_Tp>* __a,
+    typename std::atomic<_Tp>::value_type __old,
+    std::memory_order __m) noexcept
+    { __a->wait(__old, __m); }
+
+  template<typename _Tp>
+    inline void
+    atomic_notify_one(atomic<_Tp>* __a) noexcept
+    { __a->notify_one(); }
+
+  template<typename _Tp>
+    inline void
+    atomic_notify_all(atomic<_Tp>* __a) noexcept
+    { __a->notify_all(); }
+
+
+
+
+
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_add_explicit(atomic<_ITp>* __a,
+         __atomic_diff_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_add(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_add_explicit(volatile atomic<_ITp>* __a,
+         __atomic_diff_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_add(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_sub_explicit(atomic<_ITp>* __a,
+         __atomic_diff_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_sub(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_sub_explicit(volatile atomic<_ITp>* __a,
+         __atomic_diff_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_sub(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_and_explicit(__atomic_base<_ITp>* __a,
+         __atomic_val_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_and(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_and_explicit(volatile __atomic_base<_ITp>* __a,
+         __atomic_val_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_and(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_or_explicit(__atomic_base<_ITp>* __a,
+        __atomic_val_t<_ITp> __i,
+        memory_order __m) noexcept
+    { return __a->fetch_or(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_or_explicit(volatile __atomic_base<_ITp>* __a,
+        __atomic_val_t<_ITp> __i,
+        memory_order __m) noexcept
+    { return __a->fetch_or(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_xor_explicit(__atomic_base<_ITp>* __a,
+         __atomic_val_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_xor(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_xor_explicit(volatile __atomic_base<_ITp>* __a,
+         __atomic_val_t<_ITp> __i,
+         memory_order __m) noexcept
+    { return __a->fetch_xor(__i, __m); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_add(atomic<_ITp>* __a,
+       __atomic_diff_t<_ITp> __i) noexcept
+    { return atomic_fetch_add_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_add(volatile atomic<_ITp>* __a,
+       __atomic_diff_t<_ITp> __i) noexcept
+    { return atomic_fetch_add_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_sub(atomic<_ITp>* __a,
+       __atomic_diff_t<_ITp> __i) noexcept
+    { return atomic_fetch_sub_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_sub(volatile atomic<_ITp>* __a,
+       __atomic_diff_t<_ITp> __i) noexcept
+    { return atomic_fetch_sub_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_and(__atomic_base<_ITp>* __a,
+       __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_and_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_and(volatile __atomic_base<_ITp>* __a,
+       __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_and_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_or(__atomic_base<_ITp>* __a,
+      __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_or_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_or(volatile __atomic_base<_ITp>* __a,
+      __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_or_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_xor(__atomic_base<_ITp>* __a,
+       __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_xor_explicit(__a, __i, memory_order_seq_cst); }
+
+  template<typename _ITp>
+    inline _ITp
+    atomic_fetch_xor(volatile __atomic_base<_ITp>* __a,
+       __atomic_val_t<_ITp> __i) noexcept
+    { return atomic_fetch_xor_explicit(__a, __i, memory_order_seq_cst); }
+
+
+  template<>
+    struct atomic<float> : __atomic_float<float>
+    {
+      atomic() noexcept = default;
+
+      constexpr
+      atomic(float __fp) noexcept : __atomic_float<float>(__fp)
+      { }
+
+      atomic& operator=(const atomic&) volatile = delete;
+      atomic& operator=(const atomic&) = delete;
+
+      using __atomic_float<float>::operator=;
+    };
+
+  template<>
+    struct atomic<double> : __atomic_float<double>
+    {
+      atomic() noexcept = default;
+
+      constexpr
+      atomic(double __fp) noexcept : __atomic_float<double>(__fp)
+      { }
+
+      atomic& operator=(const atomic&) volatile = delete;
+      atomic& operator=(const atomic&) = delete;
+
+      using __atomic_float<double>::operator=;
+    };
+
+  template<>
+    struct atomic<long double> : __atomic_float<long double>
+    {
+      atomic() noexcept = default;
+
+      constexpr
+      atomic(long double __fp) noexcept : __atomic_float<long double>(__fp)
+      { }
+
+      atomic& operator=(const atomic&) volatile = delete;
+      atomic& operator=(const atomic&) = delete;
+
+      using __atomic_float<long double>::operator=;
+    };
+# 1761 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 3
+  template<typename _Tp>
+    struct atomic_ref : __atomic_ref<_Tp>
+    {
+      explicit
+      atomic_ref(_Tp& __t) noexcept : __atomic_ref<_Tp>(__t)
+      { }
+
+      atomic_ref& operator=(const atomic_ref&) = delete;
+
+      atomic_ref(const atomic_ref&) = default;
+
+      using __atomic_ref<_Tp>::operator=;
+    };
+# 1783 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 3
+  using atomic_signed_lock_free = atomic<signed int>;
+  using atomic_unsigned_lock_free = atomic<unsigned int>;
+# 1798 "C:/msys64/mingw64/include/c++/15.2.0/atomic" 3
+
+}
+# 8 "C:/Users/MSi/CLionProjects/Chussy/types.h" 2
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/chrono" 1 3
+# 45 "C:/msys64/mingw64/include/c++/15.2.0/chrono" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 1 3
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 1 3
+# 45 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
 # 46 "C:/msys64/mingw64/include/c++/15.2.0/ratio" 2 3
 
@@ -5792,315 +12595,6 @@ __extension__ template<> struct numeric_limits<_Float128> { static constexpr boo
 # 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 2 3
 
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/ctime" 1 3
-# 47 "C:/msys64/mingw64/include/c++/15.2.0/ctime" 3
-# 1 "C:/msys64/mingw64/include/time.h" 1 3
-# 25 "C:/msys64/mingw64/include/time.h" 3
-# 1 "C:/msys64/mingw64/include/sys/timeb.h" 1 3
-# 15 "C:/msys64/mingw64/include/sys/timeb.h" 3
-#pragma pack(push,_CRT_PACKING)
-
-
-extern "C" {
-# 53 "C:/msys64/mingw64/include/sys/timeb.h" 3
-  struct __timeb32 {
-    __time32_t time;
-    unsigned short millitm;
-    short timezone;
-    short dstflag;
-  };
-
-
-  struct timeb {
-    time_t time;
-    unsigned short millitm;
-    short timezone;
-    short dstflag;
-  };
-
-
-  struct __timeb64 {
-    __time64_t time;
-    unsigned short millitm;
-    short timezone;
-    short dstflag;
-  };
-
-
-
-  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _ftime64(struct __timeb64 *_Time);
-  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _ftime32(struct __timeb32 *_Time);
-# 89 "C:/msys64/mingw64/include/sys/timeb.h" 3
-struct _timespec32 {
-  __time32_t tv_sec;
-  long tv_nsec;
-};
-
-struct _timespec64 {
-  __time64_t tv_sec;
-  long tv_nsec;
-};
-
-
-
-struct timespec {
-  time_t tv_sec;
-  long tv_nsec;
-};
-
-struct itimerspec {
-  struct timespec it_interval;
-  struct timespec it_value;
-};
-
-
-
-
-  void __attribute__((__cdecl__)) ftime (struct timeb *) __asm__("_ftime64");
-
-
-
-
-
-
-}
-
-
-#pragma pack(pop)
-
-# 1 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 1 3
-# 10 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 3
-# 1 "C:/msys64/mingw64/include/sys/timeb.h" 1 3
-# 11 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 2 3
-
-
-extern "C" {
-
-
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _ftime32_s(struct __timeb32 *_Time);
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _ftime64_s(struct __timeb64 *_Time);
-# 26 "C:/msys64/mingw64/include/sec_api/sys/timeb_s.h" 3
-}
-# 127 "C:/msys64/mingw64/include/sys/timeb.h" 2 3
-# 26 "C:/msys64/mingw64/include/time.h" 2 3
-
-#pragma pack(push,_CRT_PACKING)
-
-
-extern "C" {
-# 63 "C:/msys64/mingw64/include/time.h" 3
-  typedef long clock_t;
-# 100 "C:/msys64/mingw64/include/time.h" 3
-  struct tm {
-    int tm_sec;
-    int tm_min;
-    int tm_hour;
-    int tm_mday;
-    int tm_mon;
-    int tm_year;
-    int tm_wday;
-    int tm_yday;
-    int tm_isdst;
-  };
-# 119 "C:/msys64/mingw64/include/time.h" 3
-  __attribute__ ((__dllimport__)) int *__attribute__((__cdecl__)) __daylight(void);
-  __attribute__ ((__dllimport__)) long *__attribute__((__cdecl__)) __dstbias(void);
-  __attribute__ ((__dllimport__)) long *__attribute__((__cdecl__)) __timezone(void);
-  __attribute__ ((__dllimport__)) char **__attribute__((__cdecl__)) __tzname(void);
-# 138 "C:/msys64/mingw64/include/time.h" 3
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_daylight(int *_Daylight);
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_dstbias(long *_Daylight_savings_bias);
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_timezone(long *_Timezone);
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_tzname(size_t *_ReturnValue,char *_Buffer,size_t _SizeInBytes,int _Index);
-  char *__attribute__((__cdecl__)) asctime(const struct tm *_Tm) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) asctime_s (char *_Buf,size_t _SizeInWords,const struct tm *_Tm);
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ctime32(const __time32_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _ctime32_s (char *_Buf,size_t _SizeInBytes,const __time32_t *_Time);
-  clock_t __attribute__((__cdecl__)) clock(void);
-  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _difftime32(__time32_t _Time1,__time32_t _Time2);
-  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _gmtime32(const __time32_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _gmtime32_s (struct tm *_Tm,const __time32_t *_Time);
-  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _localtime32(const __time32_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _localtime32_s (struct tm *_Tm,const __time32_t *_Time);
-  size_t __attribute__((__cdecl__)) strftime(char * __restrict__ _Buf,size_t _SizeInBytes,const char * __restrict__ _Format,const struct tm * __restrict__ _Tm) __attribute__((__format__ (ms_strftime, 3, 0)));
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _strftime_l(char * __restrict__ _Buf,size_t _Max_size,const char * __restrict__ _Format,const struct tm * __restrict__ _Tm,_locale_t _Locale);
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strdate(char *_Buffer) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _strdate_s (char *_Buf,size_t _SizeInBytes);
-  extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _strdate_s(char (&_Str)[__size]) { return _strdate_s(_Str,__size); } }
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strtime(char *_Buffer) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _strtime_s (char *_Buf ,size_t _SizeInBytes);
-  extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _strtime_s(char (&_Str)[__size]) { return _strtime_s(_Str,__size); } }
-  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _time32(__time32_t *_Time);
-
-
-
-  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _mktime32(struct tm *_Tm);
-  __attribute__ ((__dllimport__)) __time32_t __attribute__((__cdecl__)) _mkgmtime32(struct tm *_Tm);
-
-
-  void __attribute__((__cdecl__)) tzset(void) ;
-
-
-
-  __attribute__ ((__dllimport__))
-
-  void __attribute__((__cdecl__)) _tzset(void);
-
-
-  __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) _difftime64(__time64_t _Time1,__time64_t _Time2);
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ctime64(const __time64_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _ctime64_s (char *_Buf,size_t _SizeInBytes,const __time64_t *_Time);
-  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _gmtime64(const __time64_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _gmtime64_s (struct tm *_Tm,const __time64_t *_Time);
-  __attribute__ ((__dllimport__)) struct tm *__attribute__((__cdecl__)) _localtime64(const __time64_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _localtime64_s (struct tm *_Tm,const __time64_t *_Time);
-  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _mktime64(struct tm *_Tm);
-  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _mkgmtime64(struct tm *_Tm);
-  __attribute__ ((__dllimport__)) __time64_t __attribute__((__cdecl__)) _time64(__time64_t *_Time);
-
-
-
-  unsigned __attribute__((__cdecl__)) _getsystime(struct tm *_Tm);
-  unsigned __attribute__((__cdecl__)) _setsystime(struct tm *_Tm,unsigned _MilliSec);
-
-
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wasctime(const struct tm *_Tm);
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wasctime_s (wchar_t *_Buf,size_t _SizeInWords,const struct tm *_Tm);
-  wchar_t *__attribute__((__cdecl__)) _wctime32(const __time32_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wctime32_s (wchar_t *_Buf,size_t _SizeInWords,const __time32_t *_Time);
-  size_t __attribute__((__cdecl__)) wcsftime(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm);
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcsftime_l(wchar_t * __restrict__ _Buf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,const struct tm * __restrict__ _Tm,_locale_t _Locale);
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wstrdate(wchar_t *_Buffer) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wstrdate_s (wchar_t *_Buf,size_t _SizeInWords);
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wstrtime(wchar_t *_Buffer) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wstrtime_s (wchar_t *_Buf,size_t _SizeInWords);
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wctime64(const __time64_t *_Time) ;
-  __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _wctime64_s (wchar_t *_Buf,size_t _SizeInWords,const __time64_t *_Time);
-
-
-
-
-  wchar_t *__attribute__((__cdecl__)) _wctime(const time_t *_Time) __asm__("_wctime64") ;
-# 219 "C:/msys64/mingw64/include/time.h" 3
-  errno_t __attribute__((__cdecl__)) _wctime_s (wchar_t *_Buffer,size_t _SizeInWords,const time_t *_Time) __asm__("_wctime64_s");
-# 245 "C:/msys64/mingw64/include/time.h" 3
-time_t __attribute__((__cdecl__)) time(time_t *_Time) __asm__("_time64");
-
-
-
-double __attribute__((__cdecl__)) difftime(time_t _Time1,time_t _Time2) __asm__("_difftime64");
-struct tm *__attribute__((__cdecl__)) localtime(const time_t *_Time) __asm__("_localtime64");
-errno_t __attribute__((__cdecl__)) localtime_s(struct tm *_Tm,const time_t *_Time) __asm__("_localtime64_s");
-struct tm *__attribute__((__cdecl__)) gmtime(const time_t *_Time) __asm__("_gmtime64");
-errno_t __attribute__((__cdecl__)) gmtime_s(struct tm *_Tm, const time_t *_Time) __asm__("_gmtime64_s");
-char *__attribute__((__cdecl__)) ctime(const time_t *_Time) __asm__("_ctime64");
-errno_t __attribute__((__cdecl__)) ctime_s(char *_Buf,size_t _SizeInBytes,const time_t *_Time) __asm__("_ctime64_s");
-time_t __attribute__((__cdecl__)) mktime(struct tm *_Tm) __asm__("_mktime64");
-time_t __attribute__((__cdecl__)) _mkgmtime(struct tm *_Tm) __asm__("_mkgmtime64");
-# 274 "C:/msys64/mingw64/include/time.h" 3
-  __attribute__ ((__dllimport__)) extern int daylight ;
-  __attribute__ ((__dllimport__)) extern long timezone ;
-  __attribute__ ((__dllimport__)) extern char *tzname[2] ;
-  void __attribute__((__cdecl__)) tzset(void) ;
-
-
-# 1 "C:/msys64/mingw64/include/_timeval.h" 1 3
-# 10 "C:/msys64/mingw64/include/_timeval.h" 3
-struct timeval
-{
- long tv_sec;
- long tv_usec;
-};
-# 281 "C:/msys64/mingw64/include/time.h" 2 3
-
-
-
-struct timezone {
-  int tz_minuteswest;
-  int tz_dsttime;
-};
-
-  extern int __attribute__((__cdecl__)) mingw_gettimeofday (struct timeval *p, struct timezone *z);
-
-
-#pragma pack(pop)
-# 314 "C:/msys64/mingw64/include/time.h" 3
-}
-# 323 "C:/msys64/mingw64/include/time.h" 3
-# 1 "C:/msys64/mingw64/include/pthread_time.h" 1 3
-# 27 "C:/msys64/mingw64/include/pthread_time.h" 3
-# 1 "C:/msys64/mingw64/include/pthread_compat.h" 1 3 4
-# 78 "C:/msys64/mingw64/include/pthread_compat.h" 3 4
-typedef int clockid_t;
-
-
-
-
-
-typedef unsigned short mode_t;
-# 28 "C:/msys64/mingw64/include/pthread_time.h" 2 3
-# 74 "C:/msys64/mingw64/include/pthread_time.h" 3
-extern "C" {
-
-
- int __attribute__((__cdecl__)) nanosleep32(const struct _timespec32 *request, struct _timespec32 *remain);
- int __attribute__((__cdecl__)) nanosleep64(const struct _timespec64 *request, struct _timespec64 *remain);
-__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) nanosleep(const struct timespec *request, struct timespec *remain)
-{
-
-
-
-  return nanosleep64 ((struct _timespec64 *)request, (struct _timespec64 *)remain);
-
-}
-
- int __attribute__((__cdecl__)) clock_nanosleep32(clockid_t clock_id, int flags, const struct _timespec32 *request, struct _timespec32 *remain);
- int __attribute__((__cdecl__)) clock_nanosleep64(clockid_t clock_id, int flags, const struct _timespec64 *request, struct _timespec64 *remain);
-__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_nanosleep(clockid_t clock_id, int flags, const struct timespec *request, struct timespec *remain)
-{
-
-
-
-  return clock_nanosleep64 (clock_id, flags, (struct _timespec64 *)request, (struct _timespec64 *)remain);
-
-}
-
- int __attribute__((__cdecl__)) clock_getres32(clockid_t clock_id, struct _timespec32 *res);
- int __attribute__((__cdecl__)) clock_getres64(clockid_t clock_id, struct _timespec64 *res);
-__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_getres(clockid_t clock_id, struct timespec *res)
-{
-
-
-
-  return clock_getres64 (clock_id, (struct _timespec64 *)res);
-
-}
-
- int __attribute__((__cdecl__)) clock_gettime32(clockid_t clock_id, struct _timespec32 *tp);
- int __attribute__((__cdecl__)) clock_gettime64(clockid_t clock_id, struct _timespec64 *tp);
-__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_gettime(clockid_t clock_id, struct timespec *tp)
-{
-
-
-
-  return clock_gettime64 (clock_id, (struct _timespec64 *)tp);
-
-}
-
- int __attribute__((__cdecl__)) clock_settime32(clockid_t clock_id, const struct _timespec32 *tp);
- int __attribute__((__cdecl__)) clock_settime64(clockid_t clock_id, const struct _timespec64 *tp);
-__inline__ __attribute__((__always_inline__)) int __attribute__((__cdecl__)) clock_settime(clockid_t clock_id, const struct timespec *tp)
-{
-
-
-
-  return clock_settime64 (clock_id, (struct _timespec64 *)tp);
-
-}
-
-
-}
-# 324 "C:/msys64/mingw64/include/time.h" 2 3
-# 48 "C:/msys64/mingw64/include/c++/15.2.0/ctime" 2 3
 # 60 "C:/msys64/mingw64/include/c++/15.2.0/ctime" 3
 namespace std
 {
@@ -6121,761 +12615,7 @@ namespace std
 # 44 "C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h" 2 3
 
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/parse_numbers.h" 1 3
-# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/parse_numbers.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 1 3
-# 36 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 1 3
-# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 2 3
-
-
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
-# 76 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-extern "C++" {
-
-namespace std
-{
-
-
-  struct __true_type { };
-  struct __false_type { };
-
-  template<bool>
-    struct __truth_type
-    { typedef __false_type __type; };
-
-  template<>
-    struct __truth_type<true>
-    { typedef __true_type __type; };
-
-
-
-  template<class _Sp, class _Tp>
-    struct __traitor
-    {
-      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
-      typedef typename __truth_type<__value>::__type __type;
-    };
-
-
-  template<typename, typename>
-    struct __are_same
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Tp>
-    struct __are_same<_Tp, _Tp>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-
-  template<typename _Tp>
-    struct __is_integer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-
-  template<>
-    struct __is_integer<bool>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_integer<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_integer<char8_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_integer<char16_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<char32_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_integer<short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 264 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-__extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; typedef __true_type __type; }; __extension__ template<> struct __is_integer<unsigned __int128> { enum { __value = 1 }; typedef __true_type __type; };
-# 281 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-  template<typename _Tp>
-    struct __is_floating
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-  template<>
-    struct __is_floating<float>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<long double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 358 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-  template<typename _Tp>
-    struct __is_arithmetic
-    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
-    { };
-
-
-
-
-  template<typename _Tp>
-    struct __is_char
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_char<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_char<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<typename _Tp>
-    struct __is_byte
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_byte<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  enum class byte : unsigned char;
-
-  template<>
-    struct __is_byte<byte>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_byte<char8_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<typename _Tp>
-    struct __is_nonvolatile_trivially_copyable
-    {
-      enum { __value = __is_trivially_copyable(_Tp) };
-    };
-
-
-
-
-  template<typename _Tp>
-    struct __is_nonvolatile_trivially_copyable<volatile _Tp>
-    {
-      enum { __value = 0 };
-    };
-
-
-  template<typename _OutputIter, typename _InputIter>
-    struct __memcpyable
-    {
-      enum { __value = 0 };
-    };
-
-
-  template<typename _Tp>
-    struct __memcpyable<_Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-
-  template<typename _Tp>
-    struct __memcpyable<_Tp*, const _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp> struct __memcpyable_integer;
-
-
-
-
-  template<typename _Tp, typename _Up>
-    struct __memcpyable<_Tp*, _Up*>
-    {
-      enum {
- __value = __memcpyable_integer<_Tp>::__width != 0
-      && ((int)__memcpyable_integer<_Tp>::__width
-     == (int)__memcpyable_integer<_Up>::__width)
-      };
-    };
-
-
-  template<typename _Tp, typename _Up>
-    struct __memcpyable<_Tp*, const _Up*>
-    : __memcpyable<_Tp*, _Up*>
-    { };
-
-  template<typename _Tp>
-    struct __memcpyable_integer
-    {
-      enum {
- __width = __is_integer<_Tp>::__value ? (sizeof(_Tp) * 8) : 0
-      };
-    };
-
-
-  template<typename _Tp>
-    struct __memcpyable_integer<volatile _Tp>
-    { enum { __width = 0 }; };
-# 592 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-  template<typename _Iter1, typename _Iter2>
-    struct __memcmpable
-    {
-      enum { __value = 0 };
-    };
-
-
-  template<typename _Tp>
-    struct __memcmpable<_Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp>
-    struct __memcmpable<const _Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp>
-    struct __memcmpable<_Tp*, const _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-
-
-
-
-
-
-  template<typename _Tp, bool _TreatAsBytes =
-
-
-
- __is_byte<_Tp>::__value
-
-    >
-    struct __is_memcmp_ordered
-    {
-      static const bool __value = _Tp(-1) > _Tp(1);
-    };
-
-  template<typename _Tp>
-    struct __is_memcmp_ordered<_Tp, false>
-    {
-      static const bool __value = false;
-    };
-
-
-  template<typename _Tp, typename _Up, bool = sizeof(_Tp) == sizeof(_Up)>
-    struct __is_memcmp_ordered_with
-    {
-      static const bool __value = __is_memcmp_ordered<_Tp>::__value
- && __is_memcmp_ordered<_Up>::__value;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __is_memcmp_ordered_with<_Tp, _Up, false>
-    {
-      static const bool __value = false;
-    };
-# 661 "C:/msys64/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-  template<>
-    struct __is_memcmp_ordered_with<std::byte, std::byte, true>
-    { static constexpr bool __value = true; };
-
-  template<typename _Tp, bool _SameSize>
-    struct __is_memcmp_ordered_with<_Tp, std::byte, _SameSize>
-    { static constexpr bool __value = false; };
-
-  template<typename _Up, bool _SameSize>
-    struct __is_memcmp_ordered_with<std::byte, _Up, _SameSize>
-    { static constexpr bool __value = false; };
-
-
-
-  template<typename _ValT, typename _Tp>
-    constexpr bool __can_use_memchr_for_find
-
-      = __is_byte<_ValT>::__value
-
-   && (is_same_v<_Tp, _ValT> || is_integral_v<_Tp>);
-
-
-
-
-
-  template<typename _Tp>
-    struct __is_move_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-
-  template<typename _Iterator>
-    constexpr
-    inline _Iterator
-    __miter_base(_Iterator __it)
-    { return __it; }
-
-
-}
-}
-
-#pragma GCC diagnostic pop
-# 37 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 2 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 1 3
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
-
-extern "C++" {
-
-namespace __gnu_cxx
-{
-
-
-
-  template<bool, typename>
-    struct __enable_if
-    { };
-
-  template<typename _Tp>
-    struct __enable_if<true, _Tp>
-    { typedef _Tp __type; };
-
-
-
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    struct __conditional_type
-    { typedef _Iftrue __type; };
-
-  template<typename _Iftrue, typename _Iffalse>
-    struct __conditional_type<false, _Iftrue, _Iffalse>
-    { typedef _Iffalse __type; };
-
-
-
-  template<typename _Tp>
-    struct __add_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __add_unsigned<char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<signed char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<short>
-    { typedef unsigned short __type; };
-
-  template<>
-    struct __add_unsigned<int>
-    { typedef unsigned int __type; };
-
-  template<>
-    struct __add_unsigned<long>
-    { typedef unsigned long __type; };
-
-  template<>
-    struct __add_unsigned<long long>
-    { typedef unsigned long long __type; };
-
-
-  template<>
-    struct __add_unsigned<bool>;
-
-  template<>
-    struct __add_unsigned<wchar_t>;
-
-
-
-  template<typename _Tp>
-    struct __remove_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __remove_unsigned<char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned short>
-    { typedef short __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned int>
-    { typedef int __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long>
-    { typedef long __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long long>
-    { typedef long long __type; };
-
-
-  template<>
-    struct __remove_unsigned<bool>;
-
-  template<>
-    struct __remove_unsigned<wchar_t>;
-
-
-
-  template<typename _Type>
-    constexpr
-    inline bool
-    __is_null_pointer(_Type* __ptr)
-    { return __ptr == 0; }
-
-  template<typename _Type>
-    constexpr
-    inline bool
-    __is_null_pointer(_Type)
-    { return false; }
-
-
-  constexpr bool
-  __is_null_pointer(std::nullptr_t)
-  { return true; }
-
-
-
-
-  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
-    struct __promote
-    { typedef double __type; };
-
-
-
-
-  template<typename _Tp>
-    struct __promote<_Tp, false>
-    { };
-
-  template<>
-    struct __promote<long double>
-    { typedef long double __type; };
-
-  template<>
-    struct __promote<double>
-    { typedef double __type; };
-
-  template<>
-    struct __promote<float>
-    { typedef float __type; };
-# 230 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
-  template<typename... _Tp>
-    using __promoted_t = decltype((typename __promote<_Tp>::__type(0) + ...));
-
-
-
-  template<typename _Tp, typename _Up>
-    using __promote_2 = __promote<__promoted_t<_Tp, _Up>>;
-
-  template<typename _Tp, typename _Up, typename _Vp>
-    using __promote_3 = __promote<__promoted_t<_Tp, _Up, _Vp>>;
-
-  template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
-    using __promote_4 = __promote<__promoted_t<_Tp, _Up, _Vp, _Wp>>;
-# 274 "C:/msys64/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
-
-}
-}
-
-#pragma GCC diagnostic pop
-# 38 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 2 3
-
-namespace __gnu_cxx
-{
-
-# 52 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
-  template<typename _Tp>
-    struct __is_integer_nonstrict
-    : public std::__is_integer<_Tp>
-    {
-      using std::__is_integer<_Tp>::__value;
-
-
-      enum { __width = __value ? sizeof(_Tp) * 8 : 0 };
-    };
-
-  template<typename _Value>
-    struct __numeric_traits_integer
-    {
-
-      static_assert(__is_integer_nonstrict<_Value>::__value,
-      "invalid specialization");
-
-
-
-
-      static const bool __is_signed = (_Value)(-1) < 0;
-      static const int __digits
- = __is_integer_nonstrict<_Value>::__width - __is_signed;
-
-
-      static const _Value __max = __is_signed
- ? (((((_Value)1 << (__digits - 1)) - 1) << 1) + 1)
- : ~(_Value)0;
-      static const _Value __min = __is_signed ? -__max - 1 : (_Value)0;
-    };
-
-  template<typename _Value>
-    const _Value __numeric_traits_integer<_Value>::__min;
-
-  template<typename _Value>
-    const _Value __numeric_traits_integer<_Value>::__max;
-
-  template<typename _Value>
-    const bool __numeric_traits_integer<_Value>::__is_signed;
-
-  template<typename _Value>
-    const int __numeric_traits_integer<_Value>::__digits;
-# 139 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
-  template<typename _Tp>
-    using __int_traits = __numeric_traits_integer<_Tp>;
-# 159 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
-  template<typename _Value>
-    struct __numeric_traits_floating
-    {
-
-      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 643L / 2136);
-
-
-      static const bool __is_signed = true;
-      static const int __digits10 = (std::__are_same<_Value, float>::__value ? 6 : std::__are_same<_Value, double>::__value ? 15 : 18);
-      static const int __max_exponent10 = (std::__are_same<_Value, float>::__value ? 38 : std::__are_same<_Value, double>::__value ? 308 : 4932);
-    };
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__max_digits10;
-
-  template<typename _Value>
-    const bool __numeric_traits_floating<_Value>::__is_signed;
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__digits10;
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__max_exponent10;
-
-
-
-
-
-
-  template<typename _Value>
-    struct __numeric_traits
-    : public __numeric_traits_integer<_Value>
-    { };
-
-  template<>
-    struct __numeric_traits<float>
-    : public __numeric_traits_floating<float>
-    { };
-
-  template<>
-    struct __numeric_traits<double>
-    : public __numeric_traits_floating<double>
-    { };
-
-  template<>
-    struct __numeric_traits<long double>
-    : public __numeric_traits_floating<long double>
-    { };
-# 240 "C:/msys64/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
-
-}
-# 43 "C:/msys64/mingw64/include/c++/15.2.0/bits/parse_numbers.h" 2 3
-
+# 44 "C:/msys64/mingw64/include/c++/15.2.0/bits/parse_numbers.h" 3
 namespace std
 {
 
@@ -10426,71 +16166,7 @@ __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) __acrt_iob_func
 
 
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wsetlocale(int _Category,const wchar_t *_Locale);
-# 212 "C:/msys64/mingw64/include/wchar.h" 3
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecl(const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecle(const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexeclp(const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexeclpe(const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecv(const wchar_t *_Filename,const wchar_t *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecve(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecvp(const wchar_t *_Filename,const wchar_t *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wexecvpe(const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
-
-
-
-
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnl(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnle(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnlp(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnlpe(int _Mode,const wchar_t *_Filename,const wchar_t *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnv(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnve(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvp(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvpe(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
-
-
-
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wsystem(const wchar_t *_Command);
-
-
-
-
-
-
-  typedef unsigned short _ino_t;
-
-  typedef unsigned short ino_t;
-
-
-
-
-
-  typedef unsigned int _dev_t;
-
-  typedef unsigned int dev_t;
-
-
-
-# 1 "C:/msys64/mingw64/include/_mingw_off_t.h" 1 3
-
-
-
-
-  typedef long _off_t;
-
-  typedef long off32_t;
-
-
-
-
-
-  __extension__ typedef long long _off64_t;
-
-  __extension__ typedef long long off64_t;
-# 26 "C:/msys64/mingw64/include/_mingw_off_t.h" 3
-typedef off32_t off_t;
-# 258 "C:/msys64/mingw64/include/wchar.h" 2 3
+# 258 "C:/msys64/mingw64/include/wchar.h" 3
 # 1 "C:/msys64/mingw64/include/_mingw_stat64.h" 1 3
 # 29 "C:/msys64/mingw64/include/_mingw_stat64.h" 3
   struct _stat32 {
@@ -11645,40 +17321,7 @@ namespace __cxx11 {
 }
 # 43 "C:/msys64/mingw64/include/c++/15.2.0/ios" 2 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/exception" 1 3
-# 38 "C:/msys64/mingw64/include/c++/15.2.0/exception" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 1 3
-# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 3
-extern "C++" {
-
-namespace std
-{
-# 61 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h" 3
-  class exception
-  {
-  public:
-    exception() noexcept { }
-    virtual ~exception() noexcept;
-
-    exception(const exception&) = default;
-    exception& operator=(const exception&) = default;
-    exception(exception&&) = default;
-    exception& operator=(exception&&) = default;
-
-
-
-
-    virtual const char*
-    what() const noexcept;
-  };
-
-
-
-}
-
-}
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/exception" 2 3
-
-
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/exception" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
 # 42 "C:/msys64/mingw64/include/c++/15.2.0/exception" 2 3
 
@@ -11772,9 +17415,7 @@ namespace __gnu_cxx
 
 
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 1 3
-# 35 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h" 1 3
-# 36 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 2 3
+# 36 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_init_exception.h" 1 3
 # 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_init_exception.h" 3
 #pragma GCC visibility push(default)
@@ -11816,34 +17457,7 @@ namespace __cxxabiv1
 #pragma GCC visibility pop
 # 37 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 2 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/typeinfo" 1 3
-# 38 "C:/msys64/mingw64/include/c++/15.2.0/typeinfo" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/hash_bytes.h" 1 3
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/hash_bytes.h" 3
-namespace std
-{
-
-
-
-
-
-
-
-  size_t
-  _Hash_bytes(const void* __ptr, size_t __len, size_t __seed);
-
-
-
-
-
-  size_t
-  _Fnv_hash_bytes(const void* __ptr, size_t __len, size_t __seed);
-
-
-}
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/typeinfo" 2 3
-
-
-
+# 42 "C:/msys64/mingw64/include/c++/15.2.0/typeinfo" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
 # 43 "C:/msys64/mingw64/include/c++/15.2.0/typeinfo" 2 3
 
@@ -11976,330 +17590,6 @@ namespace std
 
 #pragma GCC visibility pop
 # 38 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 2 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/new" 1 3
-# 49 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 50 "C:/msys64/mingw64/include/c++/15.2.0/new" 2 3
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++11-extensions"
-
-#pragma GCC visibility push(default)
-
-extern "C++" {
-
-namespace std
-{
-
-
-
-
-
-
-  class bad_alloc : public exception
-  {
-  public:
-    bad_alloc() throw() { }
-
-
-    bad_alloc(const bad_alloc&) = default;
-    bad_alloc& operator=(const bad_alloc&) = default;
-
-
-
-
-    virtual ~bad_alloc() throw();
-
-
-    virtual const char* what() const throw();
-  };
-
-
-  class bad_array_new_length : public bad_alloc
-  {
-  public:
-    bad_array_new_length() throw() { }
-
-
-
-    virtual ~bad_array_new_length() throw();
-
-
-    virtual const char* what() const throw();
-  };
-
-
-
-  enum class align_val_t: size_t {};
-
-
-  struct nothrow_t
-  {
-
-    explicit nothrow_t() = default;
-
-  };
-
-  extern const nothrow_t nothrow;
-
-
-
-  typedef void (*new_handler)();
-
-
-
-  new_handler set_new_handler(new_handler) throw();
-
-
-
-  new_handler get_new_handler() noexcept;
-
-}
-# 137 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
-[[__nodiscard__]] void* operator new(std::size_t)
- 
-  __attribute__((__externally_visible__, __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t)
- 
-  __attribute__((__externally_visible__, __malloc__));
-void operator delete(void*) noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*) noexcept
-  __attribute__((__externally_visible__));
-
-void operator delete(void*, std::size_t)
-  noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*, std::size_t)
-  noexcept
-  __attribute__((__externally_visible__));
-
-[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-void operator delete(void*, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__));
-
-[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t)
- 
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
-[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
-void operator delete(void*, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete(void*, std::align_val_t, const std::nothrow_t&)
- 
-  noexcept __attribute__((__externally_visible__));
-[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t)
- 
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
-void operator delete[](void*, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete[](void*, std::align_val_t, const std::nothrow_t&)
- 
-  noexcept __attribute__((__externally_visible__));
-
-void operator delete(void*, std::size_t, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete[](void*, std::size_t, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-# 205 "C:/msys64/mingw64/include/c++/15.2.0/new" 3
-[[__nodiscard__]] inline
-void* operator new(std::size_t, void* __p)
-  noexcept
-{ return __p; }
-[[__nodiscard__]] inline
-void* operator new[](std::size_t, void* __p)
-  noexcept
-{ return __p; }
-
-
-
-
-inline void operator delete (void*, void*)
-  noexcept
-{ }
-inline void operator delete[](void*, void*)
-  noexcept
-{ }
-
-}
-
-namespace std
-{
-
-
-  template<typename _Tp>
-    [[nodiscard]] constexpr _Tp*
-    launder(_Tp* __p) noexcept
-    {
-      if constexpr (__is_same(const volatile _Tp, const volatile void))
- static_assert(!__is_same(const volatile _Tp, const volatile void),
-        "std::launder argument must not be a void pointer");
-
-      else if constexpr (__is_function(_Tp))
- static_assert(!__is_function(_Tp),
-        "std::launder argument must not be a function pointer");
-
-      else
- return __builtin_launder(__p);
-      return nullptr;
-    }
-
-
-
-  inline constexpr size_t hardware_destructive_interference_size = 64;
-  inline constexpr size_t hardware_constructive_interference_size = 64;
-
-
-
-
-
-
-  struct destroying_delete_t
-  {
-    explicit destroying_delete_t() = default;
-  };
-
-  inline constexpr destroying_delete_t destroying_delete{};
-
-}
-
-#pragma GCC visibility pop
-#pragma GCC diagnostic pop
-# 39 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 2 3
-
-
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 1 3
-# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-namespace std
-{
-
-
-
-
-
-
-
-  template<typename _Tp>
-    __attribute__((__always_inline__))
-    inline constexpr _Tp*
-    __addressof(_Tp& __r) noexcept
-    { return __builtin_addressof(__r); }
-# 69 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-    { return static_cast<_Tp&&>(__t); }
-# 82 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
-    {
-      static_assert(!std::is_lvalue_reference<_Tp>::value,
-   "std::forward must not be used to convert an rvalue to an lvalue");
-      return static_cast<_Tp&&>(__t);
-    }
-# 135 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
-    constexpr typename std::remove_reference<_Tp>::type&&
-    move(_Tp&& __t) noexcept
-    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-
-
-  template<typename _Tp>
-    struct __move_if_noexcept_cond
-    : public __and_<__not_<is_nothrow_move_constructible<_Tp>>,
-                    is_copy_constructible<_Tp>>::type { };
-# 156 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
-    constexpr
-    __conditional_t<__move_if_noexcept_cond<_Tp>::value, const _Tp&, _Tp&&>
-    move_if_noexcept(_Tp& __x) noexcept
-    { return std::move(__x); }
-# 173 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
-    inline constexpr _Tp*
-    addressof(_Tp& __r) noexcept
-    { return std::__addressof(__r); }
-
-
-
-  template<typename _Tp>
-    const _Tp* addressof(const _Tp&&) = delete;
-
-
-  template <typename _Tp, typename _Up = _Tp>
-    constexpr
-    inline _Tp
-    __exchange(_Tp& __obj, _Up&& __new_val)
-    {
-      _Tp __old_val = std::move(__obj);
-      __obj = std::forward<_Up>(__new_val);
-      return __old_val;
-    }
-# 217 "C:/msys64/mingw64/include/c++/15.2.0/bits/move.h" 3
-  template<typename _Tp>
-    constexpr
-    inline
-
-    typename enable_if<__and_<__not_<__is_tuple_like<_Tp>>,
-         is_move_constructible<_Tp>,
-         is_move_assignable<_Tp>>::value>::type
-
-
-
-    swap(_Tp& __a, _Tp& __b)
-    noexcept(__and_<is_nothrow_move_constructible<_Tp>, is_nothrow_move_assignable<_Tp>>::value)
-
-    {
-
-
-
-
-      _Tp __tmp = std::move(__a);
-      __a = std::move(__b);
-      __b = std::move(__tmp);
-    }
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    constexpr
-    inline
-
-    typename enable_if<__is_swappable<_Tp>::value>::type
-
-
-
-    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
-    noexcept(__is_nothrow_swappable<_Tp>::value)
-    {
-      for (size_t __n = 0; __n < _Nm; ++__n)
- swap(__a[__n], __b[__n]);
-    }
-
-
-
-}
-# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 2 3
 # 50 "C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h" 3
 extern "C++" {
 
@@ -15674,15 +20964,7 @@ int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_li
   int __attribute__((__cdecl__)) getw(FILE *_File) ;
   int __attribute__((__cdecl__)) putw(int _Ch,FILE *_File) ;
   int __attribute__((__cdecl__)) rmtmp(void) ;
-# 1330 "C:/msys64/mingw64/include/stdio.h" 3
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnv(int _Mode,const char *_Filename,const char *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnve(int _Mode,const char *_Filename,const char *const *_ArgList,const char *const *_Env);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnvp(int _Mode,const char *_Filename,const char *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnvpe(int _Mode,const char *_Filename,const char *const *_ArgList,const char *const *_Env);
-
-
-
-
+# 1338 "C:/msys64/mingw64/include/stdio.h" 3
 }
 
 
@@ -16177,801 +21459,7 @@ namespace __cxx11 {
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h" 1 3
 # 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/ext/atomicity.h" 1 3
-# 37 "C:/msys64/mingw64/include/c++/15.2.0/ext/atomicity.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 1 3
-# 30 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 3
-#pragma GCC visibility push(default)
-# 157 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 1 3
-# 35 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-# 1 "C:/msys64/mingw64/include/pthread.h" 1 3
-# 62 "C:/msys64/mingw64/include/pthread.h" 3
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
-# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 63 "C:/msys64/mingw64/include/pthread.h" 2 3
-# 1 "C:/msys64/mingw64/include/errno.h" 1 3
-# 12 "C:/msys64/mingw64/include/errno.h" 3
-extern "C" {
-# 239 "C:/msys64/mingw64/include/errno.h" 3
-}
-# 64 "C:/msys64/mingw64/include/pthread.h" 2 3
-# 1 "C:/msys64/mingw64/include/sys/types.h" 1 3
-# 62 "C:/msys64/mingw64/include/sys/types.h" 3
-__extension__
-typedef long long _pid_t;
-
-
-
-
-typedef _pid_t pid_t;
-# 84 "C:/msys64/mingw64/include/sys/types.h" 3
-typedef unsigned int useconds_t;
-# 103 "C:/msys64/mingw64/include/sys/types.h" 3
-__extension__
-typedef unsigned long long _sigset_t;
-# 65 "C:/msys64/mingw64/include/pthread.h" 2 3
-
-# 1 "C:/msys64/mingw64/include/process.h" 1 3
-# 10 "C:/msys64/mingw64/include/process.h" 3
-# 1 "C:/msys64/mingw64/include/corecrt_startup.h" 1 3
-# 13 "C:/msys64/mingw64/include/corecrt_startup.h" 3
-extern "C" {
-
-
-typedef enum _crt_app_type {
-    _crt_unknown_app,
-    _crt_console_app,
-    _crt_gui_app
-} _crt_app_type;
-
-__attribute__ ((__dllimport__)) _crt_app_type __attribute__((__cdecl__)) _query_app_type(void);
-__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _set_app_type(_crt_app_type _Type);
-
-typedef enum _crt_argv_mode {
-    _crt_argv_no_arguments,
-    _crt_argv_unexpanded_arguments,
-    _crt_argv_expanded_arguments
-} _crt_argv_mode;
-
-__attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _configure_narrow_argv(_crt_argv_mode mode);
-__attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _configure_wide_argv(_crt_argv_mode mode);
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_narrow_environment(void);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_wide_environment(void);
-
-__attribute__ ((__dllimport__)) char** __attribute__((__cdecl__)) _get_initial_narrow_environment(void);
-__attribute__ ((__dllimport__)) wchar_t** __attribute__((__cdecl__)) _get_initial_wide_environment(void);
-
-__attribute__ ((__dllimport__)) char* __attribute__((__cdecl__)) _get_narrow_winmain_command_line(void);
-__attribute__ ((__dllimport__)) wchar_t* __attribute__((__cdecl__)) _get_wide_winmain_command_line(void);
-
-__attribute__ ((__dllimport__)) char **__attribute__((__cdecl__)) __p__acmdln(void);
-
-
-__attribute__ ((__dllimport__)) wchar_t **__attribute__((__cdecl__)) __p__wcmdln(void);
-
-
-typedef void (__attribute__((__cdecl__)) *_PVFV)(void);
-typedef int (__attribute__((__cdecl__)) *_PIFV)(void);
-typedef void (__attribute__((__cdecl__)) *_PVFI)(int);
-
-__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _initterm(_PVFV* _First, _PVFV* _Last);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initterm_e(_PIFV* _First, _PIFV* _Last);
-
-typedef struct _onexit_table_t {
-    _PVFV* _first;
-    _PVFV* _last;
-    _PVFV* _end;
-} _onexit_table_t;
-
-typedef int (__attribute__((__cdecl__)) *_onexit_t)(void);
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _initialize_onexit_table(_onexit_table_t*);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _register_onexit_function(_onexit_table_t*,_onexit_t);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _execute_onexit_table(_onexit_table_t*);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _crt_atexit(_PVFV func);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _crt_at_quick_exit(_PVFV func);
-
-
-}
-# 11 "C:/msys64/mingw64/include/process.h" 2 3
-
-
-
-
-
-
-extern "C" {
-# 32 "C:/msys64/mingw64/include/process.h" 3
-  typedef void (__attribute__((__cdecl__)) *_beginthread_proc_type)(void *);
-  typedef unsigned (__attribute__((__stdcall__)) *_beginthreadex_proc_type)(void *);
-
-  __attribute__ ((__dllimport__)) uintptr_t __attribute__((__cdecl__)) _beginthread(_beginthread_proc_type _StartAddress,unsigned _StackSize,void *_ArgList);
-  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _endthread(void) __attribute__ ((__noreturn__));
-  __attribute__ ((__dllimport__)) uintptr_t __attribute__((__cdecl__)) _beginthreadex(void *_Security,unsigned _StackSize,_beginthreadex_proc_type _StartAddress,void *_ArgList,unsigned _InitFlag,unsigned *_ThrdAddr);
-  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _endthreadex(unsigned _Retval) __attribute__ ((__noreturn__));
-
-
-
-  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
-  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
-
-
-
-
-
-
-  void __attribute__((__cdecl__)) _Exit(int) __attribute__ ((__noreturn__));
-
-  inline __attribute__ ((__noreturn__)) void __attribute__((__cdecl__)) _Exit(int status)
-  { _exit(status); }
-
-
-
-       
-
-  void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) abort(void);
-       
-
-
-
-  typedef void (__attribute__((__stdcall__)) *_tls_callback_type)(void*,unsigned long,void*);
-  __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _register_thread_local_exe_atexit_callback(_tls_callback_type callback);
-
-  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _cexit(void);
-  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _c_exit(void);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _getpid(void);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _cwait(int *_TermStat,intptr_t _ProcHandle,int _Action);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execl(const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execle(const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execlp(const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execlpe(const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execv(const char *_Filename,const char *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execve(const char *_Filename,const char *const *_ArgList,const char *const *_Env);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execvp(const char *_Filename,const char *const *_ArgList);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _execvpe(const char *_Filename,const char *const *_ArgList,const char *const *_Env);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnl(int _Mode,const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnle(int _Mode,const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnlp(int _Mode,const char *_Filename,const char *_ArgList,...);
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnlpe(int _Mode,const char *_Filename,const char *_ArgList,...);
-# 95 "C:/msys64/mingw64/include/process.h" 3
-  int __attribute__((__cdecl__)) system(const char *_Command);
-# 129 "C:/msys64/mingw64/include/process.h" 3
-  intptr_t __attribute__((__cdecl__)) _loaddll(char *_Filename);
-  int __attribute__((__cdecl__)) _unloaddll(intptr_t _Handle);
-  int (__attribute__((__cdecl__)) *__attribute__((__cdecl__)) _getdllprocaddr(intptr_t _Handle,char *_ProcedureName,intptr_t _Ordinal))(void);
-# 161 "C:/msys64/mingw64/include/process.h" 3
-  int __attribute__((__cdecl__)) getpid(void) ;
-
-
-
-  intptr_t __attribute__((__cdecl__)) cwait(int *_TermStat,intptr_t _ProcHandle,int _Action) ;
-
-  int __attribute__((__cdecl__)) execl(const char *_Filename,const char *_ArgList,...) ;
-  int __attribute__((__cdecl__)) execle(const char *_Filename,const char *_ArgList,...) ;
-  int __attribute__((__cdecl__)) execlp(const char *_Filename,const char *_ArgList,...) ;
-  int __attribute__((__cdecl__)) execlpe(const char *_Filename,const char *_ArgList,...) ;
-
-
-
-
-
-
-  intptr_t __attribute__((__cdecl__)) spawnl(int,const char *_Filename,const char *_ArgList,...) ;
-  intptr_t __attribute__((__cdecl__)) spawnle(int,const char *_Filename,const char *_ArgList,...) ;
-  intptr_t __attribute__((__cdecl__)) spawnlp(int,const char *_Filename,const char *_ArgList,...) ;
-  intptr_t __attribute__((__cdecl__)) spawnlpe(int,const char *_Filename,const char *_ArgList,...) ;
-
-
-
-
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execv(const char *_Filename,char *const _ArgList[]) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execve(const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execvp(const char *_Filename,char *const _ArgList[]) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) execvpe(const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
-
-
-
-
-
-
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnv(int,const char *_Filename,char *const _ArgList[]) ;
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnve(int,const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnvp(int,const char *_Filename,char *const _ArgList[]) ;
-  __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) spawnvpe(int,const char *_Filename,char *const _ArgList[],char *const _Env[]) ;
-
-
-
-
-}
-# 67 "C:/msys64/mingw64/include/pthread.h" 2 3
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 34 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 1 3 4
-
-
-
-
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 210 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
-# 1 "C:/msys64/mingw64/include/limits.h" 1 3 4
-# 211 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
-# 10 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 2 3 4
-#pragma GCC diagnostic pop
-# 35 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
-# 68 "C:/msys64/mingw64/include/pthread.h" 2 3
-# 1 "C:/msys64/mingw64/include/signal.h" 1 3
-# 10 "C:/msys64/mingw64/include/signal.h" 3
-# 1 "C:/msys64/mingw64/include/pthread_signal.h" 1 3
-# 11 "C:/msys64/mingw64/include/signal.h" 2 3
-
-
-extern "C" {
-
-
-
-
-  typedef int sig_atomic_t;
-# 48 "C:/msys64/mingw64/include/signal.h" 3
-  typedef void (*__p_sig_fn_t)(int);
-# 57 "C:/msys64/mingw64/include/signal.h" 3
-  extern void **__attribute__((__cdecl__)) __pxcptinfoptrs(void);
-
-
-  __p_sig_fn_t __attribute__((__cdecl__)) signal(int _SigNum,__p_sig_fn_t _Func);
-  int __attribute__((__cdecl__)) raise(int _SigNum);
-
-
-}
-# 69 "C:/msys64/mingw64/include/pthread.h" 2 3
-
-
-
-# 1 "C:/msys64/mingw64/include/sched.h" 1 3 4
-# 25 "C:/msys64/mingw64/include/sched.h" 3 4
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/msys64/mingw64/include/stddef.h" 1 3 4
-# 2 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 26 "C:/msys64/mingw64/include/sched.h" 2 3 4
-
-
-
-
-# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 31 "C:/msys64/mingw64/include/sched.h" 2 3 4
-# 42 "C:/msys64/mingw64/include/sched.h" 3 4
-struct sched_param {
-  int sched_priority;
-};
-
-
-extern "C" {
-
-
- int sched_yield(void);
- int sched_get_priority_min(int pol);
- int sched_get_priority_max(int pol);
- int sched_getscheduler(pid_t pid);
- int sched_setscheduler(pid_t pid, int pol, const struct sched_param *param);
-
-
-}
-# 73 "C:/msys64/mingw64/include/pthread.h" 2 3
-
-
-
-
-
-
-extern "C" {
-# 141 "C:/msys64/mingw64/include/pthread.h" 3
- void * pthread_timechange_handler_np(void * dummy);
- int pthread_delay32_np (const struct _timespec32 *interval);
- int pthread_delay64_np (const struct _timespec64 *interval);
-__inline__ __attribute__((__always_inline__)) int pthread_delay_np (const struct timespec *interval)
-{
-
-
-
-  return pthread_delay64_np ((const struct _timespec64 *) interval);
-
-}
- int pthread_num_processors_np(void);
- int pthread_set_num_processors_np(int n);
-# 170 "C:/msys64/mingw64/include/pthread.h" 3
-typedef long pthread_once_t;
-typedef unsigned pthread_mutexattr_t;
-typedef unsigned pthread_key_t;
-typedef void *pthread_barrierattr_t;
-typedef int pthread_condattr_t;
-typedef int pthread_rwlockattr_t;
-typedef uintptr_t pthread_t;
-
-typedef struct _pthread_cleanup _pthread_cleanup;
-struct _pthread_cleanup
-{
-    void (*func)(void *);
-    void *arg;
-    _pthread_cleanup *next;
-};
-# 212 "C:/msys64/mingw64/include/pthread.h" 3
-typedef struct pthread_attr_t pthread_attr_t;
-struct pthread_attr_t
-{
-    unsigned p_state;
-    void *stack;
-    size_t s_size;
-    struct sched_param param;
-};
-
- int pthread_attr_setschedparam(pthread_attr_t *attr, const struct sched_param *param);
- int pthread_attr_getschedparam(const pthread_attr_t *attr, struct sched_param *param);
- int pthread_getschedparam(pthread_t thread, int *pol, struct sched_param *param);
- int pthread_setschedparam(pthread_t thread, int pol, const struct sched_param *param);
- int pthread_attr_setschedpolicy (pthread_attr_t *attr, int pol);
- int pthread_attr_getschedpolicy (const pthread_attr_t *attr, int *pol);
-
-
-typedef intptr_t pthread_spinlock_t;
-typedef intptr_t pthread_mutex_t;
-typedef intptr_t pthread_cond_t;
-typedef intptr_t pthread_rwlock_t;
-typedef void *pthread_barrier_t;
-# 252 "C:/msys64/mingw64/include/pthread.h" 3
- extern void (**_pthread_key_dest)(void *);
- int pthread_key_create(pthread_key_t *key, void (* dest)(void *));
- int pthread_key_delete(pthread_key_t key);
- void * pthread_getspecific(pthread_key_t key);
- int pthread_setspecific(pthread_key_t key, const void *value);
-
- pthread_t pthread_self(void);
- int pthread_once(pthread_once_t *o, void (*func)(void));
- void pthread_testcancel(void);
- int pthread_equal(pthread_t t1, pthread_t t2);
- void pthread_tls_init(void);
- void _pthread_cleanup_dest(pthread_t t);
- int pthread_get_concurrency(int *val);
- int pthread_set_concurrency(int val);
- void pthread_exit(void *res);
- void _pthread_invoke_cancel(void);
- int pthread_cancel(pthread_t t);
- int pthread_kill(pthread_t t, int sig);
- unsigned _pthread_get_state(const pthread_attr_t *attr, unsigned flag);
- int _pthread_set_state(pthread_attr_t *attr, unsigned flag, unsigned val);
- int pthread_setcancelstate(int state, int *oldstate);
- int pthread_setcanceltype(int type, int *oldtype);
- unsigned __attribute__((__stdcall__)) pthread_create_wrapper(void *args);
- int pthread_create(pthread_t *th, const pthread_attr_t *attr, void *(* func)(void *), void *arg);
- int pthread_join(pthread_t t, void **res);
- int pthread_detach(pthread_t t);
- int pthread_setname_np(pthread_t thread, const char *name);
- int pthread_getname_np(pthread_t thread, char *name, size_t len);
-
- int pthread_rwlock_init(pthread_rwlock_t *rwlock_, const pthread_rwlockattr_t *attr);
- int pthread_rwlock_wrlock(pthread_rwlock_t *l);
- int pthread_rwlock_timedwrlock32(pthread_rwlock_t *rwlock, const struct _timespec32 *ts);
- int pthread_rwlock_timedwrlock64(pthread_rwlock_t *rwlock, const struct _timespec64 *ts);
-__inline__ __attribute__((__always_inline__)) int pthread_rwlock_timedwrlock(pthread_rwlock_t *rwlock, const struct timespec *ts)
-{
-
-
-
-  return pthread_rwlock_timedwrlock64 (rwlock, (const struct _timespec64 *) ts);
-
-}
- int pthread_rwlock_rdlock(pthread_rwlock_t *l);
- int pthread_rwlock_timedrdlock32(pthread_rwlock_t *l, const struct _timespec32 *ts);
- int pthread_rwlock_timedrdlock64(pthread_rwlock_t *l, const struct _timespec64 *ts);
-__inline__ __attribute__((__always_inline__)) int pthread_rwlock_timedrdlock(pthread_rwlock_t *l, const struct timespec *ts)
-{
-
-
-
-  return pthread_rwlock_timedrdlock64 (l, (const struct _timespec64 *) ts);
-
-}
- int pthread_rwlock_unlock(pthread_rwlock_t *l);
- int pthread_rwlock_tryrdlock(pthread_rwlock_t *l);
- int pthread_rwlock_trywrlock(pthread_rwlock_t *l);
- int pthread_rwlock_destroy (pthread_rwlock_t *l);
-
- int pthread_cond_init(pthread_cond_t *cv, const pthread_condattr_t *a);
- int pthread_cond_destroy(pthread_cond_t *cv);
- int pthread_cond_signal (pthread_cond_t *cv);
- int pthread_cond_broadcast (pthread_cond_t *cv);
- int pthread_cond_wait (pthread_cond_t *cv, pthread_mutex_t *external_mutex);
- int pthread_cond_timedwait32(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec32 *t);
- int pthread_cond_timedwait64(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec64 *t);
-__inline__ __attribute__((__always_inline__)) int pthread_cond_timedwait(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct timespec *t)
-{
-
-
-
-  return pthread_cond_timedwait64 (cv, external_mutex, (const struct _timespec64 *) t);
-
-}
- int pthread_cond_timedwait32_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec32 *t);
- int pthread_cond_timedwait64_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct _timespec64 *t);
-__inline__ __attribute__((__always_inline__)) int pthread_cond_timedwait_relative_np(pthread_cond_t *cv, pthread_mutex_t *external_mutex, const struct timespec *t)
-{
-
-
-
-  return pthread_cond_timedwait64_relative_np (cv, external_mutex, (const struct _timespec64 *) t);
-
-}
-
- int pthread_mutex_lock(pthread_mutex_t *m);
- int pthread_mutex_timedlock32(pthread_mutex_t *m, const struct _timespec32 *ts);
- int pthread_mutex_timedlock64(pthread_mutex_t *m, const struct _timespec64 *ts);
-__inline__ __attribute__((__always_inline__)) int pthread_mutex_timedlock(pthread_mutex_t *m, const struct timespec *ts)
-{
-
-
-
-  return pthread_mutex_timedlock64 (m, (const struct _timespec64 *) ts);
-
-}
- int pthread_mutex_unlock(pthread_mutex_t *m);
- int pthread_mutex_trylock(pthread_mutex_t *m);
- int pthread_mutex_init(pthread_mutex_t *m, const pthread_mutexattr_t *a);
- int pthread_mutex_destroy(pthread_mutex_t *m);
-
- int pthread_barrier_destroy(pthread_barrier_t *b);
- int pthread_barrier_init(pthread_barrier_t *b, const void *attr, unsigned int count);
- int pthread_barrier_wait(pthread_barrier_t *b);
-
- int pthread_spin_init(pthread_spinlock_t *l, int pshared);
- int pthread_spin_destroy(pthread_spinlock_t *l);
-
- int pthread_spin_lock(pthread_spinlock_t *l);
- int pthread_spin_trylock(pthread_spinlock_t *l);
- int pthread_spin_unlock(pthread_spinlock_t *l);
-
- int pthread_attr_init(pthread_attr_t *attr);
- int pthread_attr_destroy(pthread_attr_t *attr);
- int pthread_attr_setdetachstate(pthread_attr_t *a, int flag);
- int pthread_attr_getdetachstate(const pthread_attr_t *a, int *flag);
- int pthread_attr_setinheritsched(pthread_attr_t *a, int flag);
- int pthread_attr_getinheritsched(const pthread_attr_t *a, int *flag);
- int pthread_attr_setscope(pthread_attr_t *a, int flag);
- int pthread_attr_getscope(const pthread_attr_t *a, int *flag);
- int pthread_attr_getstack(const pthread_attr_t *attr, void **stack, size_t *size);
- int pthread_attr_setstack(pthread_attr_t *attr, void *stack, size_t size);
- int pthread_attr_getstackaddr(const pthread_attr_t *attr, void **stack);
- int pthread_attr_setstackaddr(pthread_attr_t *attr, void *stack);
- int pthread_attr_getstacksize(const pthread_attr_t *attr, size_t *size);
- int pthread_attr_setstacksize(pthread_attr_t *attr, size_t size);
-
- int pthread_mutexattr_init(pthread_mutexattr_t *a);
- int pthread_mutexattr_destroy(pthread_mutexattr_t *a);
- int pthread_mutexattr_gettype(const pthread_mutexattr_t *a, int *type);
- int pthread_mutexattr_settype(pthread_mutexattr_t *a, int type);
- int pthread_mutexattr_getpshared(const pthread_mutexattr_t *a, int *type);
- int pthread_mutexattr_setpshared(pthread_mutexattr_t * a, int type);
- int pthread_mutexattr_getprotocol(const pthread_mutexattr_t *a, int *type);
- int pthread_mutexattr_setprotocol(pthread_mutexattr_t *a, int type);
- int pthread_mutexattr_getprioceiling(const pthread_mutexattr_t *a, int * prio);
- int pthread_mutexattr_setprioceiling(pthread_mutexattr_t *a, int prio);
- int pthread_getconcurrency(void);
- int pthread_setconcurrency(int new_level);
-
- int pthread_condattr_destroy(pthread_condattr_t *a);
- int pthread_condattr_init(pthread_condattr_t *a);
- int pthread_condattr_getpshared(const pthread_condattr_t *a, int *s);
- int pthread_condattr_setpshared(pthread_condattr_t *a, int s);
-
- int pthread_condattr_getclock (const pthread_condattr_t *attr,
-       clockid_t *clock_id);
- int pthread_condattr_setclock(pthread_condattr_t *attr,
-       clockid_t clock_id);
-
- int pthread_barrierattr_init(void **attr);
- int pthread_barrierattr_destroy(void **attr);
- int pthread_barrierattr_setpshared(void **attr, int s);
- int pthread_barrierattr_getpshared(void **attr, int *s);
-
-
- struct _pthread_cleanup ** pthread_getclean (void);
- void * pthread_gethandle (pthread_t t);
- void * pthread_getevent (void);
-
- int _pthread_tryjoin (pthread_t t, void **res);
- int pthread_rwlockattr_destroy(pthread_rwlockattr_t *a);
- int pthread_rwlockattr_getpshared(pthread_rwlockattr_t *a, int *s);
- int pthread_rwlockattr_init(pthread_rwlockattr_t *a);
- int pthread_rwlockattr_setpshared(pthread_rwlockattr_t *a, int s);
-# 426 "C:/msys64/mingw64/include/pthread.h" 3
-# 1 "C:/msys64/mingw64/include/pthread_unistd.h" 1 3
-# 427 "C:/msys64/mingw64/include/pthread.h" 2 3
-# 688 "C:/msys64/mingw64/include/pthread.h" 3
-}
-# 36 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 2 3
-# 62 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-typedef pthread_t __gthread_t;
-typedef pthread_key_t __gthread_key_t;
-typedef pthread_once_t __gthread_once_t;
-typedef pthread_mutex_t __gthread_mutex_t;
-
-
-
-typedef pthread_mutex_t __gthread_recursive_mutex_t;
-typedef pthread_cond_t __gthread_cond_t;
-typedef struct timespec __gthread_time_t;
-# 123 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 345 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-inline __attribute__((__always_inline__)) int
-__gthread_active_p (void)
-{
-  return 1;
-}
-# 705 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-inline __attribute__((__always_inline__)) int
-__gthread_create (__gthread_t *__threadid, void *(*__func) (void*),
-    void *__args)
-{
-  return pthread_create (__threadid, __null, __func, __args);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_join (__gthread_t __threadid, void **__value_ptr)
-{
-  return pthread_join (__threadid, __value_ptr);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_detach (__gthread_t __threadid)
-{
-  return pthread_detach (__threadid);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_equal (__gthread_t __t1, __gthread_t __t2)
-{
-  return pthread_equal (__t1, __t2);
-}
-
-inline __attribute__((__always_inline__)) __gthread_t
-__gthread_self (void)
-{
-  return pthread_self ();
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_yield (void)
-{
-  return sched_yield ();
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_once (__gthread_once_t *__once, void (*__func) (void))
-{
-  if (__gthread_active_p ())
-    return pthread_once (__once, __func);
-  else
-    return -1;
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_key_create (__gthread_key_t *__key, void (*__dtor) (void *))
-{
-  return pthread_key_create (__key, __dtor);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_key_delete (__gthread_key_t __key)
-{
-  return pthread_key_delete (__key);
-}
-
-inline __attribute__((__always_inline__)) void *
-__gthread_getspecific (__gthread_key_t __key)
-{
-  return pthread_getspecific (__key);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_setspecific (__gthread_key_t __key, const void *__ptr)
-{
-  return pthread_setspecific (__key, __ptr);
-}
-
-inline __attribute__((__always_inline__)) void
-__gthread_mutex_init_function (__gthread_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    pthread_mutex_init (__mutex, __null);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_mutex_destroy (__gthread_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    return pthread_mutex_destroy (__mutex);
-  else
-    return 0;
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_mutex_lock (__gthread_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    return pthread_mutex_lock (__mutex);
-  else
-    return 0;
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_mutex_trylock (__gthread_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    return pthread_mutex_trylock (__mutex);
-  else
-    return 0;
-}
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_mutex_timedlock (__gthread_mutex_t *__mutex,
-      const __gthread_time_t *__abs_timeout)
-{
-  if (__gthread_active_p ())
-    return pthread_mutex_timedlock (__mutex, __abs_timeout);
-  else
-    return 0;
-}
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_mutex_unlock (__gthread_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    return pthread_mutex_unlock (__mutex);
-  else
-    return 0;
-}
-
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex)
-{
-  if (__gthread_active_p ())
-    {
-      pthread_mutexattr_t __attr;
-      int __r;
-
-      __r = pthread_mutexattr_init (&__attr);
-      if (!__r)
- __r = pthread_mutexattr_settype (&__attr,
-         2);
-      if (!__r)
- __r = pthread_mutex_init (__mutex, &__attr);
-      if (!__r)
- __r = pthread_mutexattr_destroy (&__attr);
-      return __r;
-    }
-  return 0;
-}
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_mutex_lock (__mutex);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_mutex_trylock (__mutex);
-}
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_timedlock (__gthread_recursive_mutex_t *__mutex,
-         const __gthread_time_t *__abs_timeout)
-{
-  return __gthread_mutex_timedlock (__mutex, __abs_timeout);
-}
-
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_mutex_unlock (__mutex);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_recursive_mutex_destroy (__gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_mutex_destroy (__mutex);
-}
-# 896 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h" 3
-inline __attribute__((__always_inline__)) int
-__gthread_cond_broadcast (__gthread_cond_t *__cond)
-{
-  return pthread_cond_broadcast (__cond);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_cond_signal (__gthread_cond_t *__cond)
-{
-  return pthread_cond_signal (__cond);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex)
-{
-  return pthread_cond_wait (__cond, __mutex);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_cond_timedwait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex,
-     const __gthread_time_t *__abs_timeout)
-{
-  return pthread_cond_timedwait (__cond, __mutex, __abs_timeout);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_cond_wait_recursive (__gthread_cond_t *__cond,
-          __gthread_recursive_mutex_t *__mutex)
-{
-  return __gthread_cond_wait (__cond, __mutex);
-}
-
-inline __attribute__((__always_inline__)) int
-__gthread_cond_destroy (__gthread_cond_t* __cond)
-{
-  return pthread_cond_destroy (__cond);
-}
-# 158 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h" 2 3
-
-
-#pragma GCC visibility pop
-# 38 "C:/msys64/mingw64/include/c++/15.2.0/ext/atomicity.h" 2 3
+# 38 "C:/msys64/mingw64/include/c++/15.2.0/ext/atomicity.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h" 1 3
 # 32 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h" 3
 typedef int _Atomic_word;
@@ -17059,91 +21547,7 @@ namespace __gnu_cxx
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h" 1 3
 # 33 "C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/new_allocator.h" 1 3
-# 35 "C:/msys64/mingw64/include/c++/15.2.0/bits/new_allocator.h" 3
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 1 3
-# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
-namespace std
-{
-
-
-
-
-  void
-  __throw_bad_exception(void) __attribute__((__noreturn__));
-
-
-  void
-  __throw_bad_alloc(void) __attribute__((__noreturn__));
-
-  void
-  __throw_bad_array_new_length(void) __attribute__((__noreturn__));
-
-
-  void
-  __throw_bad_cast(void) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_bad_typeid(void) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_logic_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_domain_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_invalid_argument(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_length_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_out_of_range(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_out_of_range_fmt(const char*, ...) __attribute__((__noreturn__,__cold__))
-    __attribute__((__format__(__gnu_printf__, 1, 2)));
-
-  void
-  __throw_runtime_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_range_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_overflow_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_underflow_error(const char*) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_ios_failure(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_ios_failure(const char*, int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_system_error(int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_future_error(int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_bad_function_call() __attribute__((__noreturn__,__cold__));
-# 140 "C:/msys64/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
-
-}
-# 36 "C:/msys64/mingw64/include/c++/15.2.0/bits/new_allocator.h" 2 3
-
-
-
-
-
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/new_allocator.h" 3
 namespace std
 {
 
@@ -25455,232 +29859,7 @@ template<typename _Alloc, typename = typename _Alloc::value_type>
 # 46 "C:/msys64/mingw64/include/c++/15.2.0/string_view" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
 # 47 "C:/msys64/mingw64/include/c++/15.2.0/string_view" 2 3
-
-
-
-
-
-# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 1 3
-# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
-namespace std
-{
-
-# 52 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
-  template<typename _Result, typename _Arg>
-    struct __hash_base
-    {
-
-
-
-
-    };
-
-
-
-  template<typename _Tp> struct __hash_empty_base { };
-
-
-
-  template<typename _Tp>
-    struct hash;
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++14-extensions"
-  template<typename _Tp, typename = void>
-    constexpr bool __is_hash_enabled_for = false;
-
-  template<typename _Tp>
-    constexpr bool
-    __is_hash_enabled_for<_Tp,
-     __void_t<decltype(hash<_Tp>()(declval<_Tp>()))>>
-      = true;
-#pragma GCC diagnostic pop
-
-
-  template<typename _Tp>
-    struct __hash_not_enabled
-    {
-      __hash_not_enabled(__hash_not_enabled&&) = delete;
-      ~__hash_not_enabled() = delete;
-    };
-
-
-  template<typename _Tp, bool = true>
-    struct __hash_enum : public __hash_base<size_t, _Tp>
-    {
-      size_t
-      operator()(_Tp __val) const noexcept
-      {
-       using __type = typename underlying_type<_Tp>::type;
-       return hash<__type>{}(static_cast<__type>(__val));
-      }
-    };
-
-
-  template<typename _Tp>
-    struct hash
-    : __conditional_t<__is_enum(_Tp), __hash_enum<_Tp>, __hash_not_enabled<_Tp>>
-    { };
-
-
-  template<typename _Tp>
-    struct hash<_Tp*> : public __hash_base<size_t, _Tp*>
-    {
-      size_t
-      operator()(_Tp* __p) const noexcept
-      { return reinterpret_cast<size_t>(__p); }
-    };
-# 128 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
-  template<> struct hash<bool> : public __hash_base<size_t, bool> { size_t operator()(bool __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<char> : public __hash_base<size_t, char> { size_t operator()(char __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<signed char> : public __hash_base<size_t, signed char> { size_t operator()(signed char __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<unsigned char> : public __hash_base<size_t, unsigned char> { size_t operator()(unsigned char __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<wchar_t> : public __hash_base<size_t, wchar_t> { size_t operator()(wchar_t __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-
-  template<> struct hash<char8_t> : public __hash_base<size_t, char8_t> { size_t operator()(char8_t __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-
-  template<> struct hash<char16_t> : public __hash_base<size_t, char16_t> { size_t operator()(char16_t __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<char32_t> : public __hash_base<size_t, char32_t> { size_t operator()(char32_t __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<short> : public __hash_base<size_t, short> { size_t operator()(short __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<int> : public __hash_base<size_t, int> { size_t operator()(int __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<long> : public __hash_base<size_t, long> { size_t operator()(long __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<long long> : public __hash_base<size_t, long long> { size_t operator()(long long __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<unsigned short> : public __hash_base<size_t, unsigned short> { size_t operator()(unsigned short __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<unsigned int> : public __hash_base<size_t, unsigned int> { size_t operator()(unsigned int __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<unsigned long> : public __hash_base<size_t, unsigned long> { size_t operator()(unsigned long __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  template<> struct hash<unsigned long long> : public __hash_base<size_t, unsigned long long> { size_t operator()(unsigned long long __val) const noexcept { return static_cast<size_t>(__val); } };
-
-
-  __extension__
-  template<> struct hash<__int128> : public __hash_base<size_t, __int128> { size_t operator()(__int128 __val) const noexcept { return static_cast<size_t>(__val); } };
-  __extension__
-  template<> struct hash<__int128 unsigned> : public __hash_base<size_t, __int128 unsigned> { size_t operator()(__int128 unsigned __val) const noexcept { return static_cast<size_t>(__val); } };
-# 204 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
-  struct _Hash_impl
-  {
-    static size_t
-    hash(const void* __ptr, size_t __clength,
-  size_t __seed = static_cast<size_t>(0xc70f6907UL))
-    { return _Hash_bytes(__ptr, __clength, __seed); }
-
-    template<typename _Tp>
-      static size_t
-      hash(const _Tp& __val)
-      { return hash(&__val, sizeof(__val)); }
-
-    template<typename _Tp>
-      static size_t
-      __hash_combine(const _Tp& __val, size_t __hash)
-      { return hash(&__val, sizeof(__val), __hash); }
-  };
-
-
-  struct _Fnv_hash_impl
-  {
-    static size_t
-    hash(const void* __ptr, size_t __clength,
-  size_t __seed = static_cast<size_t>(2166136261UL))
-    { return _Fnv_hash_bytes(__ptr, __clength, __seed); }
-
-    template<typename _Tp>
-      static size_t
-      hash(const _Tp& __val)
-      { return hash(&__val, sizeof(__val)); }
-
-    template<typename _Tp>
-      static size_t
-      __hash_combine(const _Tp& __val, size_t __hash)
-      { return hash(&__val, sizeof(__val), __hash); }
-  };
-
-
-  template<>
-    struct hash<float> : public __hash_base<size_t, float>
-    {
-      size_t
-      operator()(float __val) const noexcept
-      {
-
- return __val != 0.0f ? std::_Hash_impl::hash(__val) : 0;
-      }
-    };
-
-
-  template<>
-    struct hash<double> : public __hash_base<size_t, double>
-    {
-      size_t
-      operator()(double __val) const noexcept
-      {
-
- return __val != 0.0 ? std::_Hash_impl::hash(__val) : 0;
-      }
-    };
-
-
-  template<>
-    struct hash<long double>
-    : public __hash_base<size_t, long double>
-    {
-      __attribute__ ((__pure__)) size_t
-      operator()(long double __val) const noexcept;
-    };
-
-
-  template<>
-    struct hash<nullptr_t> : public __hash_base<size_t, nullptr_t>
-    {
-      size_t
-      operator()(nullptr_t) const noexcept
-      { return 0; }
-    };
-# 297 "C:/msys64/mingw64/include/c++/15.2.0/bits/functional_hash.h" 3
-  template<typename _Hash>
-    struct __is_fast_hash : public std::true_type
-    { };
-
-  template<>
-    struct __is_fast_hash<hash<long double>> : public std::false_type
-    { };
-
-
-}
-# 53 "C:/msys64/mingw64/include/c++/15.2.0/string_view" 2 3
-
-
-
-
-
+# 58 "C:/msys64/mingw64/include/c++/15.2.0/string_view" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/ranges_base.h" 1 3
 # 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/ranges_base.h" 3
 # 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/max_size_type.h" 1 3
@@ -84163,9 +88342,1807 @@ namespace __detail
 
 }
 # 3379 "C:/msys64/mingw64/include/c++/15.2.0/chrono" 2 3
-# 9 "C:/Users/MSi/CLionProjects/Chussy/types.h" 2
+# 10 "C:/Users/MSi/CLionProjects/Chussy/types.h" 2
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/thread" 1 3
+# 44 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 1 3
+# 35 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 36 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 2 3
 
-# 9 "C:/Users/MSi/CLionProjects/Chussy/types.h"
+
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 1 3
+# 54 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 3
+namespace std
+{
+
+# 84 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 3
+  class thread
+  {
+  public:
+
+    using native_handle_type = __gthread_t;
+# 98 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 3
+    class id
+    {
+      native_handle_type _M_thread;
+
+    public:
+      id() noexcept : _M_thread() { }
+
+      explicit
+      id(native_handle_type __id) : _M_thread(__id) { }
+
+    private:
+      friend class thread;
+      friend struct hash<id>;
+
+      friend bool
+      operator==(id __x, id __y) noexcept;
+
+
+      friend strong_ordering
+      operator<=>(id __x, id __y) noexcept;
+
+
+
+
+
+      template<class _CharT, class _Traits>
+ friend basic_ostream<_CharT, _Traits>&
+ operator<<(basic_ostream<_CharT, _Traits>& __out, id __id);
+
+
+
+
+
+    };
+
+  private:
+    id _M_id;
+
+
+
+
+    template<typename _Tp>
+      using __not_same = __not_<is_same<__remove_cvref_t<_Tp>, thread>>;
+
+  public:
+    thread() noexcept = default;
+
+
+  private:
+
+
+
+
+
+
+    static void
+    _M_thread_deps_never_run() {
+
+
+
+
+    }
+
+  public:
+    template<typename _Callable, typename... _Args,
+      typename = _Require<__not_same<_Callable>>>
+      explicit
+      thread(_Callable&& __f, _Args&&... __args)
+      {
+ static_assert( __is_invocable<typename decay<_Callable>::type,
+          typename decay<_Args>::type...>::value,
+   "std::thread arguments must be invocable after conversion to rvalues"
+   );
+
+ using _Wrapper = _Call_wrapper<_Callable, _Args...>;
+
+
+ _M_start_thread(_State_ptr(new _State_impl<_Wrapper>(
+       std::forward<_Callable>(__f), std::forward<_Args>(__args)...)),
+     _M_thread_deps_never_run);
+      }
+
+
+    ~thread()
+    {
+      if (joinable())
+ std::__terminate();
+    }
+
+    thread(const thread&) = delete;
+
+    thread(thread&& __t) noexcept
+    { swap(__t); }
+
+    thread& operator=(const thread&) = delete;
+
+    thread& operator=(thread&& __t) noexcept
+    {
+      if (joinable())
+ std::__terminate();
+      swap(__t);
+      return *this;
+    }
+
+    void
+    swap(thread& __t) noexcept
+    { std::swap(_M_id, __t._M_id); }
+
+    bool
+    joinable() const noexcept
+    { return !(_M_id == id()); }
+
+    void
+    join();
+
+    void
+    detach();
+
+    id
+    get_id() const noexcept
+    { return _M_id; }
+
+
+
+    native_handle_type
+    native_handle()
+    { return _M_id._M_thread; }
+
+
+    static unsigned int
+    hardware_concurrency() noexcept;
+
+
+
+  private:
+
+
+
+    struct _State
+    {
+      virtual ~_State();
+      virtual void _M_run() = 0;
+    };
+    using _State_ptr = unique_ptr<_State>;
+
+  private:
+    template<typename _Callable>
+      struct _State_impl : public _State
+      {
+ _Callable _M_func;
+
+ template<typename... _Args>
+   _State_impl(_Args&&... __args)
+   : _M_func(std::forward<_Args>(__args)...)
+   { }
+
+ void
+ _M_run() { _M_func(); }
+      };
+
+    void
+    _M_start_thread(_State_ptr, void (*)());
+# 280 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 3
+  private:
+
+    template<typename _Tuple>
+      struct _Invoker
+      {
+ template<typename... _Args>
+   explicit
+   _Invoker(_Args&&... __args)
+   : _M_t(std::forward<_Args>(__args)...)
+   { }
+
+ _Tuple _M_t;
+
+ template<typename>
+   struct __result;
+ template<typename _Fn, typename... _Args>
+   struct __result<tuple<_Fn, _Args...>>
+   : __invoke_result<_Fn, _Args...>
+   { };
+
+ template<size_t... _Ind>
+   typename __result<_Tuple>::type
+   _M_invoke(_Index_tuple<_Ind...>)
+   { return std::__invoke(std::get<_Ind>(std::move(_M_t))...); }
+
+ typename __result<_Tuple>::type
+ operator()()
+ {
+   using _Indices
+     = typename _Build_index_tuple<tuple_size<_Tuple>::value>::__type;
+   return _M_invoke(_Indices());
+ }
+      };
+
+  public:
+
+    template<typename... _Tp>
+      using _Call_wrapper = _Invoker<tuple<typename decay<_Tp>::type...>>;
+
+
+  };
+# 329 "C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h" 3
+  inline void
+  swap(thread& __x, thread& __y) noexcept
+  { __x.swap(__y); }
+
+
+  inline bool
+  operator==(thread::id __x, thread::id __y) noexcept
+  {
+
+
+
+
+    return __x._M_thread == __y._M_thread;
+  }
+
+
+
+
+
+  template<>
+    struct hash<thread::id>
+    : public __hash_base<size_t, thread::id>
+    {
+      size_t
+      operator()(const thread::id& __id) const noexcept
+      { return std::_Hash_impl::hash(__id._M_thread); }
+    };
+
+  namespace this_thread
+  {
+
+    inline thread::id
+    get_id() noexcept
+    {
+
+
+
+
+
+      return thread::id(__gthread_self());
+
+    }
+
+
+    inline void
+    yield() noexcept
+    {
+
+      __gthread_yield();
+
+    }
+
+  }
+
+
+
+
+}
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 2 3
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/semaphore" 1 3
+# 39 "C:/msys64/mingw64/include/c++/15.2.0/semaphore" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h" 1 3
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_timed_wait.h" 1 3
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_timed_wait.h" 3
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/this_thread_sleep.h" 1 3
+# 45 "C:/msys64/mingw64/include/c++/15.2.0/bits/this_thread_sleep.h" 3
+namespace std
+{
+
+# 58 "C:/msys64/mingw64/include/c++/15.2.0/bits/this_thread_sleep.h" 3
+  namespace this_thread
+  {
+# 68 "C:/msys64/mingw64/include/c++/15.2.0/bits/this_thread_sleep.h" 3
+    template<typename _Rep, typename _Period>
+      inline void
+      sleep_for(const chrono::duration<_Rep, _Period>& __rtime)
+      {
+ if (__rtime <= __rtime.zero())
+   return;
+ auto __s = chrono::duration_cast<chrono::seconds>(__rtime);
+ auto __ns = chrono::duration_cast<chrono::nanoseconds>(__rtime - __s);
+
+ struct ::timespec __ts =
+   {
+     static_cast<std::time_t>(__s.count()),
+     static_cast<long>(__ns.count())
+   };
+ while (::nanosleep(&__ts, &__ts) == -1 && (*_errno()) == 4)
+   { }
+
+
+
+      }
+
+
+    template<typename _Clock, typename _Duration>
+      inline void
+      sleep_until(const chrono::time_point<_Clock, _Duration>& __atime)
+      {
+
+ static_assert(chrono::is_clock_v<_Clock>);
+
+ auto __now = _Clock::now();
+ if (_Clock::is_steady)
+   {
+     if (__now < __atime)
+       sleep_for(__atime - __now);
+     return;
+   }
+ while (__now < __atime)
+   {
+     sleep_for(__atime - __now);
+     __now = _Clock::now();
+   }
+      }
+
+  }
+
+
+
+
+}
+# 42 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_timed_wait.h" 2 3
+
+
+
+
+
+
+namespace std
+{
+
+
+  namespace __detail
+  {
+    using __wait_clock_t = chrono::steady_clock;
+
+    template<typename _Clock, typename _Dur>
+      __wait_clock_t::time_point
+      __to_wait_clock(const chrono::time_point<_Clock, _Dur>& __atime) noexcept
+      {
+ const typename _Clock::time_point __c_entry = _Clock::now();
+ const __wait_clock_t::time_point __w_entry = __wait_clock_t::now();
+ const auto __delta = __atime - __c_entry;
+ using __w_dur = typename __wait_clock_t::duration;
+ return __w_entry + chrono::ceil<__w_dur>(__delta);
+      }
+
+    template<typename _Dur>
+      __wait_clock_t::time_point
+      __to_wait_clock(const chrono::time_point<__wait_clock_t,
+            _Dur>& __atime) noexcept
+      {
+ using __w_dur = typename __wait_clock_t::duration;
+ return chrono::ceil<__w_dur>(__atime);
+      }
+# 145 "C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_timed_wait.h" 3
+    template<typename _Clock, typename _Dur>
+      bool
+      __cond_wait_until_impl(__condvar& __cv, mutex& __mx,
+        const chrono::time_point<_Clock, _Dur>& __atime)
+      {
+ static_assert(std::__is_one_of<_Clock, chrono::steady_clock,
+            chrono::system_clock>::value);
+
+ auto __s = chrono::time_point_cast<chrono::seconds>(__atime);
+ auto __ns = chrono::duration_cast<chrono::nanoseconds>(__atime - __s);
+
+ __gthread_time_t __ts =
+   {
+     static_cast<std::time_t>(__s.time_since_epoch().count()),
+     static_cast<long>(__ns.count())
+   };
+
+
+
+
+
+
+   __cv.wait_until(__mx, __ts);
+ return _Clock::now() < __atime;
+      }
+
+
+    template<typename _Clock, typename _Dur>
+      bool
+      __cond_wait_until(__condvar& __cv, mutex& __mx,
+   const chrono::time_point<_Clock, _Dur>& __atime)
+      {
+
+
+
+
+
+ if constexpr (is_same_v<_Clock, chrono::system_clock>)
+   return __detail::__cond_wait_until_impl(__cv, __mx, __atime);
+ else
+   {
+     if (__cond_wait_until_impl(__cv, __mx,
+           __to_wait_clock(__atime)))
+       {
+
+
+
+  if (_Clock::now() < __atime)
+    return true;
+       }
+     return false;
+   }
+      }
+
+
+    struct __timed_waiter_pool : __waiter_pool_base
+    {
+
+      template<typename _Clock, typename _Dur>
+ bool
+ _M_do_wait_until(__platform_wait_t* __addr, __platform_wait_t __old,
+    const chrono::time_point<_Clock, _Dur>& __atime)
+ {
+
+
+
+   __platform_wait_t __val;
+   __atomic_load(__addr, &__val, 0);
+   if (__val == __old)
+     {
+       lock_guard<mutex> __l(_M_mtx);
+       return __cond_wait_until(_M_cv, _M_mtx, __atime);
+     }
+   else
+     return true;
+
+ }
+    };
+
+    struct __timed_backoff_spin_policy
+    {
+      __wait_clock_t::time_point _M_deadline;
+      __wait_clock_t::time_point _M_t0;
+
+      template<typename _Clock, typename _Dur>
+ __timed_backoff_spin_policy(chrono::time_point<_Clock, _Dur>
+          __deadline = _Clock::time_point::max(),
+        chrono::time_point<_Clock, _Dur>
+          __t0 = _Clock::now()) noexcept
+   : _M_deadline(__to_wait_clock(__deadline))
+   , _M_t0(__to_wait_clock(__t0))
+ { }
+
+      bool
+      operator()() const noexcept
+      {
+ using namespace literals::chrono_literals;
+ auto __now = __wait_clock_t::now();
+ if (_M_deadline <= __now)
+   return false;
+
+
+
+ auto __elapsed = __now - _M_t0;
+ if (__elapsed > 128ms)
+   {
+     this_thread::sleep_for(64ms);
+   }
+ else if (__elapsed > 64us)
+   {
+     this_thread::sleep_for(__elapsed / 2);
+   }
+ else if (__elapsed > 4us)
+   {
+     __thread_yield();
+   }
+ else
+   return false;
+ return true;
+      }
+    };
+
+    template<typename _EntersWait>
+      struct __timed_waiter : __waiter_base<__timed_waiter_pool>
+      {
+ using __base_type = __waiter_base<__timed_waiter_pool>;
+
+ template<typename _Tp>
+   __timed_waiter(const _Tp* __addr) noexcept
+   : __base_type(__addr)
+ {
+   if constexpr (_EntersWait::value)
+     _M_w._M_enter_wait();
+ }
+
+ ~__timed_waiter()
+ {
+   if constexpr (_EntersWait::value)
+     _M_w._M_leave_wait();
+ }
+
+
+ template<typename _Tp, typename _ValFn,
+   typename _Clock, typename _Dur>
+   bool
+   _M_do_wait_until_v(_Tp __old, _ValFn __vfn,
+        const chrono::time_point<_Clock, _Dur>&
+        __atime) noexcept
+   {
+     __platform_wait_t __val;
+     if (_M_do_spin(__old, std::move(__vfn), __val,
+      __timed_backoff_spin_policy(__atime)))
+       return true;
+     return __base_type::_M_w._M_do_wait_until(__base_type::_M_addr, __val, __atime);
+   }
+
+
+ template<typename _Pred,
+   typename _Clock, typename _Dur>
+   bool
+   _M_do_wait_until(_Pred __pred, __platform_wait_t __val,
+     const chrono::time_point<_Clock, _Dur>&
+             __atime) noexcept
+   {
+     for (auto __now = _Clock::now(); __now < __atime;
+    __now = _Clock::now())
+       {
+  if (__base_type::_M_w._M_do_wait_until(
+        __base_type::_M_addr, __val, __atime)
+      && __pred())
+    return true;
+
+  if (__base_type::_M_do_spin(__pred, __val,
+          __timed_backoff_spin_policy(__atime, __now)))
+    return true;
+       }
+     return false;
+   }
+
+
+ template<typename _Pred,
+   typename _Clock, typename _Dur>
+   bool
+   _M_do_wait_until(_Pred __pred,
+      const chrono::time_point<_Clock, _Dur>&
+        __atime) noexcept
+   {
+     __platform_wait_t __val;
+     if (__base_type::_M_do_spin(__pred, __val,
+     __timed_backoff_spin_policy(__atime)))
+       return true;
+     return _M_do_wait_until(__pred, __val, __atime);
+   }
+
+ template<typename _Tp, typename _ValFn,
+   typename _Rep, typename _Period>
+   bool
+   _M_do_wait_for_v(_Tp __old, _ValFn __vfn,
+      const chrono::duration<_Rep, _Period>&
+        __rtime) noexcept
+   {
+     __platform_wait_t __val;
+     if (_M_do_spin_v(__old, std::move(__vfn), __val))
+       return true;
+
+     if (!__rtime.count())
+       return false;
+
+     auto __reltime = chrono::ceil<__wait_clock_t::duration>(__rtime);
+
+     return __base_type::_M_w._M_do_wait_until(
+       __base_type::_M_addr,
+       __val,
+       chrono::steady_clock::now() + __reltime);
+   }
+
+ template<typename _Pred,
+   typename _Rep, typename _Period>
+   bool
+   _M_do_wait_for(_Pred __pred,
+    const chrono::duration<_Rep, _Period>& __rtime) noexcept
+   {
+     __platform_wait_t __val;
+     if (__base_type::_M_do_spin(__pred, __val))
+       return true;
+
+     if (!__rtime.count())
+       return false;
+
+     auto __reltime = chrono::ceil<__wait_clock_t::duration>(__rtime);
+
+     return _M_do_wait_until(__pred, __val,
+        chrono::steady_clock::now() + __reltime);
+   }
+      };
+
+    using __enters_timed_wait = __timed_waiter<std::true_type>;
+    using __bare_timed_wait = __timed_waiter<std::false_type>;
+  }
+
+
+  template<typename _Tp, typename _ValFn,
+    typename _Clock, typename _Dur>
+    bool
+    __atomic_wait_address_until_v(const _Tp* __addr, _Tp&& __old, _ValFn&& __vfn,
+   const chrono::time_point<_Clock, _Dur>&
+       __atime) noexcept
+    {
+      __detail::__enters_timed_wait __w{__addr};
+      return __w._M_do_wait_until_v(__old, __vfn, __atime);
+    }
+
+  template<typename _Tp, typename _Pred,
+    typename _Clock, typename _Dur>
+    bool
+    __atomic_wait_address_until(const _Tp* __addr, _Pred __pred,
+    const chrono::time_point<_Clock, _Dur>&
+             __atime) noexcept
+    {
+      __detail::__enters_timed_wait __w{__addr};
+      return __w._M_do_wait_until(__pred, __atime);
+    }
+
+  template<typename _Pred,
+    typename _Clock, typename _Dur>
+    bool
+    __atomic_wait_address_until_bare(const __detail::__platform_wait_t* __addr,
+    _Pred __pred,
+    const chrono::time_point<_Clock, _Dur>&
+             __atime) noexcept
+    {
+      __detail::__bare_timed_wait __w{__addr};
+      return __w._M_do_wait_until(__pred, __atime);
+    }
+
+  template<typename _Tp, typename _ValFn,
+    typename _Rep, typename _Period>
+    bool
+    __atomic_wait_address_for_v(const _Tp* __addr, _Tp&& __old, _ValFn&& __vfn,
+        const chrono::duration<_Rep, _Period>& __rtime) noexcept
+    {
+      __detail::__enters_timed_wait __w{__addr};
+      return __w._M_do_wait_for_v(__old, __vfn, __rtime);
+    }
+
+  template<typename _Tp, typename _Pred,
+    typename _Rep, typename _Period>
+    bool
+    __atomic_wait_address_for(const _Tp* __addr, _Pred __pred,
+        const chrono::duration<_Rep, _Period>& __rtime) noexcept
+    {
+
+      __detail::__enters_timed_wait __w{__addr};
+      return __w._M_do_wait_for(__pred, __rtime);
+    }
+
+  template<typename _Pred,
+    typename _Rep, typename _Period>
+    bool
+    __atomic_wait_address_for_bare(const __detail::__platform_wait_t* __addr,
+   _Pred __pred,
+   const chrono::duration<_Rep, _Period>& __rtime) noexcept
+    {
+      __detail::__bare_timed_wait __w{__addr};
+      return __w._M_do_wait_for(__pred, __rtime);
+    }
+
+}
+# 41 "C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h" 2 3
+
+
+
+
+
+# 1 "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
+# 47 "C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h" 2 3
+# 1 "C:/msys64/mingw64/include/semaphore.h" 1 3
+# 30 "C:/msys64/mingw64/include/semaphore.h" 3
+extern "C" {
+
+
+
+
+typedef void *sem_t;
+
+
+
+ int sem_init(sem_t * sem, int pshared, unsigned int value);
+
+ int sem_destroy(sem_t *sem);
+
+ int sem_trywait(sem_t *sem);
+
+ int sem_wait(sem_t *sem);
+
+ int sem_timedwait32(sem_t * sem, const struct _timespec32 *t);
+ int sem_timedwait64(sem_t * sem, const struct _timespec64 *t);
+__inline__ __attribute__((__always_inline__)) int sem_timedwait(sem_t * sem, const struct timespec *t)
+{
+
+
+
+  return sem_timedwait64 (sem, (const struct _timespec64 *) t);
+
+}
+
+ int sem_post(sem_t *sem);
+
+ int sem_post_multiple(sem_t *sem, int count);
+
+
+ sem_t * sem_open(const char * name, int oflag, mode_t mode, unsigned int value);
+
+ int sem_close(sem_t * sem);
+
+ int sem_unlink(const char * name);
+
+ int sem_getvalue(sem_t * sem, int * sval);
+
+
+}
+# 48 "C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h" 2 3
+
+
+
+
+
+namespace std
+{
+
+
+
+  struct __platform_semaphore
+  {
+    using __clock_t = chrono::system_clock;
+
+    static constexpr ptrdiff_t _S_max = 0x7fffffff;
+
+
+
+
+    explicit __platform_semaphore(ptrdiff_t __count) noexcept
+    {
+      sem_init(&_M_semaphore, 0, __count);
+    }
+
+    __platform_semaphore(const __platform_semaphore&) = delete;
+    __platform_semaphore& operator=(const __platform_semaphore&) = delete;
+
+    ~__platform_semaphore()
+    { sem_destroy(&_M_semaphore); }
+
+    inline __attribute__((__always_inline__)) void
+    _M_acquire() noexcept
+    {
+      while (sem_wait(&_M_semaphore))
+ if ((*_errno()) != 4)
+   std::__terminate();
+    }
+
+    inline __attribute__((__always_inline__)) bool
+    _M_try_acquire() noexcept
+    {
+      while (sem_trywait(&_M_semaphore))
+ {
+   if ((*_errno()) == 11)
+     return false;
+   else if ((*_errno()) != 4)
+     std::__terminate();
+
+ }
+      return true;
+    }
+
+    inline __attribute__((__always_inline__)) void
+    _M_release(ptrdiff_t __update) noexcept
+    {
+      for(; __update != 0; --__update)
+ if (sem_post(&_M_semaphore))
+   std::__terminate();
+    }
+
+    bool
+    _M_try_acquire_until_impl(const chrono::time_point<__clock_t>& __atime)
+      noexcept
+    {
+      auto __s = chrono::time_point_cast<chrono::seconds>(__atime);
+      auto __ns = chrono::duration_cast<chrono::nanoseconds>(__atime - __s);
+
+      struct timespec __ts =
+      {
+ static_cast<std::time_t>(__s.time_since_epoch().count()),
+ static_cast<long>(__ns.count())
+      };
+
+      while (sem_timedwait(&_M_semaphore, &__ts))
+ {
+   if ((*_errno()) == 138)
+     return false;
+   else if ((*_errno()) != 4)
+     std::__terminate();
+ }
+      return true;
+    }
+
+    template<typename _Clock, typename _Duration>
+      bool
+      _M_try_acquire_until(const chrono::time_point<_Clock,
+      _Duration>& __atime) noexcept
+      {
+ if constexpr (std::is_same_v<__clock_t, _Clock>)
+   {
+     using _Dur = __clock_t::duration;
+     return _M_try_acquire_until_impl(chrono::ceil<_Dur>(__atime));
+   }
+ else
+   {
+
+
+
+     const typename _Clock::time_point __c_entry = _Clock::now();
+     const auto __s_entry = __clock_t::now();
+     const auto __delta = __atime - __c_entry;
+     const auto __s_atime = __s_entry + __delta;
+     if (_M_try_acquire_until_impl(__s_atime))
+       return true;
+
+
+
+
+     return (_Clock::now() < __atime);
+   }
+      }
+
+    template<typename _Rep, typename _Period>
+      inline __attribute__((__always_inline__)) bool
+      _M_try_acquire_for(const chrono::duration<_Rep, _Period>& __rtime)
+ noexcept
+      { return _M_try_acquire_until(__clock_t::now() + __rtime); }
+
+  private:
+    sem_t _M_semaphore;
+  };
+
+
+
+  struct __atomic_semaphore
+  {
+    static constexpr ptrdiff_t _S_max = __gnu_cxx::__int_traits<int>::__max;
+    explicit __atomic_semaphore(__detail::__platform_wait_t __count) noexcept
+      : _M_counter(__count)
+    {
+      do { if (std::__is_constant_evaluated() && !bool(__count >= 0 && __count <= _S_max)) std::__glibcxx_assert_fail(); } while (false);
+    }
+
+    __atomic_semaphore(const __atomic_semaphore&) = delete;
+    __atomic_semaphore& operator=(const __atomic_semaphore&) = delete;
+
+    static inline __attribute__((__always_inline__)) bool
+    _S_do_try_acquire(__detail::__platform_wait_t* __counter) noexcept
+    {
+      auto __old = __atomic_impl::load(__counter, memory_order::acquire);
+      if (__old == 0)
+ return false;
+
+      return __atomic_impl::compare_exchange_strong(__counter,
+          __old, __old - 1,
+          memory_order::acquire,
+          memory_order::relaxed);
+    }
+
+    inline __attribute__((__always_inline__)) void
+    _M_acquire() noexcept
+    {
+      auto const __pred =
+ [this] { return _S_do_try_acquire(&this->_M_counter); };
+      std::__atomic_wait_address_bare(&_M_counter, __pred);
+    }
+
+    bool
+    _M_try_acquire() noexcept
+    {
+      auto const __pred =
+ [this] { return _S_do_try_acquire(&this->_M_counter); };
+      return std::__detail::__atomic_spin(__pred);
+    }
+
+    template<typename _Clock, typename _Duration>
+      inline __attribute__((__always_inline__)) bool
+      _M_try_acquire_until(const chrono::time_point<_Clock,
+      _Duration>& __atime) noexcept
+      {
+ auto const __pred =
+   [this] { return _S_do_try_acquire(&this->_M_counter); };
+
+ return __atomic_wait_address_until_bare(&_M_counter, __pred, __atime);
+      }
+
+    template<typename _Rep, typename _Period>
+      inline __attribute__((__always_inline__)) bool
+      _M_try_acquire_for(const chrono::duration<_Rep, _Period>& __rtime)
+ noexcept
+      {
+ auto const __pred =
+   [this] { return _S_do_try_acquire(&this->_M_counter); };
+
+ return __atomic_wait_address_for_bare(&_M_counter, __pred, __rtime);
+      }
+
+    inline __attribute__((__always_inline__)) void
+    _M_release(ptrdiff_t __update) noexcept
+    {
+      if (0 < __atomic_impl::fetch_add(&_M_counter, __update, memory_order_release))
+ return;
+      if (__update > 1)
+ __atomic_notify_address_bare(&_M_counter, true);
+      else
+ __atomic_notify_address_bare(&_M_counter, true);
+
+
+    }
+
+  private:
+    alignas(__detail::__platform_wait_alignment)
+    __detail::__platform_wait_t _M_counter;
+  };
+
+
+
+
+
+  using __semaphore_impl = __atomic_semaphore;
+
+
+
+
+
+}
+# 40 "C:/msys64/mingw64/include/c++/15.2.0/semaphore" 2 3
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 43 "C:/msys64/mingw64/include/c++/15.2.0/semaphore" 2 3
+
+
+namespace std
+{
+
+
+  template<ptrdiff_t __least_max_value = __semaphore_impl::_S_max>
+    class counting_semaphore
+    {
+      static_assert(__least_max_value >= 0);
+      static_assert(__least_max_value <= __semaphore_impl::_S_max);
+
+      __semaphore_impl _M_sem;
+
+    public:
+      explicit counting_semaphore(ptrdiff_t __desired) noexcept
+ : _M_sem(__desired)
+      { }
+
+      ~counting_semaphore() = default;
+
+      counting_semaphore(const counting_semaphore&) = delete;
+      counting_semaphore& operator=(const counting_semaphore&) = delete;
+
+      static constexpr ptrdiff_t
+      max() noexcept
+      { return __least_max_value; }
+
+      void
+      release(ptrdiff_t __update = 1) noexcept(noexcept(_M_sem._M_release(1)))
+      { _M_sem._M_release(__update); }
+
+      void
+      acquire() noexcept(noexcept(_M_sem._M_acquire()))
+      { _M_sem._M_acquire(); }
+
+      bool
+      try_acquire() noexcept(noexcept(_M_sem._M_try_acquire()))
+      { return _M_sem._M_try_acquire(); }
+
+      template<typename _Rep, typename _Period>
+ bool
+ try_acquire_for(const std::chrono::duration<_Rep, _Period>& __rtime)
+ { return _M_sem._M_try_acquire_for(__rtime); }
+
+      template<typename _Clock, typename _Dur>
+ bool
+ try_acquire_until(const std::chrono::time_point<_Clock, _Dur>& __atime)
+ { return _M_sem._M_try_acquire_until(__atime); }
+    };
+
+  using binary_semaphore = std::counting_semaphore<1>;
+
+
+}
+# 43 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 2 3
+
+namespace std
+{
+
+
+
+  struct nostopstate_t { explicit nostopstate_t() = default; };
+  inline constexpr nostopstate_t nostopstate{};
+
+  class stop_source;
+
+
+  class stop_token
+  {
+  public:
+    stop_token() noexcept = default;
+
+    stop_token(const stop_token&) noexcept = default;
+    stop_token(stop_token&&) noexcept = default;
+
+    ~stop_token() = default;
+
+    stop_token&
+    operator=(const stop_token&) noexcept = default;
+
+    stop_token&
+    operator=(stop_token&&) noexcept = default;
+
+    [[nodiscard]]
+    bool
+    stop_possible() const noexcept
+    {
+      return static_cast<bool>(_M_state) && _M_state->_M_stop_possible();
+    }
+
+    [[nodiscard]]
+    bool
+    stop_requested() const noexcept
+    {
+      return static_cast<bool>(_M_state) && _M_state->_M_stop_requested();
+    }
+
+    void
+    swap(stop_token& __rhs) noexcept
+    { _M_state.swap(__rhs._M_state); }
+
+    [[nodiscard]]
+    friend bool
+    operator==(const stop_token& __a, const stop_token& __b)
+    { return __a._M_state == __b._M_state; }
+
+    friend void
+    swap(stop_token& __lhs, stop_token& __rhs) noexcept
+    { __lhs.swap(__rhs); }
+
+  private:
+    friend class stop_source;
+    template<typename _Callback>
+      friend class stop_callback;
+
+    static void
+    _S_yield() noexcept
+    {
+
+      __builtin_ia32_pause();
+
+      this_thread::yield();
+    }
+# 135 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 3
+    struct _Stop_cb
+    {
+      using __cb_type = void(_Stop_cb*) noexcept;
+      __cb_type* _M_callback;
+      _Stop_cb* _M_prev = nullptr;
+      _Stop_cb* _M_next = nullptr;
+      bool* _M_destroyed = nullptr;
+      binary_semaphore _M_done{0};
+
+      [[__gnu__::__nonnull__]]
+      explicit
+      _Stop_cb(__cb_type* __cb)
+      : _M_callback(__cb)
+      { }
+
+      void _M_run() noexcept { _M_callback(this); }
+    };
+
+    struct _Stop_state_t
+    {
+      using value_type = uint32_t;
+      static constexpr value_type _S_stop_requested_bit = 1;
+      static constexpr value_type _S_locked_bit = 2;
+      static constexpr value_type _S_ssrc_counter_inc = 4;
+
+      std::atomic<value_type> _M_owners{1};
+      std::atomic<value_type> _M_value{_S_ssrc_counter_inc};
+      _Stop_cb* _M_head = nullptr;
+      std::thread::id _M_requester;
+
+      _Stop_state_t() = default;
+
+      bool
+      _M_stop_possible() noexcept
+      {
+
+
+ return _M_value.load(memory_order::acquire) & ~_S_locked_bit;
+      }
+
+      bool
+      _M_stop_requested() noexcept
+      {
+ return _M_value.load(memory_order::acquire) & _S_stop_requested_bit;
+      }
+
+      void
+      _M_add_owner() noexcept
+      {
+ _M_owners.fetch_add(1, memory_order::relaxed);
+      }
+
+      void
+      _M_release_ownership() noexcept
+      {
+ if (_M_owners.fetch_sub(1, memory_order::acq_rel) == 1)
+   delete this;
+      }
+
+      void
+      _M_add_ssrc() noexcept
+      {
+ _M_value.fetch_add(_S_ssrc_counter_inc, memory_order::relaxed);
+      }
+
+      void
+      _M_sub_ssrc() noexcept
+      {
+ _M_value.fetch_sub(_S_ssrc_counter_inc, memory_order::release);
+      }
+
+
+      void
+      _M_lock() noexcept
+      {
+
+
+ auto __old = _M_value.load(memory_order::relaxed);
+ while (!_M_try_lock(__old, memory_order::relaxed))
+   { }
+      }
+
+
+      void
+      _M_unlock() noexcept
+      {
+ _M_value.fetch_sub(_S_locked_bit, memory_order::release);
+      }
+
+      bool
+      _M_request_stop() noexcept
+      {
+
+ auto __old = _M_value.load(memory_order::acquire);
+ do
+   {
+     if (__old & _S_stop_requested_bit)
+       return false;
+   }
+ while (!_M_try_lock_and_stop(__old));
+
+ _M_requester = this_thread::get_id();
+
+ while (_M_head)
+   {
+     bool __last_cb;
+     _Stop_cb* __cb = _M_head;
+     _M_head = _M_head->_M_next;
+     if (_M_head)
+       {
+  _M_head->_M_prev = nullptr;
+  __last_cb = false;
+       }
+     else
+       __last_cb = true;
+
+
+     _M_unlock();
+
+     bool __destroyed = false;
+     __cb->_M_destroyed = &__destroyed;
+
+
+     __cb->_M_run();
+
+     if (!__destroyed)
+       {
+  __cb->_M_destroyed = nullptr;
+
+
+  if (!__gnu_cxx::__is_single_threaded())
+    __cb->_M_done.release();
+       }
+
+
+     if (__last_cb)
+       return true;
+
+     _M_lock();
+   }
+
+ _M_unlock();
+ return true;
+      }
+
+      [[__gnu__::__nonnull__]]
+      bool
+      _M_register_callback(_Stop_cb* __cb) noexcept
+      {
+ auto __old = _M_value.load(memory_order::acquire);
+ do
+   {
+     if (__old & _S_stop_requested_bit)
+       {
+  __cb->_M_run();
+  return false;
+       }
+
+     if (__old < _S_ssrc_counter_inc)
+
+
+
+       return false;
+   }
+ while (!_M_try_lock(__old));
+
+        __cb->_M_next = _M_head;
+        if (_M_head)
+          {
+            _M_head->_M_prev = __cb;
+          }
+        _M_head = __cb;
+ _M_unlock();
+        return true;
+      }
+
+
+      [[__gnu__::__nonnull__]]
+      void
+      _M_remove_callback(_Stop_cb* __cb)
+      {
+ _M_lock();
+
+        if (__cb == _M_head)
+          {
+            _M_head = _M_head->_M_next;
+            if (_M_head)
+       _M_head->_M_prev = nullptr;
+     _M_unlock();
+     return;
+          }
+ else if (__cb->_M_prev)
+          {
+            __cb->_M_prev->_M_next = __cb->_M_next;
+            if (__cb->_M_next)
+       __cb->_M_next->_M_prev = __cb->_M_prev;
+     _M_unlock();
+     return;
+          }
+
+ _M_unlock();
+
+
+
+
+
+
+
+ if (!(_M_requester == this_thread::get_id()))
+   {
+
+     __cb->_M_done.acquire();
+
+     return;
+   }
+
+ if (__cb->_M_destroyed)
+   *__cb->_M_destroyed = true;
+      }
+
+
+
+
+
+      bool
+      _M_try_lock(value_type& __curval,
+    memory_order __failure = memory_order::acquire) noexcept
+      {
+ return _M_do_try_lock(__curval, 0, memory_order::acquire, __failure);
+      }
+
+
+
+
+
+
+
+      bool
+      _M_try_lock_and_stop(value_type& __curval) noexcept
+      {
+ return _M_do_try_lock(__curval, _S_stop_requested_bit,
+         memory_order::acq_rel, memory_order::acquire);
+      }
+
+      bool
+      _M_do_try_lock(value_type& __curval, value_type __newbits,
+       memory_order __success, memory_order __failure) noexcept
+      {
+ if (__curval & _S_locked_bit)
+   {
+     _S_yield();
+     __curval = _M_value.load(__failure);
+     return false;
+   }
+ __newbits |= _S_locked_bit;
+ return _M_value.compare_exchange_weak(__curval, __curval | __newbits,
+           __success, __failure);
+      }
+    };
+
+    struct _Stop_state_ref
+    {
+      _Stop_state_ref() = default;
+
+      [[__gnu__::__access__(__none__, 2)]]
+      explicit
+      _Stop_state_ref(const stop_source&)
+      : _M_ptr(new _Stop_state_t())
+      { }
+
+      _Stop_state_ref(const _Stop_state_ref& __other) noexcept
+      : _M_ptr(__other._M_ptr)
+      {
+ if (_M_ptr)
+   _M_ptr->_M_add_owner();
+      }
+
+      _Stop_state_ref(_Stop_state_ref&& __other) noexcept
+      : _M_ptr(__other._M_ptr)
+      {
+ __other._M_ptr = nullptr;
+      }
+
+      _Stop_state_ref&
+      operator=(const _Stop_state_ref& __other) noexcept
+      {
+ if (auto __ptr = __other._M_ptr; __ptr != _M_ptr)
+   {
+     if (__ptr)
+       __ptr->_M_add_owner();
+     if (_M_ptr)
+       _M_ptr->_M_release_ownership();
+     _M_ptr = __ptr;
+   }
+ return *this;
+      }
+
+      _Stop_state_ref&
+      operator=(_Stop_state_ref&& __other) noexcept
+      {
+ _Stop_state_ref(std::move(__other)).swap(*this);
+ return *this;
+      }
+
+      ~_Stop_state_ref()
+      {
+ if (_M_ptr)
+   _M_ptr->_M_release_ownership();
+      }
+
+      void
+      swap(_Stop_state_ref& __other) noexcept
+      { std::swap(_M_ptr, __other._M_ptr); }
+
+      explicit operator bool() const noexcept { return _M_ptr != nullptr; }
+
+      _Stop_state_t* operator->() const noexcept { return _M_ptr; }
+
+
+      friend bool
+      operator==(const _Stop_state_ref&, const _Stop_state_ref&) = default;
+# 468 "C:/msys64/mingw64/include/c++/15.2.0/stop_token" 3
+    private:
+      _Stop_state_t* _M_ptr = nullptr;
+    };
+
+    _Stop_state_ref _M_state;
+
+    explicit
+    stop_token(const _Stop_state_ref& __state) noexcept
+    : _M_state{__state}
+    { }
+  };
+
+
+  class stop_source
+  {
+  public:
+    stop_source() : _M_state(*this)
+    { }
+
+    explicit stop_source(std::nostopstate_t) noexcept
+    { }
+
+    stop_source(const stop_source& __other) noexcept
+    : _M_state(__other._M_state)
+    {
+      if (_M_state)
+ _M_state->_M_add_ssrc();
+    }
+
+    stop_source(stop_source&&) noexcept = default;
+
+    stop_source&
+    operator=(const stop_source& __other) noexcept
+    {
+      if (_M_state != __other._M_state)
+ {
+   stop_source __sink(std::move(*this));
+   _M_state = __other._M_state;
+   if (_M_state)
+     _M_state->_M_add_ssrc();
+ }
+      return *this;
+    }
+
+    stop_source&
+    operator=(stop_source&&) noexcept = default;
+
+    ~stop_source()
+    {
+      if (_M_state)
+ _M_state->_M_sub_ssrc();
+    }
+
+    [[nodiscard]]
+    bool
+    stop_possible() const noexcept
+    {
+      return static_cast<bool>(_M_state);
+    }
+
+    [[nodiscard]]
+    bool
+    stop_requested() const noexcept
+    {
+      return static_cast<bool>(_M_state) && _M_state->_M_stop_requested();
+    }
+
+    bool
+    request_stop() const noexcept
+    {
+      if (stop_possible())
+        return _M_state->_M_request_stop();
+      return false;
+    }
+
+    [[nodiscard]]
+    stop_token
+    get_token() const noexcept
+    {
+      return stop_token{_M_state};
+    }
+
+    void
+    swap(stop_source& __other) noexcept
+    {
+      _M_state.swap(__other._M_state);
+    }
+
+    [[nodiscard]]
+    friend bool
+    operator==(const stop_source& __a, const stop_source& __b) noexcept
+    {
+      return __a._M_state == __b._M_state;
+    }
+
+    friend void
+    swap(stop_source& __lhs, stop_source& __rhs) noexcept
+    {
+      __lhs.swap(__rhs);
+    }
+
+  private:
+    stop_token::_Stop_state_ref _M_state;
+  };
+
+
+  template<typename _Callback>
+    class [[nodiscard]] stop_callback
+    {
+      static_assert(is_nothrow_destructible_v<_Callback>);
+      static_assert(is_invocable_v<_Callback>);
+
+    public:
+      using callback_type = _Callback;
+
+      template<typename _Cb,
+               enable_if_t<is_constructible_v<_Callback, _Cb>, int> = 0>
+        explicit
+ stop_callback(const stop_token& __token, _Cb&& __cb)
+        noexcept(is_nothrow_constructible_v<_Callback, _Cb>)
+ : _M_cb(std::forward<_Cb>(__cb))
+        {
+   if (auto __state = __token._M_state)
+     {
+       if (__state->_M_register_callback(&_M_cb))
+  _M_state.swap(__state);
+     }
+        }
+
+      template<typename _Cb,
+               enable_if_t<is_constructible_v<_Callback, _Cb>, int> = 0>
+        explicit
+ stop_callback(stop_token&& __token, _Cb&& __cb)
+        noexcept(is_nothrow_constructible_v<_Callback, _Cb>)
+ : _M_cb(std::forward<_Cb>(__cb))
+ {
+   if (auto& __state = __token._M_state)
+     {
+       if (__state->_M_register_callback(&_M_cb))
+  _M_state.swap(__state);
+     }
+ }
+
+      ~stop_callback()
+      {
+ if (_M_state)
+   {
+     _M_state->_M_remove_callback(&_M_cb);
+   }
+      }
+
+      stop_callback(const stop_callback&) = delete;
+      stop_callback& operator=(const stop_callback&) = delete;
+      stop_callback(stop_callback&&) = delete;
+      stop_callback& operator=(stop_callback&&) = delete;
+
+    private:
+      struct _Cb_impl : stop_token::_Stop_cb
+      {
+ template<typename _Cb>
+   explicit
+   _Cb_impl(_Cb&& __cb)
+   : _Stop_cb(&_S_execute),
+     _M_cb(std::forward<_Cb>(__cb))
+   { }
+
+ _Callback _M_cb;
+
+ [[__gnu__::__nonnull__]]
+ static void
+ _S_execute(_Stop_cb* __that) noexcept
+ {
+   _Callback& __cb = static_cast<_Cb_impl*>(__that)->_M_cb;
+   std::forward<_Callback>(__cb)();
+ }
+      };
+
+      _Cb_impl _M_cb;
+      stop_token::_Stop_state_ref _M_state;
+    };
+
+  template<typename _Callback>
+    stop_callback(stop_token, _Callback) -> stop_callback<_Callback>;
+
+
+}
+# 45 "C:/msys64/mingw64/include/c++/15.2.0/thread" 2 3
+
+
+
+
+
+
+
+# 1 "C:/msys64/mingw64/include/c++/15.2.0/bits/version.h" 1 3
+# 53 "C:/msys64/mingw64/include/c++/15.2.0/thread" 2 3
+
+
+
+
+
+namespace std
+{
+
+# 76 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+  inline strong_ordering
+  operator<=>(thread::id __x, thread::id __y) noexcept
+  { return __x._M_thread <=> __y._M_thread; }
+# 105 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+  template<class _CharT, class _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+    {
+
+      using __output_type
+ = __conditional_t<is_pointer<thread::native_handle_type>::value,
+     const void*,
+     thread::native_handle_type>;
+
+      if (__id == thread::id())
+ return __out << "thread::id of a non-executing thread";
+      else
+ return __out << static_cast<__output_type>(__id._M_thread);
+    }
+# 128 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+    template<typename _Callable, typename... _Args>
+      constexpr bool __pmf_expects_stop_token = false;
+
+    template<typename _Callable, typename _Obj, typename... _Args>
+      requires is_member_function_pointer_v<remove_reference_t<_Callable>>
+      constexpr bool __pmf_expects_stop_token<_Callable, _Obj, _Args...>
+ = is_invocable_v<_Callable, _Obj, stop_token, _Args...>;
+# 152 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+  class jthread
+  {
+  public:
+    using id = thread::id;
+    using native_handle_type = thread::native_handle_type;
+
+    jthread() noexcept
+    : _M_stop_source{nostopstate}
+    { }
+
+    template<typename _Callable, typename... _Args,
+      typename = enable_if_t<!is_same_v<remove_cvref_t<_Callable>,
+            jthread>>>
+      explicit
+      jthread(_Callable&& __f, _Args&&... __args)
+      : _M_thread{_S_create(_M_stop_source, std::forward<_Callable>(__f),
+       std::forward<_Args>(__args)...)}
+      { }
+
+    jthread(const jthread&) = delete;
+    jthread(jthread&&) noexcept = default;
+
+    ~jthread()
+    {
+      if (joinable())
+        {
+          request_stop();
+          join();
+        }
+    }
+
+    jthread&
+    operator=(const jthread&) = delete;
+
+    jthread&
+    operator=(jthread&& __other) noexcept
+    {
+      std::jthread(std::move(__other)).swap(*this);
+      return *this;
+    }
+
+    void
+    swap(jthread& __other) noexcept
+    {
+      std::swap(_M_stop_source, __other._M_stop_source);
+      std::swap(_M_thread, __other._M_thread);
+    }
+
+    [[nodiscard]] bool
+    joinable() const noexcept
+    {
+      return _M_thread.joinable();
+    }
+
+    void
+    join()
+    {
+      _M_thread.join();
+    }
+
+    void
+    detach()
+    {
+      _M_thread.detach();
+    }
+
+    [[nodiscard]] id
+    get_id() const noexcept
+    {
+      return _M_thread.get_id();
+    }
+
+    [[nodiscard]] native_handle_type
+    native_handle()
+    {
+      return _M_thread.native_handle();
+    }
+
+    [[nodiscard]] static unsigned
+    hardware_concurrency() noexcept
+    {
+      return thread::hardware_concurrency();
+    }
+
+    [[nodiscard]] stop_source
+    get_stop_source() noexcept
+    {
+      return _M_stop_source;
+    }
+
+    [[nodiscard]] stop_token
+    get_stop_token() const noexcept
+    {
+      return _M_stop_source.get_token();
+    }
+
+    bool request_stop() noexcept
+    {
+      return _M_stop_source.request_stop();
+    }
+
+    friend void swap(jthread& __lhs, jthread& __rhs) noexcept
+    {
+      __lhs.swap(__rhs);
+    }
+
+  private:
+    template<typename _Callable, typename... _Args>
+      static thread
+      _S_create(stop_source& __ssrc, _Callable&& __f, _Args&&... __args)
+      {
+
+ if constexpr (__pmf_expects_stop_token<_Callable, _Args...>)
+   return _S_create_pmf(__ssrc, __f, std::forward<_Args>(__args)...);
+ else
+
+ if constexpr(is_invocable_v<decay_t<_Callable>, stop_token,
+        decay_t<_Args>...>)
+   return thread{std::forward<_Callable>(__f), __ssrc.get_token(),
+   std::forward<_Args>(__args)...};
+ else
+   {
+     static_assert(is_invocable_v<decay_t<_Callable>,
+      decay_t<_Args>...>,
+     "std::jthread arguments must be invocable after"
+     " conversion to rvalues");
+     return thread{std::forward<_Callable>(__f),
+     std::forward<_Args>(__args)...};
+   }
+      }
+
+
+    template<typename _Callable, typename _Obj, typename... _Args>
+      static thread
+      _S_create_pmf(stop_source& __ssrc, _Callable __f, _Obj&& __obj,
+      _Args&&... __args)
+      {
+ return thread{__f, std::forward<_Obj>(__obj), __ssrc.get_token(),
+        std::forward<_Args>(__args)...};
+      }
+
+
+    stop_source _M_stop_source;
+    thread _M_thread;
+  };
+# 376 "C:/msys64/mingw64/include/c++/15.2.0/thread" 3
+
+}
+# 11 "C:/Users/MSi/CLionProjects/Chussy/types.h" 2
+
+# 11 "C:/Users/MSi/CLionProjects/Chussy/types.h"
 using U64 = uint64_t;
 using Move = uint32_t;
 constexpr uint8_t FLAG_CAPTURE = 1 << 0;
@@ -84176,7 +90153,9 @@ enum Piece {PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING,EMPTY};
 enum Color {WHITE,BLACK,NO_COLOR};
 inline uint16_t generation=0;
 inline auto start=std::chrono::high_resolution_clock::now();
-constexpr int TIME_LIMIT=5000;
+inline std::atomic<bool> isSearching(false);
+inline std::thread searchThread;
+inline int TIME_LIMIT=5000;
 inline Move prevBestMove=-1;
 struct EvalDelta { int mg, eg, phase; };
 struct History {
@@ -84188,6 +90167,15 @@ struct History {
     int halfMoveClock;
     U64 zobristKey;
     EvalDelta d;
+};
+struct SearchLimits {
+    int wtime = -1, btime = -1, winc = 0, binc = 0;
+    int movestogo = 30;
+    int depth = 32;
+    long long nodes = -1;
+    int movetime = 5000;
+    bool infinite = false;
+    bool ponder = false;
 };
 inline Move make_move(int from,int to,int promo=0,int flags=0) {
     return (from) | (to << 6) | (promo << 12) | (flags << 16);

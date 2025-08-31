@@ -192,6 +192,11 @@ CMakeFiles\ChessEngine.dir\bitboards.cpp.obj.ddi: \
  C:/msys64/mingw64/include/c++/15.2.0/bits/sstream.tcc \
  C:/Users/MSi/CLionProjects/Chussy/attacks.h \
  C:/Users/MSi/CLionProjects/Chussy/types.h \
+ C:/msys64/mingw64/include/c++/15.2.0/atomic \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/std_mutex.h \
  C:/msys64/mingw64/include/c++/15.2.0/chrono \
  C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h \
  C:/msys64/mingw64/include/c++/15.2.0/ratio \
@@ -229,5 +234,13 @@ CMakeFiles\ChessEngine.dir\bitboards.cpp.obj.ddi: \
  C:/msys64/mingw64/include/c++/15.2.0/bits/ranges_algobase.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/unicode.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/unicode-data.h \
+ C:/msys64/mingw64/include/c++/15.2.0/thread \
+ C:/msys64/mingw64/include/c++/15.2.0/stop_token \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/std_thread.h \
+ C:/msys64/mingw64/include/c++/15.2.0/semaphore \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/semaphore_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_timed_wait.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/this_thread_sleep.h \
+ C:/msys64/mingw64/include/semaphore.h \
  C:/msys64/mingw64/include/c++/15.2.0/iostream \
  C:/Users/MSi/CLionProjects/Chussy/magic.h

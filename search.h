@@ -185,7 +185,7 @@ inline void order_moves(Board& board,int ply) {
     }
 }
 inline int quiesce(Board& board,int alpha,int beta,int ply) {
-    if (outOfTime()) {
+    if (outOfTime()||!isSearching) {
         bestMove=prevBestMove;
         return -INF;
     }
@@ -217,7 +217,7 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
             makeMove(board,move,ply);
             int score=-quiesce(board,-beta,-alpha,ply+1);
             unmakeMove(board,ply);
-            if (outOfTime()) {
+            if (outOfTime()||!isSearching) {
                 bestMove=prevBestMove;
                 return -INF;
             }
@@ -230,7 +230,7 @@ inline int quiesce(Board& board,int alpha,int beta,int ply) {
     return alpha;
 }
 inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
-    if (outOfTime()) {
+    if (outOfTime()||!isSearching) {
         bestMove=prevBestMove;
         return -INF;
     }
@@ -275,14 +275,14 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
             makeNullMove(board);
             int score=-alphaBeta(board,-beta,-beta+1,depth-1-NULL_R,ply+1);
             undoNullMove(board,oldEP);
-            if (outOfTime()) {
+            if (outOfTime()||!isSearching) {
                 bestMove=prevBestMove;
                 return -INF;
             }
             if (score>=beta) {
                 if (depth-2>2) {
                     int verify=alphaBeta(board,alpha,beta,depth-2,ply+1);
-                    if (outOfTime()) {
+                    if (outOfTime()||!isSearching) {
                         bestMove=prevBestMove;
                         return -INF;
                     }
@@ -319,7 +319,7 @@ inline int alphaBeta(Board& board,int alpha,int beta,int depth,int ply) {
             score = -alphaBeta(board, -beta, -alpha, depth-1, ply+1);
         }
         unmakeMove(board,ply);
-        if (outOfTime()) {
+        if (outOfTime()||!isSearching) {
             bestMove=prevBestMove;
             return -INF;
         }

@@ -4,8 +4,10 @@
 
 #ifndef TYPES_H
 #define TYPES_H
+#include <atomic>
 #include <cstdint>
 #include <chrono>
+#include <thread>
 using U64 = uint64_t;
 using Move = uint32_t;
 constexpr uint8_t FLAG_CAPTURE   = 1 << 0;
@@ -16,7 +18,9 @@ enum Piece {PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING,EMPTY};
 enum Color {WHITE,BLACK,NO_COLOR};
 inline uint16_t generation=0;
 inline auto start=std::chrono::high_resolution_clock::now();
-constexpr int TIME_LIMIT=5000;
+inline std::atomic<bool> isSearching(false);
+inline std::thread searchThread;
+inline int TIME_LIMIT=5000;
 inline Move prevBestMove=-1;
 struct EvalDelta { int mg, eg, phase; };
 struct History {
@@ -28,6 +32,15 @@ struct History {
     int halfMoveClock;
     U64 zobristKey;
     EvalDelta d;
+};
+struct SearchLimits {
+    int wtime = -1, btime = -1, winc = 0, binc = 0;
+    int movestogo = 30;
+    int depth = 32;
+    long long nodes = -1;
+    int movetime = 5000;
+    bool infinite = false;
+    bool ponder = false;
 };
 inline Move make_move(int from,int to,int promo=0,int flags=0) {
     return (from) | (to << 6) | (promo << 12) | (flags << 16);
