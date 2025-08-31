@@ -90187,7 +90187,7 @@ struct History {
     EvalDelta d;
 };
 struct SearchLimits {
-    int wtime = -1, btime = -1, winc = 0, binc = 0;
+    int wtime = 10000, btime = 10000, winc = 0, binc = 0;
     int movestogo = 30;
     int depth = 32;
     long long nodes = -1;

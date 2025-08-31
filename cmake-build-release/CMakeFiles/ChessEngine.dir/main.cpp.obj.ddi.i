@@ -90218,7 +90218,7 @@ struct History {
     EvalDelta d;
 };
 struct SearchLimits {
-    int wtime = -1, btime = -1, winc = 0, binc = 0;
+    int wtime = 10000, btime = 10000, winc = 0, binc = 0;
     int movestogo = 30;
     int depth = 32;
     long long nodes = -1;
@@ -110849,8 +110849,20 @@ inline std::string moveToString(int fromSquare, int toSquare, char promotionPiec
     }
     return moveStr;
 }
+inline int thinkTime(int myTime, int myIncrement, int movesToGo = 30) {
+
+    int timeForMove = (int)ceil((double)myTime / movesToGo) + myIncrement;
+
+
+    int maxTime = (int)ceil((double)myTime / 5.0);
+
+    return std::min(timeForMove, maxTime);
+}
 inline std::string play(Board& board,const SearchLimits& searchLimits) {
-    TIME_LIMIT=searchLimits.movetime;
+    if (board.currentColor==WHITE)
+        TIME_LIMIT=thinkTime(searchLimits.btime,searchLimits.binc);
+    else
+        TIME_LIMIT=thinkTime(searchLimits.wtime,searchLimits.winc);
     generation++;
     int prevScore=0;
     int score=-1;

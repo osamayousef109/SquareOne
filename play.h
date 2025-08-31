@@ -19,8 +19,20 @@ inline std::string moveToString(int fromSquare, int toSquare, char promotionPiec
     }
     return moveStr;
 }
+inline int thinkTime(int myTime, int myIncrement, int movesToGo = 30) {
+    // Use ~1/movesToGo of your remaining time plus increment
+    int timeForMove = (int)ceil((double)myTime / movesToGo) + myIncrement;
+
+    // Safety margin: don't exceed 20% of total time
+    int maxTime = (int)ceil((double)myTime / 5.0);
+
+    return std::min(timeForMove, maxTime);
+}
 inline std::string play(Board& board,const SearchLimits& searchLimits) {
-    TIME_LIMIT=searchLimits.movetime;
+    if (board.currentColor==WHITE)
+        TIME_LIMIT=thinkTime(searchLimits.btime,searchLimits.binc);
+    else
+        TIME_LIMIT=thinkTime(searchLimits.wtime,searchLimits.winc);
     generation++;
     int prevScore=0;
     int score=-1;
