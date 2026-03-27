@@ -53,8 +53,8 @@ The decision-making core relies on the **Negamax framework** combined with highl
 ### Compilation
 Clone the repository and build using CMake:
 
-    git clone https://github.com/osamayousef109/Chussy
-    cd Chussy
+    git clone https://github.com/osamayousef109/SquareOne
+    cd SquareOne
     mkdir build
     cd build
     cmake ..
