@@ -1,6 +1,6 @@
 <div align="center">
 
-# ♟️ [Chussy]
+# ♟️ SquareOne
 
 **A High-Performance, UCI-Compliant Chess Engine written in modern C++**
 
@@ -10,7 +10,7 @@
 
 </div>
 
-Welcome to **[Chussy]**, a strong, open-source chess engine built from scratch in C++. Designed for speed and efficiency, the engine utilizes a highly optimized bitboard representation and advanced search heuristics to achieve playing strengths exceeding 2000 Elo. 
+Welcome to **SquareOne**, a strong, open-source chess engine built from scratch in C++. Designed for speed and efficiency, the engine utilizes a highly optimized bitboard representation and advanced search heuristics to achieve playing strengths exceeding 2000 Elo. 
 
 It is fully compatible with the Universal Chess Interface (UCI) protocol, allowing it to be seamlessly integrated into popular chess GUIs (like Arena or Cute Chess) or run as an automated bot on Lichess.
 
