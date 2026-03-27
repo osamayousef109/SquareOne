@@ -41,8 +41,7 @@ The decision-making core relies on the **Negamax framework** combined with highl
 - **Late Move Reductions (LMR):** Searches moves considered "less likely" to be good at a shallower depth to save time for tactical lines.
 
 ### Evaluation
-- **[a custom Hand-Crafted Evaluation function focusing on material, mobility, king safety, and pawn structure]**
-
+- **PeSTo's evaluation tables, Tapered Eval and a custom Hand-Crafted Evaluation function focusing on material, mobility, king safety, and pawn structure**
 ---
 
 ## ⚙️ Building the Engine
